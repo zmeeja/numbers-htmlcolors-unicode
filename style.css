@@ -1,0 +1,19 @@
+@font-face {
+    font-family: unifont;
+    src: url(/fonts/unifont-16.0.02.otf);
+}
+
+@font-face {
+    font-family: unifont_jp;
+    src: url(/fonts/unifont_jp-16.0.02.otf);
+}
+
+@font-face {
+    font-family: unifont_upper;
+    src: url(/fonts/unifont_upper-16.0.02.otf);
+}
+
+@font-face {
+    font-family: unifont_csur;
+    src: url(/fonts/unifont_csur-16.0.02.otf);
+}

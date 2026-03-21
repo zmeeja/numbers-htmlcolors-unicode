@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="/maps/colorsMap.js"></script>
+    <script src="/maps/unicodeMap.js"></script>
+    <script src="/maps/unicodeMapRu.js"></script>
+    <script src="/maps/blocksMap.js"></script>
+    <script src="/maps/controlCharactersMap.js"></script>
+    <script src="/maps/entitiesMap.js"></script>
+    <script src="/maps/base64Map.js"></script>
+
+    <script src="/additionalDataTypes.js"></script>
+    <script src="/class_mynumber.js"></script>
+    <script src="/render.js"></script>
+    <script src="/renderTable.js"></script>
+    <script src="/renderLine.js"></script>
+    <script src="/buttonsSelector.js" defer></script>
+    <script src="/input.js" defer></script>
+
+    <link rel="stylesheet" href="styleTable.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="buttonsSelector" style="background-color: plum; padding: 5px;">
+        <button onclick="selector(this)" id="select1">Table</button>
+        <button onclick="selector(this)" id="select2">Line</button>
+        <button onclick="selector(this)" id="select3">.....</button>
+    </div>
+    <div style="background-color: cadetblue; padding: 5px;">
+        <button onclick="render(range(128))">Basic Latin (ACSII)</button>
+        <button onclick="render(range(128, 256))">Latin-1 Supplement</button>
+        <button onclick="render(Object.keys(controlCharactersMap).sort().map(x => parseInt(x, 16)))"><b><span style="color: red;">control</span></b> characters</button>
+        <button onclick="render(Object.keys(colorsMap).sort().map(x => parseInt(x, 16)))">named HTML <b>colors</b></button>
+        <button onclick="render(colorsMap1.sort().map(x => parseInt(x, 16)))">1</button>
+        <button onclick="render(colorsMap2.sort().map(x => parseInt(x, 16)))">2</button>
+        <button onclick="render(colorsMapBasic.sort().map(x => parseInt(x, 16)))">basic <b>colors</b></button>
+        <button onclick="render(Object.keys(entitiesMap).sort().map(x => parseInt(x, 16)))">named HTML <b>entities</b></button>
+    </div>
+    <div style="background-color: palevioletred; padding: 5px;">
+        <input type="text" id="textInput">
+        <input type="number" id="numberInput">
+    </div>
+    <!-- <div>
+        <b>ip address</b> (32bit), <b>port</b> (16bit) <b>DEC:</b> XXX.XXX.XXX.XXX:XXXXX<br>
+        <b>UTF-32</b> (32bit) <b>HEX:</b> XXXXXXXX
+    </div> -->
+    <div id="contener">
+    </div>
+</body>
+</html>
