@@ -47,22 +47,42 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
         </tr>
         <tr>
             <td></td>
-            <td style="text-align: center; color: blue;">data<br>↓<br>symbol</td>
+            <td style="text-align: center; color: blue;">bytes<br>↓<br>text</td>
+            <td style="text-align: center; color: lime;">text<br>↓<br>text</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="text-align: center; color: Fuchsia;">color<br>↓<br>text<br>(hex code)</td>
+            <td style="text-align: center; color: Fuchsia;">color<br>↓<br>text<br>(3 dec numbers)</td>
+            <td style="text-align: center; color: red;">text<br>↓<br>bytes</td>
+            <td style="text-align: center; color: red;">text<br>↓<br>bytes</td>
+            <td style="text-align: center; color: lime;">text<br>↓<br>text</td>
+            <td style="text-align: center; color: lime;">text<br>↓<br>text</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="text-align: center; color: Fuchsia;">color<br>↓<br>text</td>
+            <td style="text-align: center; color: lime;">text<br>↓<br>text</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">total</td>
+            <td style="text-align: center;">64</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td style="text-align: center; color: Fuchsia;">color<br>↓<br>symbol</td>
-            <td style="text-align: center; color: Fuchsia;">color<br>↓<br>symbol</td>
-            <td style="text-align: center; color: red;">symbol<br>↓<br>data</td>
-            <td style="text-align: center; color: red;">symbol<br>↓<br>data</td>
-            <td style="text-align: center; color: lime;">symbol<br>↓<br>symbol</td>
-            <td style="text-align: center; color: lime;">symbol<br>↓<br>symbol</td>
+            <td style="text-align: center;">16 777 216</td>
+            <td style="text-align: center;">16 777 216</td>
+            <td style="text-align: center;">1 114 112</td>
+            <td style="text-align: center;">1 114 112</td>
+            <td style="text-align: center;">1 114 112</td>
+            <td style="text-align: center;">1 114 112</td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td style="text-align: center;">139</td>
             <td></td>
             <td></td>
         </tr>

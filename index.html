@@ -31,18 +31,31 @@
         <button onclick="selector(this)" id="select3">.....</button>
     </div>
     <div style="background-color: cadetblue; padding: 5px;">
-        <button onclick="render(range(128))">Basic Latin (ACSII)</button>
-        <button onclick="render(range(128, 256))">Latin-1 Supplement</button>
-        <button onclick="render(Object.keys(controlCharactersMap).sort().map(x => parseInt(x, 16)))"><b><span style="color: red;">control</span></b> characters</button>
-        <button onclick="render(Object.keys(colorsMap).sort().map(x => parseInt(x, 16)))">named HTML <b>colors</b></button>
+        <button onclick="render(range(128))"><b>[0, 127]</b> Basic Latin (ACSII)</button>
+        <button onclick="render(range(128, 256))"><b>[128, 255]</b> Latin-1 Supplement</button>
+        <button onclick="render(Object.keys(controlCharactersMap).sort().map(x => parseInt(x, 16)))"><b>[0, 31]&#8746;{127}&#8746;[128, 159]</b> <span style="color: red;">control</span> characters</button>
+        <button onclick="render(Object.keys(colorsMap).sort().map(x => parseInt(x, 16)))">named HTML <b><span style="color: blue;">c</span><span style="color: lime;">o</span><span style="color: aqua;">l</span><span style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></button>
         <button onclick="render(colorsMap1.sort().map(x => parseInt(x, 16)))">1</button>
         <button onclick="render(colorsMap2.sort().map(x => parseInt(x, 16)))">2</button>
-        <button onclick="render(colorsMapBasic.sort().map(x => parseInt(x, 16)))">basic <b>colors</b></button>
+        <button onclick="render(colorsMapBasic.sort().map(x => parseInt(x, 16)))">basic <b><span style="color: blue;">c</span><span style="color: lime;">o</span><span style="color: aqua;">l</span><span
+            style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></button>
         <button onclick="render(Object.keys(entitiesMap).sort().map(x => parseInt(x, 16)))">named HTML <b>entities</b></button>
     </div>
     <div style="background-color: palevioletred; padding: 5px;">
+        <span>UNI:</span>
         <input type="text" id="textInput">
-        <input type="number" id="numberInput">
+        <span>DEC:</span>
+        <input type="number" id="DECnumberInput">
+        <span>BIN:</span>
+        <input type="text" id="BINnumberInput">
+        <span>OCT:</span>
+        <input type="text" id="OCTnumberInput">
+        <span>HEX:</span>
+        <input type="text" id="HEXnumberInput">
+    </div>
+    <div style="background-color: SkyBlue; padding: 5px;">
+        newline Windows: <span style="color: yellow;">\r\n</span>
+        newline Unix/macOS: <span style="color: yellow;">\n</span>
     </div>
     <!-- <div>
         <b>ip address</b> (32bit), <b>port</b> (16bit) <b>DEC:</b> XXX.XXX.XXX.XXX:XXXXX<br>
