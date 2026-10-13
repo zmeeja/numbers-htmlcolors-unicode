@@ -1,3 +1,1692 @@
-const blocksMap = [["000000","00007F","Basic Latin"],["000080","0000FF","Latin-1 Supplement"],["000100","00017F","Latin Extended-A"],["000180","00024F","Latin Extended-B"],["000250","0002AF","IPA Extensions"],["0002B0","0002FF","Spacing Modifier Letters"],["000300","00036F","Combining Diacritical Marks"],["000370","0003FF","Greek and Coptic"],["000400","0004FF","Cyrillic"],["000500","00052F","Cyrillic Supplement"],["000530","00058F","Armenian"],["000590","0005FF","Hebrew"],["000600","0006FF","Arabic"],["000700","00074F","Syriac"],["000750","00077F","Arabic Supplement"],["000780","0007BF","Thaana"],["0007C0","0007FF","NKo"],["000800","00083F","Samaritan"],["000840","00085F","Mandaic"],["000860","00086F","Syriac Supplement"],["000870","00089F","Arabic Extended-B"],["0008A0","0008FF","Arabic Extended-A"],["000900","00097F","Devanagari"],["000980","0009FF","Bengali"],["000A00","000A7F","Gurmukhi"],["000A80","000AFF","Gujarati"],["000B00","000B7F","Oriya"],["000B80","000BFF","Tamil"],["000C00","000C7F","Telugu"],["000C80","000CFF","Kannada"],["000D00","000D7F","Malayalam"],["000D80","000DFF","Sinhala"],["000E00","000E7F","Thai"],["000E80","000EFF","Lao"],["000F00","000FFF","Tibetan"],["001000","00109F","Myanmar"],["0010A0","0010FF","Georgian"],["001100","0011FF","Hangul Jamo"],["001200","00137F","Ethiopic"],["001380","00139F","Ethiopic Supplement"],["0013A0","0013FF","Cherokee"],["001400","00167F","Unified Canadian Aboriginal Syllabics"],["001680","00169F","Ogham"],["0016A0","0016FF","Runic"],["001700","00171F","Tagalog"],["001720","00173F","Hanunoo"],["001740","00175F","Buhid"],["001760","00177F","Tagbanwa"],["001780","0017FF","Khmer"],["001800","0018AF","Mongolian"],["0018B0","0018FF","Unified Canadian Aboriginal Syllabics Extended"],["001900","00194F","Limbu"],["001950","00197F","Tai Le"],["001980","0019DF","New Tai Lue"],["0019E0","0019FF","Khmer Symbols"],["001A00","001A1F","Buginese"],["001A20","001AAF","Tai Tham"],["001AB0","001AFF","Combining Diacritical Marks Extended"],["001B00","001B7F","Balinese"],["001B80","001BBF","Sundanese"],["001BC0","001BFF","Batak"],["001C00","001C4F","Lepcha"],["001C50","001C7F","Ol Chiki"],["001C80","001C8F","Cyrillic Extended-C"],["001C90","001CBF","Georgian Extended"],["001CC0","001CCF","Sundanese Supplement"],["001CD0","001CFF","Vedic Extensions"],["001D00","001D7F","Phonetic Extensions"],["001D80","001DBF","Phonetic Extensions Supplement"],["001DC0","001DFF","Combining Diacritical Marks Supplement"],["001E00","001EFF","Latin Extended Additional"],["001F00","001FFF","Greek Extended"],["002000","00206F","General Punctuation"],["002070","00209F","Superscripts and Subscripts"],["0020A0","0020CF","Currency Symbols"],["0020D0","0020FF","Combining Diacritical Marks for Symbols"],["002100","00214F","Letterlike Symbols"],["002150","00218F","Number Forms"],["002190","0021FF","Arrows"],["002200","0022FF","Mathematical Operators"],["002300","0023FF","Miscellaneous Technical"],["002400","00243F","Control Pictures"],["002440","00245F","Optical Character Recognition"],["002460","0024FF","Enclosed Alphanumerics"],["002500","00257F","Box Drawing"],["002580","00259F","Block Elements"],["0025A0","0025FF","Geometric Shapes"],["002600","0026FF","Miscellaneous Symbols"],["002700","0027BF","Dingbats"],["0027C0","0027EF","Miscellaneous Mathematical Symbols-A"],["0027F0","0027FF","Supplemental Arrows-A"],["002800","0028FF","Braille Patterns"],["002900","00297F","Supplemental Arrows-B"],["002980","0029FF","Miscellaneous Mathematical Symbols-B"],["002A00","002AFF","Supplemental Mathematical Operators"],["002B00","002BFF","Miscellaneous Symbols and Arrows"],["002C00","002C5F","Glagolitic"],["002C60","002C7F","Latin Extended-C"],["002C80","002CFF","Coptic"],["002D00","002D2F","Georgian Supplement"],["002D30","002D7F","Tifinagh"],["002D80","002DDF","Ethiopic Extended"],["002DE0","002DFF","Cyrillic Extended-A"],["002E00","002E7F","Supplemental Punctuation"],["002E80","002EFF","CJK Radicals Supplement"],["002F00","002FDF","Kangxi Radicals"],["002FF0","002FFF","Ideographic Description Characters"],["003000","00303F","CJK Symbols and Punctuation"],["003040","00309F","Hiragana"],["0030A0","0030FF","Katakana"],["003100","00312F","Bopomofo"],["003130","00318F","Hangul Compatibility Jamo"],["003190","00319F","Kanbun"],["0031A0","0031BF","Bopomofo Extended"],["0031C0","0031EF","CJK Strokes"],["0031F0","0031FF","Katakana Phonetic Extensions"],["003200","0032FF","Enclosed CJK Letters and Months"],["003300","0033FF","CJK Compatibility"],["003400","004DBF","CJK Unified Ideographs Extension A"],["004DC0","004DFF","Yijing Hexagram Symbols"],["004E00","009FFF","CJK Unified Ideographs"],["00A000","00A48F","Yi Syllables"],["00A490","00A4CF","Yi Radicals"],["00A4D0","00A4FF","Lisu"],["00A500","00A63F","Vai"],["00A640","00A69F","Cyrillic Extended-B"],["00A6A0","00A6FF","Bamum"],["00A700","00A71F","Modifier Tone Letters"],["00A720","00A7FF","Latin Extended-D"],["00A800","00A82F","Syloti Nagri"],["00A830","00A83F","Common Indic Number Forms"],["00A840","00A87F","Phags-pa"],["00A880","00A8DF","Saurashtra"],["00A8E0","00A8FF","Devanagari Extended"],["00A900","00A92F","Kayah Li"],["00A930","00A95F","Rejang"],["00A960","00A97F","Hangul Jamo Extended-A"],["00A980","00A9DF","Javanese"],["00A9E0","00A9FF","Myanmar Extended-B"],["00AA00","00AA5F","Cham"],["00AA60","00AA7F","Myanmar Extended-A"],["00AA80","00AADF","Tai Viet"],["00AAE0","00AAFF","Meetei Mayek Extensions"],["00AB00","00AB2F","Ethiopic Extended-A"],["00AB30","00AB6F","Latin Extended-E"],["00AB70","00ABBF","Cherokee Supplement"],["00ABC0","00ABFF","Meetei Mayek"],["00AC00","00D7AF","Hangul Syllables"],["00D7B0","00D7FF","Hangul Jamo Extended-B"],["00D800","00DB7F","High Surrogates"],["00DB80","00DBFF","High Private Use Surrogates"],["00DC00","00DFFF","Low Surrogates"],["00E000","00F8FF","Private Use Area"],["00F900","00FAFF","CJK Compatibility Ideographs"],["00FB00","00FB4F","Alphabetic Presentation Forms"],["00FB50","00FDFF","Arabic Presentation Forms-A"],["00FE00","00FE0F","Variation Selectors"],["00FE10","00FE1F","Vertical Forms"],["00FE20","00FE2F","Combining Half Marks"],["00FE30","00FE4F","CJK Compatibility Forms"],["00FE50","00FE6F","Small Form Variants"],["00FE70","00FEFF","Arabic Presentation Forms-B"],["00FF00","00FFEF","Halfwidth and Fullwidth Forms"],["00FFF0","00FFFF","Specials"],["010000","01007F","Linear B Syllabary"],["010080","0100FF","Linear B Ideograms"],["010100","01013F","Aegean Numbers"],["010140","01018F","Ancient Greek Numbers"],["010190","0101CF","Ancient Symbols"],["0101D0","0101FF","Phaistos Disc"],["010280","01029F","Lycian"],["0102A0","0102DF","Carian"],["0102E0","0102FF","Coptic Epact Numbers"],["010300","01032F","Old Italic"],["010330","01034F","Gothic"],["010350","01037F","Old Permic"],["010380","01039F","Ugaritic"],["0103A0","0103DF","Old Persian"],["010400","01044F","Deseret"],["010450","01047F","Shavian"],["010480","0104AF","Osmanya"],["0104B0","0104FF","Osage"],["010500","01052F","Elbasan"],["010530","01056F","Caucasian Albanian"],["010570","0105BF","Vithkuqi"],["0105C0","0105FF","Todhri"],["010600","01077F","Linear A"],["010780","0107BF","Latin Extended-F"],["010800","01083F","Cypriot Syllabary"],["010840","01085F","Imperial Aramaic"],["010860","01087F","Palmyrene"],["010880","0108AF","Nabataean"],["0108E0","0108FF","Hatran"],["010900","01091F","Phoenician"],["010920","01093F","Lydian"],["010980","01099F","Meroitic Hieroglyphs"],["0109A0","0109FF","Meroitic Cursive"],["010A00","010A5F","Kharoshthi"],["010A60","010A7F","Old South Arabian"],["010A80","010A9F","Old North Arabian"],["010AC0","010AFF","Manichaean"],["010B00","010B3F","Avestan"],["010B40","010B5F","Inscriptional Parthian"],["010B60","010B7F","Inscriptional Pahlavi"],["010B80","010BAF","Psalter Pahlavi"],["010C00","010C4F","Old Turkic"],["010C80","010CFF","Old Hungarian"],["010D00","010D3F","Hanifi Rohingya"],["010D40","010D8F","Garay"],["010E60","010E7F","Rumi Numeral Symbols"],["010E80","010EBF","Yezidi"],["010EC0","010EFF","Arabic Extended-C"],["010F00","010F2F","Old Sogdian"],["010F30","010F6F","Sogdian"],["010F70","010FAF","Old Uyghur"],["010FB0","010FDF","Chorasmian"],["010FE0","010FFF","Elymaic"],["011000","01107F","Brahmi"],["011080","0110CF","Kaithi"],["0110D0","0110FF","Sora Sompeng"],["011100","01114F","Chakma"],["011150","01117F","Mahajani"],["011180","0111DF","Sharada"],["0111E0","0111FF","Sinhala Archaic Numbers"],["011200","01124F","Khojki"],["011280","0112AF","Multani"],["0112B0","0112FF","Khudawadi"],["011300","01137F","Grantha"],["011380","0113FF","Tulu-Tigalari"],["011400","01147F","Newa"],["011480","0114DF","Tirhuta"],["011580","0115FF","Siddham"],["011600","01165F","Modi"],["011660","01167F","Mongolian Supplement"],["011680","0116CF","Takri"],["0116D0","0116FF","Myanmar Extended-C"],["011700","01174F","Ahom"],["011800","01184F","Dogra"],["0118A0","0118FF","Warang Citi"],["011900","01195F","Dives Akuru"],["0119A0","0119FF","Nandinagari"],["011A00","011A4F","Zanabazar Square"],["011A50","011AAF","Soyombo"],["011AB0","011ABF","Unified Canadian Aboriginal Syllabics Extended-A"],["011AC0","011AFF","Pau Cin Hau"],["011B00","011B5F","Devanagari Extended-A"],["011BC0","011BFF","Sunuwar"],["011C00","011C6F","Bhaiksuki"],["011C70","011CBF","Marchen"],["011D00","011D5F","Masaram Gondi"],["011D60","011DAF","Gunjala Gondi"],["011EE0","011EFF","Makasar"],["011F00","011F5F","Kawi"],["011FB0","011FBF","Lisu Supplement"],["011FC0","011FFF","Tamil Supplement"],["012000","0123FF","Cuneiform"],["012400","01247F","Cuneiform Numbers and Punctuation"],["012480","01254F","Early Dynastic Cuneiform"],["012F90","012FFF","Cypro-Minoan"],["013000","01342F","Egyptian Hieroglyphs"],["013430","01345F","Egyptian Hieroglyph Format Controls"],["013460","0143FF","Egyptian Hieroglyphs Extended-A"],["014400","01467F","Anatolian Hieroglyphs"],["016100","01613F","Gurung Khema"],["016800","016A3F","Bamum Supplement"],["016A40","016A6F","Mro"],["016A70","016ACF","Tangsa"],["016AD0","016AFF","Bassa Vah"],["016B00","016B8F","Pahawh Hmong"],["016D40","016D7F","Kirat Rai"],["016E40","016E9F","Medefaidrin"],["016F00","016F9F","Miao"],["016FE0","016FFF","Ideographic Symbols and Punctuation"],["017000","0187FF","Tangut"],["018800","018AFF","Tangut Components"],["018B00","018CFF","Khitan Small Script"],["018D00","018D7F","Tangut Supplement"],["01AFF0","01AFFF","Kana Extended-B"],["01B000","01B0FF","Kana Supplement"],["01B100","01B12F","Kana Extended-A"],["01B130","01B16F","Small Kana Extension"],["01B170","01B2FF","Nushu"],["01BC00","01BC9F","Duployan"],["01BCA0","01BCAF","Shorthand Format Controls"],["01CC00","01CEBF","Symbols for Legacy Computing Supplement"],["01CF00","01CFCF","Znamenny Musical Notation"],["01D000","01D0FF","Byzantine Musical Symbols"],["01D100","01D1FF","Musical Symbols"],["01D200","01D24F","Ancient Greek Musical Notation"],["01D2C0","01D2DF","Kaktovik Numerals"],["01D2E0","01D2FF","Mayan Numerals"],["01D300","01D35F","Tai Xuan Jing Symbols"],["01D360","01D37F","Counting Rod Numerals"],["01D400","01D7FF","Mathematical Alphanumeric Symbols"],["01D800","01DAAF","Sutton SignWriting"],["01DF00","01DFFF","Latin Extended-G"],["01E000","01E02F","Glagolitic Supplement"],["01E030","01E08F","Cyrillic Extended-D"],["01E100","01E14F","Nyiakeng Puachue Hmong"],["01E290","01E2BF","Toto"],["01E2C0","01E2FF","Wancho"],["01E4D0","01E4FF","Nag Mundari"],["01E5D0","01E5FF","Ol Onal"],["01E7E0","01E7FF","Ethiopic Extended-B"],["01E800","01E8DF","Mende Kikakui"],["01E900","01E95F","Adlam"],["01EC70","01ECBF","Indic Siyaq Numbers"],["01ED00","01ED4F","Ottoman Siyaq Numbers"],["01EE00","01EEFF","Arabic Mathematical Alphabetic Symbols"],["01F000","01F02F","Mahjong Tiles"],["01F030","01F09F","Domino Tiles"],["01F0A0","01F0FF","Playing Cards"],["01F100","01F1FF","Enclosed Alphanumeric Supplement"],["01F200","01F2FF","Enclosed Ideographic Supplement"],["01F300","01F5FF","Miscellaneous Symbols and Pictographs"],["01F600","01F64F","Emoticons"],["01F650","01F67F","Ornamental Dingbats"],["01F680","01F6FF","Transport and Map Symbols"],["01F700","01F77F","Alchemical Symbols"],["01F780","01F7FF","Geometric Shapes Extended"],["01F800","01F8FF","Supplemental Arrows-C"],["01F900","01F9FF","Supplemental Symbols and Pictographs"],["01FA00","01FA6F","Chess Symbols"],["01FA70","01FAFF","Symbols and Pictographs Extended-A"],["01FB00","01FBFF","Symbols for Legacy Computing"],["020000","02A6DF","CJK Unified Ideographs Extension B"],["02A700","02B73F","CJK Unified Ideographs Extension C"],["02B740","02B81F","CJK Unified Ideographs Extension D"],["02B820","02CEAF","CJK Unified Ideographs Extension E"],["02CEB0","02EBEF","CJK Unified Ideographs Extension F"],["02EBF0","02EE5F","CJK Unified Ideographs Extension I"],["02F800","02FA1F","CJK Compatibility Ideographs Supplement"],["030000","03134F","CJK Unified Ideographs Extension G"],["031350","0323AF","CJK Unified Ideographs Extension H"],["0E0000","0E007F","Tags"],["0E0100","0E01EF","Variation Selectors Supplement"],["0F0000","0FFFFF","Supplementary Private Use Area-A"],["100000","10FFFF","Supplementary Private Use Area-B"]];
-
-export default blocksMap;
+const blocksMap = [
+  [
+    "0x000000",
+    "0x00007F",
+    "Basic Latin"
+  ],
+  [
+    "0x000080",
+    "0x0000FF",
+    "Latin-1 Supplement"
+  ],
+  [
+    "0x000100",
+    "0x00017F",
+    "Latin Extended-A"
+  ],
+  [
+    "0x000180",
+    "0x00024F",
+    "Latin Extended-B"
+  ],
+  [
+    "0x000250",
+    "0x0002AF",
+    "IPA Extensions"
+  ],
+  [
+    "0x0002B0",
+    "0x0002FF",
+    "Spacing Modifier Letters"
+  ],
+  [
+    "0x000300",
+    "0x00036F",
+    "Combining Diacritical Marks"
+  ],
+  [
+    "0x000370",
+    "0x0003FF",
+    "Greek and Coptic"
+  ],
+  [
+    "0x000400",
+    "0x0004FF",
+    "Cyrillic"
+  ],
+  [
+    "0x000500",
+    "0x00052F",
+    "Cyrillic Supplement"
+  ],
+  [
+    "0x000530",
+    "0x00058F",
+    "Armenian"
+  ],
+  [
+    "0x000590",
+    "0x0005FF",
+    "Hebrew"
+  ],
+  [
+    "0x000600",
+    "0x0006FF",
+    "Arabic"
+  ],
+  [
+    "0x000700",
+    "0x00074F",
+    "Syriac"
+  ],
+  [
+    "0x000750",
+    "0x00077F",
+    "Arabic Supplement"
+  ],
+  [
+    "0x000780",
+    "0x0007BF",
+    "Thaana"
+  ],
+  [
+    "0x0007C0",
+    "0x0007FF",
+    "NKo"
+  ],
+  [
+    "0x000800",
+    "0x00083F",
+    "Samaritan"
+  ],
+  [
+    "0x000840",
+    "0x00085F",
+    "Mandaic"
+  ],
+  [
+    "0x000860",
+    "0x00086F",
+    "Syriac Supplement"
+  ],
+  [
+    "0x000870",
+    "0x00089F",
+    "Arabic Extended-B"
+  ],
+  [
+    "0x0008A0",
+    "0x0008FF",
+    "Arabic Extended-A"
+  ],
+  [
+    "0x000900",
+    "0x00097F",
+    "Devanagari"
+  ],
+  [
+    "0x000980",
+    "0x0009FF",
+    "Bengali"
+  ],
+  [
+    "0x000A00",
+    "0x000A7F",
+    "Gurmukhi"
+  ],
+  [
+    "0x000A80",
+    "0x000AFF",
+    "Gujarati"
+  ],
+  [
+    "0x000B00",
+    "0x000B7F",
+    "Oriya"
+  ],
+  [
+    "0x000B80",
+    "0x000BFF",
+    "Tamil"
+  ],
+  [
+    "0x000C00",
+    "0x000C7F",
+    "Telugu"
+  ],
+  [
+    "0x000C80",
+    "0x000CFF",
+    "Kannada"
+  ],
+  [
+    "0x000D00",
+    "0x000D7F",
+    "Malayalam"
+  ],
+  [
+    "0x000D80",
+    "0x000DFF",
+    "Sinhala"
+  ],
+  [
+    "0x000E00",
+    "0x000E7F",
+    "Thai"
+  ],
+  [
+    "0x000E80",
+    "0x000EFF",
+    "Lao"
+  ],
+  [
+    "0x000F00",
+    "0x000FFF",
+    "Tibetan"
+  ],
+  [
+    "0x001000",
+    "0x00109F",
+    "Myanmar"
+  ],
+  [
+    "0x0010A0",
+    "0x0010FF",
+    "Georgian"
+  ],
+  [
+    "0x001100",
+    "0x0011FF",
+    "Hangul Jamo"
+  ],
+  [
+    "0x001200",
+    "0x00137F",
+    "Ethiopic"
+  ],
+  [
+    "0x001380",
+    "0x00139F",
+    "Ethiopic Supplement"
+  ],
+  [
+    "0x0013A0",
+    "0x0013FF",
+    "Cherokee"
+  ],
+  [
+    "0x001400",
+    "0x00167F",
+    "Unified Canadian Aboriginal Syllabics"
+  ],
+  [
+    "0x001680",
+    "0x00169F",
+    "Ogham"
+  ],
+  [
+    "0x0016A0",
+    "0x0016FF",
+    "Runic"
+  ],
+  [
+    "0x001700",
+    "0x00171F",
+    "Tagalog"
+  ],
+  [
+    "0x001720",
+    "0x00173F",
+    "Hanunoo"
+  ],
+  [
+    "0x001740",
+    "0x00175F",
+    "Buhid"
+  ],
+  [
+    "0x001760",
+    "0x00177F",
+    "Tagbanwa"
+  ],
+  [
+    "0x001780",
+    "0x0017FF",
+    "Khmer"
+  ],
+  [
+    "0x001800",
+    "0x0018AF",
+    "Mongolian"
+  ],
+  [
+    "0x0018B0",
+    "0x0018FF",
+    "Unified Canadian Aboriginal Syllabics Extended"
+  ],
+  [
+    "0x001900",
+    "0x00194F",
+    "Limbu"
+  ],
+  [
+    "0x001950",
+    "0x00197F",
+    "Tai Le"
+  ],
+  [
+    "0x001980",
+    "0x0019DF",
+    "New Tai Lue"
+  ],
+  [
+    "0x0019E0",
+    "0x0019FF",
+    "Khmer Symbols"
+  ],
+  [
+    "0x001A00",
+    "0x001A1F",
+    "Buginese"
+  ],
+  [
+    "0x001A20",
+    "0x001AAF",
+    "Tai Tham"
+  ],
+  [
+    "0x001AB0",
+    "0x001AFF",
+    "Combining Diacritical Marks Extended"
+  ],
+  [
+    "0x001B00",
+    "0x001B7F",
+    "Balinese"
+  ],
+  [
+    "0x001B80",
+    "0x001BBF",
+    "Sundanese"
+  ],
+  [
+    "0x001BC0",
+    "0x001BFF",
+    "Batak"
+  ],
+  [
+    "0x001C00",
+    "0x001C4F",
+    "Lepcha"
+  ],
+  [
+    "0x001C50",
+    "0x001C7F",
+    "Ol Chiki"
+  ],
+  [
+    "0x001C80",
+    "0x001C8F",
+    "Cyrillic Extended-C"
+  ],
+  [
+    "0x001C90",
+    "0x001CBF",
+    "Georgian Extended"
+  ],
+  [
+    "0x001CC0",
+    "0x001CCF",
+    "Sundanese Supplement"
+  ],
+  [
+    "0x001CD0",
+    "0x001CFF",
+    "Vedic Extensions"
+  ],
+  [
+    "0x001D00",
+    "0x001D7F",
+    "Phonetic Extensions"
+  ],
+  [
+    "0x001D80",
+    "0x001DBF",
+    "Phonetic Extensions Supplement"
+  ],
+  [
+    "0x001DC0",
+    "0x001DFF",
+    "Combining Diacritical Marks Supplement"
+  ],
+  [
+    "0x001E00",
+    "0x001EFF",
+    "Latin Extended Additional"
+  ],
+  [
+    "0x001F00",
+    "0x001FFF",
+    "Greek Extended"
+  ],
+  [
+    "0x002000",
+    "0x00206F",
+    "General Punctuation"
+  ],
+  [
+    "0x002070",
+    "0x00209F",
+    "Superscripts and Subscripts"
+  ],
+  [
+    "0x0020A0",
+    "0x0020CF",
+    "Currency Symbols"
+  ],
+  [
+    "0x0020D0",
+    "0x0020FF",
+    "Combining Diacritical Marks for Symbols"
+  ],
+  [
+    "0x002100",
+    "0x00214F",
+    "Letterlike Symbols"
+  ],
+  [
+    "0x002150",
+    "0x00218F",
+    "Number Forms"
+  ],
+  [
+    "0x002190",
+    "0x0021FF",
+    "Arrows"
+  ],
+  [
+    "0x002200",
+    "0x0022FF",
+    "Mathematical Operators"
+  ],
+  [
+    "0x002300",
+    "0x0023FF",
+    "Miscellaneous Technical"
+  ],
+  [
+    "0x002400",
+    "0x00243F",
+    "Control Pictures"
+  ],
+  [
+    "0x002440",
+    "0x00245F",
+    "Optical Character Recognition"
+  ],
+  [
+    "0x002460",
+    "0x0024FF",
+    "Enclosed Alphanumerics"
+  ],
+  [
+    "0x002500",
+    "0x00257F",
+    "Box Drawing"
+  ],
+  [
+    "0x002580",
+    "0x00259F",
+    "Block Elements"
+  ],
+  [
+    "0x0025A0",
+    "0x0025FF",
+    "Geometric Shapes"
+  ],
+  [
+    "0x002600",
+    "0x0026FF",
+    "Miscellaneous Symbols"
+  ],
+  [
+    "0x002700",
+    "0x0027BF",
+    "Dingbats"
+  ],
+  [
+    "0x0027C0",
+    "0x0027EF",
+    "Miscellaneous Mathematical Symbols-A"
+  ],
+  [
+    "0x0027F0",
+    "0x0027FF",
+    "Supplemental Arrows-A"
+  ],
+  [
+    "0x002800",
+    "0x0028FF",
+    "Braille Patterns"
+  ],
+  [
+    "0x002900",
+    "0x00297F",
+    "Supplemental Arrows-B"
+  ],
+  [
+    "0x002980",
+    "0x0029FF",
+    "Miscellaneous Mathematical Symbols-B"
+  ],
+  [
+    "0x002A00",
+    "0x002AFF",
+    "Supplemental Mathematical Operators"
+  ],
+  [
+    "0x002B00",
+    "0x002BFF",
+    "Miscellaneous Symbols and Arrows"
+  ],
+  [
+    "0x002C00",
+    "0x002C5F",
+    "Glagolitic"
+  ],
+  [
+    "0x002C60",
+    "0x002C7F",
+    "Latin Extended-C"
+  ],
+  [
+    "0x002C80",
+    "0x002CFF",
+    "Coptic"
+  ],
+  [
+    "0x002D00",
+    "0x002D2F",
+    "Georgian Supplement"
+  ],
+  [
+    "0x002D30",
+    "0x002D7F",
+    "Tifinagh"
+  ],
+  [
+    "0x002D80",
+    "0x002DDF",
+    "Ethiopic Extended"
+  ],
+  [
+    "0x002DE0",
+    "0x002DFF",
+    "Cyrillic Extended-A"
+  ],
+  [
+    "0x002E00",
+    "0x002E7F",
+    "Supplemental Punctuation"
+  ],
+  [
+    "0x002E80",
+    "0x002EFF",
+    "CJK Radicals Supplement"
+  ],
+  [
+    "0x002F00",
+    "0x002FDF",
+    "Kangxi Radicals"
+  ],
+  [
+    "0x002FF0",
+    "0x002FFF",
+    "Ideographic Description Characters"
+  ],
+  [
+    "0x003000",
+    "0x00303F",
+    "CJK Symbols and Punctuation"
+  ],
+  [
+    "0x003040",
+    "0x00309F",
+    "Hiragana"
+  ],
+  [
+    "0x0030A0",
+    "0x0030FF",
+    "Katakana"
+  ],
+  [
+    "0x003100",
+    "0x00312F",
+    "Bopomofo"
+  ],
+  [
+    "0x003130",
+    "0x00318F",
+    "Hangul Compatibility Jamo"
+  ],
+  [
+    "0x003190",
+    "0x00319F",
+    "Kanbun"
+  ],
+  [
+    "0x0031A0",
+    "0x0031BF",
+    "Bopomofo Extended"
+  ],
+  [
+    "0x0031C0",
+    "0x0031EF",
+    "CJK Strokes"
+  ],
+  [
+    "0x0031F0",
+    "0x0031FF",
+    "Katakana Phonetic Extensions"
+  ],
+  [
+    "0x003200",
+    "0x0032FF",
+    "Enclosed CJK Letters and Months"
+  ],
+  [
+    "0x003300",
+    "0x0033FF",
+    "CJK Compatibility"
+  ],
+  [
+    "0x003400",
+    "0x004DBF",
+    "CJK Unified Ideographs Extension A"
+  ],
+  [
+    "0x004DC0",
+    "0x004DFF",
+    "Yijing Hexagram Symbols"
+  ],
+  [
+    "0x004E00",
+    "0x009FFF",
+    "CJK Unified Ideographs"
+  ],
+  [
+    "0x00A000",
+    "0x00A48F",
+    "Yi Syllables"
+  ],
+  [
+    "0x00A490",
+    "0x00A4CF",
+    "Yi Radicals"
+  ],
+  [
+    "0x00A4D0",
+    "0x00A4FF",
+    "Lisu"
+  ],
+  [
+    "0x00A500",
+    "0x00A63F",
+    "Vai"
+  ],
+  [
+    "0x00A640",
+    "0x00A69F",
+    "Cyrillic Extended-B"
+  ],
+  [
+    "0x00A6A0",
+    "0x00A6FF",
+    "Bamum"
+  ],
+  [
+    "0x00A700",
+    "0x00A71F",
+    "Modifier Tone Letters"
+  ],
+  [
+    "0x00A720",
+    "0x00A7FF",
+    "Latin Extended-D"
+  ],
+  [
+    "0x00A800",
+    "0x00A82F",
+    "Syloti Nagri"
+  ],
+  [
+    "0x00A830",
+    "0x00A83F",
+    "Common Indic Number Forms"
+  ],
+  [
+    "0x00A840",
+    "0x00A87F",
+    "Phags-pa"
+  ],
+  [
+    "0x00A880",
+    "0x00A8DF",
+    "Saurashtra"
+  ],
+  [
+    "0x00A8E0",
+    "0x00A8FF",
+    "Devanagari Extended"
+  ],
+  [
+    "0x00A900",
+    "0x00A92F",
+    "Kayah Li"
+  ],
+  [
+    "0x00A930",
+    "0x00A95F",
+    "Rejang"
+  ],
+  [
+    "0x00A960",
+    "0x00A97F",
+    "Hangul Jamo Extended-A"
+  ],
+  [
+    "0x00A980",
+    "0x00A9DF",
+    "Javanese"
+  ],
+  [
+    "0x00A9E0",
+    "0x00A9FF",
+    "Myanmar Extended-B"
+  ],
+  [
+    "0x00AA00",
+    "0x00AA5F",
+    "Cham"
+  ],
+  [
+    "0x00AA60",
+    "0x00AA7F",
+    "Myanmar Extended-A"
+  ],
+  [
+    "0x00AA80",
+    "0x00AADF",
+    "Tai Viet"
+  ],
+  [
+    "0x00AAE0",
+    "0x00AAFF",
+    "Meetei Mayek Extensions"
+  ],
+  [
+    "0x00AB00",
+    "0x00AB2F",
+    "Ethiopic Extended-A"
+  ],
+  [
+    "0x00AB30",
+    "0x00AB6F",
+    "Latin Extended-E"
+  ],
+  [
+    "0x00AB70",
+    "0x00ABBF",
+    "Cherokee Supplement"
+  ],
+  [
+    "0x00ABC0",
+    "0x00ABFF",
+    "Meetei Mayek"
+  ],
+  [
+    "0x00AC00",
+    "0x00D7AF",
+    "Hangul Syllables"
+  ],
+  [
+    "0x00D7B0",
+    "0x00D7FF",
+    "Hangul Jamo Extended-B"
+  ],
+  [
+    "0x00D800",
+    "0x00DB7F",
+    "High Surrogates"
+  ],
+  [
+    "0x00DB80",
+    "0x00DBFF",
+    "High Private Use Surrogates"
+  ],
+  [
+    "0x00DC00",
+    "0x00DFFF",
+    "Low Surrogates"
+  ],
+  [
+    "0x00E000",
+    "0x00F8FF",
+    "Private Use Area"
+  ],
+  [
+    "0x00F900",
+    "0x00FAFF",
+    "CJK Compatibility Ideographs"
+  ],
+  [
+    "0x00FB00",
+    "0x00FB4F",
+    "Alphabetic Presentation Forms"
+  ],
+  [
+    "0x00FB50",
+    "0x00FDFF",
+    "Arabic Presentation Forms-A"
+  ],
+  [
+    "0x00FE00",
+    "0x00FE0F",
+    "Variation Selectors"
+  ],
+  [
+    "0x00FE10",
+    "0x00FE1F",
+    "Vertical Forms"
+  ],
+  [
+    "0x00FE20",
+    "0x00FE2F",
+    "Combining Half Marks"
+  ],
+  [
+    "0x00FE30",
+    "0x00FE4F",
+    "CJK Compatibility Forms"
+  ],
+  [
+    "0x00FE50",
+    "0x00FE6F",
+    "Small Form Variants"
+  ],
+  [
+    "0x00FE70",
+    "0x00FEFF",
+    "Arabic Presentation Forms-B"
+  ],
+  [
+    "0x00FF00",
+    "0x00FFEF",
+    "Halfwidth and Fullwidth Forms"
+  ],
+  [
+    "0x00FFF0",
+    "0x00FFFF",
+    "Specials"
+  ],
+  [
+    "0x010000",
+    "0x01007F",
+    "Linear B Syllabary"
+  ],
+  [
+    "0x010080",
+    "0x0100FF",
+    "Linear B Ideograms"
+  ],
+  [
+    "0x010100",
+    "0x01013F",
+    "Aegean Numbers"
+  ],
+  [
+    "0x010140",
+    "0x01018F",
+    "Ancient Greek Numbers"
+  ],
+  [
+    "0x010190",
+    "0x0101CF",
+    "Ancient Symbols"
+  ],
+  [
+    "0x0101D0",
+    "0x0101FF",
+    "Phaistos Disc"
+  ],
+  [
+    "0x010280",
+    "0x01029F",
+    "Lycian"
+  ],
+  [
+    "0x0102A0",
+    "0x0102DF",
+    "Carian"
+  ],
+  [
+    "0x0102E0",
+    "0x0102FF",
+    "Coptic Epact Numbers"
+  ],
+  [
+    "0x010300",
+    "0x01032F",
+    "Old Italic"
+  ],
+  [
+    "0x010330",
+    "0x01034F",
+    "Gothic"
+  ],
+  [
+    "0x010350",
+    "0x01037F",
+    "Old Permic"
+  ],
+  [
+    "0x010380",
+    "0x01039F",
+    "Ugaritic"
+  ],
+  [
+    "0x0103A0",
+    "0x0103DF",
+    "Old Persian"
+  ],
+  [
+    "0x010400",
+    "0x01044F",
+    "Deseret"
+  ],
+  [
+    "0x010450",
+    "0x01047F",
+    "Shavian"
+  ],
+  [
+    "0x010480",
+    "0x0104AF",
+    "Osmanya"
+  ],
+  [
+    "0x0104B0",
+    "0x0104FF",
+    "Osage"
+  ],
+  [
+    "0x010500",
+    "0x01052F",
+    "Elbasan"
+  ],
+  [
+    "0x010530",
+    "0x01056F",
+    "Caucasian Albanian"
+  ],
+  [
+    "0x010570",
+    "0x0105BF",
+    "Vithkuqi"
+  ],
+  [
+    "0x0105C0",
+    "0x0105FF",
+    "Todhri"
+  ],
+  [
+    "0x010600",
+    "0x01077F",
+    "Linear A"
+  ],
+  [
+    "0x010780",
+    "0x0107BF",
+    "Latin Extended-F"
+  ],
+  [
+    "0x010800",
+    "0x01083F",
+    "Cypriot Syllabary"
+  ],
+  [
+    "0x010840",
+    "0x01085F",
+    "Imperial Aramaic"
+  ],
+  [
+    "0x010860",
+    "0x01087F",
+    "Palmyrene"
+  ],
+  [
+    "0x010880",
+    "0x0108AF",
+    "Nabataean"
+  ],
+  [
+    "0x0108E0",
+    "0x0108FF",
+    "Hatran"
+  ],
+  [
+    "0x010900",
+    "0x01091F",
+    "Phoenician"
+  ],
+  [
+    "0x010920",
+    "0x01093F",
+    "Lydian"
+  ],
+  [
+    "0x010980",
+    "0x01099F",
+    "Meroitic Hieroglyphs"
+  ],
+  [
+    "0x0109A0",
+    "0x0109FF",
+    "Meroitic Cursive"
+  ],
+  [
+    "0x010A00",
+    "0x010A5F",
+    "Kharoshthi"
+  ],
+  [
+    "0x010A60",
+    "0x010A7F",
+    "Old South Arabian"
+  ],
+  [
+    "0x010A80",
+    "0x010A9F",
+    "Old North Arabian"
+  ],
+  [
+    "0x010AC0",
+    "0x010AFF",
+    "Manichaean"
+  ],
+  [
+    "0x010B00",
+    "0x010B3F",
+    "Avestan"
+  ],
+  [
+    "0x010B40",
+    "0x010B5F",
+    "Inscriptional Parthian"
+  ],
+  [
+    "0x010B60",
+    "0x010B7F",
+    "Inscriptional Pahlavi"
+  ],
+  [
+    "0x010B80",
+    "0x010BAF",
+    "Psalter Pahlavi"
+  ],
+  [
+    "0x010C00",
+    "0x010C4F",
+    "Old Turkic"
+  ],
+  [
+    "0x010C80",
+    "0x010CFF",
+    "Old Hungarian"
+  ],
+  [
+    "0x010D00",
+    "0x010D3F",
+    "Hanifi Rohingya"
+  ],
+  [
+    "0x010D40",
+    "0x010D8F",
+    "Garay"
+  ],
+  [
+    "0x010E60",
+    "0x010E7F",
+    "Rumi Numeral Symbols"
+  ],
+  [
+    "0x010E80",
+    "0x010EBF",
+    "Yezidi"
+  ],
+  [
+    "0x010EC0",
+    "0x010EFF",
+    "Arabic Extended-C"
+  ],
+  [
+    "0x010F00",
+    "0x010F2F",
+    "Old Sogdian"
+  ],
+  [
+    "0x010F30",
+    "0x010F6F",
+    "Sogdian"
+  ],
+  [
+    "0x010F70",
+    "0x010FAF",
+    "Old Uyghur"
+  ],
+  [
+    "0x010FB0",
+    "0x010FDF",
+    "Chorasmian"
+  ],
+  [
+    "0x010FE0",
+    "0x010FFF",
+    "Elymaic"
+  ],
+  [
+    "0x011000",
+    "0x01107F",
+    "Brahmi"
+  ],
+  [
+    "0x011080",
+    "0x0110CF",
+    "Kaithi"
+  ],
+  [
+    "0x0110D0",
+    "0x0110FF",
+    "Sora Sompeng"
+  ],
+  [
+    "0x011100",
+    "0x01114F",
+    "Chakma"
+  ],
+  [
+    "0x011150",
+    "0x01117F",
+    "Mahajani"
+  ],
+  [
+    "0x011180",
+    "0x0111DF",
+    "Sharada"
+  ],
+  [
+    "0x0111E0",
+    "0x0111FF",
+    "Sinhala Archaic Numbers"
+  ],
+  [
+    "0x011200",
+    "0x01124F",
+    "Khojki"
+  ],
+  [
+    "0x011280",
+    "0x0112AF",
+    "Multani"
+  ],
+  [
+    "0x0112B0",
+    "0x0112FF",
+    "Khudawadi"
+  ],
+  [
+    "0x011300",
+    "0x01137F",
+    "Grantha"
+  ],
+  [
+    "0x011380",
+    "0x0113FF",
+    "Tulu-Tigalari"
+  ],
+  [
+    "0x011400",
+    "0x01147F",
+    "Newa"
+  ],
+  [
+    "0x011480",
+    "0x0114DF",
+    "Tirhuta"
+  ],
+  [
+    "0x011580",
+    "0x0115FF",
+    "Siddham"
+  ],
+  [
+    "0x011600",
+    "0x01165F",
+    "Modi"
+  ],
+  [
+    "0x011660",
+    "0x01167F",
+    "Mongolian Supplement"
+  ],
+  [
+    "0x011680",
+    "0x0116CF",
+    "Takri"
+  ],
+  [
+    "0x0116D0",
+    "0x0116FF",
+    "Myanmar Extended-C"
+  ],
+  [
+    "0x011700",
+    "0x01174F",
+    "Ahom"
+  ],
+  [
+    "0x011800",
+    "0x01184F",
+    "Dogra"
+  ],
+  [
+    "0x0118A0",
+    "0x0118FF",
+    "Warang Citi"
+  ],
+  [
+    "0x011900",
+    "0x01195F",
+    "Dives Akuru"
+  ],
+  [
+    "0x0119A0",
+    "0x0119FF",
+    "Nandinagari"
+  ],
+  [
+    "0x011A00",
+    "0x011A4F",
+    "Zanabazar Square"
+  ],
+  [
+    "0x011A50",
+    "0x011AAF",
+    "Soyombo"
+  ],
+  [
+    "0x011AB0",
+    "0x011ABF",
+    "Unified Canadian Aboriginal Syllabics Extended-A"
+  ],
+  [
+    "0x011AC0",
+    "0x011AFF",
+    "Pau Cin Hau"
+  ],
+  [
+    "0x011B00",
+    "0x011B5F",
+    "Devanagari Extended-A"
+  ],
+  [
+    "0x011BC0",
+    "0x011BFF",
+    "Sunuwar"
+  ],
+  [
+    "0x011C00",
+    "0x011C6F",
+    "Bhaiksuki"
+  ],
+  [
+    "0x011C70",
+    "0x011CBF",
+    "Marchen"
+  ],
+  [
+    "0x011D00",
+    "0x011D5F",
+    "Masaram Gondi"
+  ],
+  [
+    "0x011D60",
+    "0x011DAF",
+    "Gunjala Gondi"
+  ],
+  [
+    "0x011EE0",
+    "0x011EFF",
+    "Makasar"
+  ],
+  [
+    "0x011F00",
+    "0x011F5F",
+    "Kawi"
+  ],
+  [
+    "0x011FB0",
+    "0x011FBF",
+    "Lisu Supplement"
+  ],
+  [
+    "0x011FC0",
+    "0x011FFF",
+    "Tamil Supplement"
+  ],
+  [
+    "0x012000",
+    "0x0123FF",
+    "Cuneiform"
+  ],
+  [
+    "0x012400",
+    "0x01247F",
+    "Cuneiform Numbers and Punctuation"
+  ],
+  [
+    "0x012480",
+    "0x01254F",
+    "Early Dynastic Cuneiform"
+  ],
+  [
+    "0x012F90",
+    "0x012FFF",
+    "Cypro-Minoan"
+  ],
+  [
+    "0x013000",
+    "0x01342F",
+    "Egyptian Hieroglyphs"
+  ],
+  [
+    "0x013430",
+    "0x01345F",
+    "Egyptian Hieroglyph Format Controls"
+  ],
+  [
+    "0x013460",
+    "0x0143FF",
+    "Egyptian Hieroglyphs Extended-A"
+  ],
+  [
+    "0x014400",
+    "0x01467F",
+    "Anatolian Hieroglyphs"
+  ],
+  [
+    "0x016100",
+    "0x01613F",
+    "Gurung Khema"
+  ],
+  [
+    "0x016800",
+    "0x016A3F",
+    "Bamum Supplement"
+  ],
+  [
+    "0x016A40",
+    "0x016A6F",
+    "Mro"
+  ],
+  [
+    "0x016A70",
+    "0x016ACF",
+    "Tangsa"
+  ],
+  [
+    "0x016AD0",
+    "0x016AFF",
+    "Bassa Vah"
+  ],
+  [
+    "0x016B00",
+    "0x016B8F",
+    "Pahawh Hmong"
+  ],
+  [
+    "0x016D40",
+    "0x016D7F",
+    "Kirat Rai"
+  ],
+  [
+    "0x016E40",
+    "0x016E9F",
+    "Medefaidrin"
+  ],
+  [
+    "0x016F00",
+    "0x016F9F",
+    "Miao"
+  ],
+  [
+    "0x016FE0",
+    "0x016FFF",
+    "Ideographic Symbols and Punctuation"
+  ],
+  [
+    "0x017000",
+    "0x0187FF",
+    "Tangut"
+  ],
+  [
+    "0x018800",
+    "0x018AFF",
+    "Tangut Components"
+  ],
+  [
+    "0x018B00",
+    "0x018CFF",
+    "Khitan Small Script"
+  ],
+  [
+    "0x018D00",
+    "0x018D7F",
+    "Tangut Supplement"
+  ],
+  [
+    "0x01AFF0",
+    "0x01AFFF",
+    "Kana Extended-B"
+  ],
+  [
+    "0x01B000",
+    "0x01B0FF",
+    "Kana Supplement"
+  ],
+  [
+    "0x01B100",
+    "0x01B12F",
+    "Kana Extended-A"
+  ],
+  [
+    "0x01B130",
+    "0x01B16F",
+    "Small Kana Extension"
+  ],
+  [
+    "0x01B170",
+    "0x01B2FF",
+    "Nushu"
+  ],
+  [
+    "0x01BC00",
+    "0x01BC9F",
+    "Duployan"
+  ],
+  [
+    "0x01BCA0",
+    "0x01BCAF",
+    "Shorthand Format Controls"
+  ],
+  [
+    "0x01CC00",
+    "0x01CEBF",
+    "Symbols for Legacy Computing Supplement"
+  ],
+  [
+    "0x01CF00",
+    "0x01CFCF",
+    "Znamenny Musical Notation"
+  ],
+  [
+    "0x01D000",
+    "0x01D0FF",
+    "Byzantine Musical Symbols"
+  ],
+  [
+    "0x01D100",
+    "0x01D1FF",
+    "Musical Symbols"
+  ],
+  [
+    "0x01D200",
+    "0x01D24F",
+    "Ancient Greek Musical Notation"
+  ],
+  [
+    "0x01D2C0",
+    "0x01D2DF",
+    "Kaktovik Numerals"
+  ],
+  [
+    "0x01D2E0",
+    "0x01D2FF",
+    "Mayan Numerals"
+  ],
+  [
+    "0x01D300",
+    "0x01D35F",
+    "Tai Xuan Jing Symbols"
+  ],
+  [
+    "0x01D360",
+    "0x01D37F",
+    "Counting Rod Numerals"
+  ],
+  [
+    "0x01D400",
+    "0x01D7FF",
+    "Mathematical Alphanumeric Symbols"
+  ],
+  [
+    "0x01D800",
+    "0x01DAAF",
+    "Sutton SignWriting"
+  ],
+  [
+    "0x01DF00",
+    "0x01DFFF",
+    "Latin Extended-G"
+  ],
+  [
+    "0x01E000",
+    "0x01E02F",
+    "Glagolitic Supplement"
+  ],
+  [
+    "0x01E030",
+    "0x01E08F",
+    "Cyrillic Extended-D"
+  ],
+  [
+    "0x01E100",
+    "0x01E14F",
+    "Nyiakeng Puachue Hmong"
+  ],
+  [
+    "0x01E290",
+    "0x01E2BF",
+    "Toto"
+  ],
+  [
+    "0x01E2C0",
+    "0x01E2FF",
+    "Wancho"
+  ],
+  [
+    "0x01E4D0",
+    "0x01E4FF",
+    "Nag Mundari"
+  ],
+  [
+    "0x01E5D0",
+    "0x01E5FF",
+    "Ol Onal"
+  ],
+  [
+    "0x01E7E0",
+    "0x01E7FF",
+    "Ethiopic Extended-B"
+  ],
+  [
+    "0x01E800",
+    "0x01E8DF",
+    "Mende Kikakui"
+  ],
+  [
+    "0x01E900",
+    "0x01E95F",
+    "Adlam"
+  ],
+  [
+    "0x01EC70",
+    "0x01ECBF",
+    "Indic Siyaq Numbers"
+  ],
+  [
+    "0x01ED00",
+    "0x01ED4F",
+    "Ottoman Siyaq Numbers"
+  ],
+  [
+    "0x01EE00",
+    "0x01EEFF",
+    "Arabic Mathematical Alphabetic Symbols"
+  ],
+  [
+    "0x01F000",
+    "0x01F02F",
+    "Mahjong Tiles"
+  ],
+  [
+    "0x01F030",
+    "0x01F09F",
+    "Domino Tiles"
+  ],
+  [
+    "0x01F0A0",
+    "0x01F0FF",
+    "Playing Cards"
+  ],
+  [
+    "0x01F100",
+    "0x01F1FF",
+    "Enclosed Alphanumeric Supplement"
+  ],
+  [
+    "0x01F200",
+    "0x01F2FF",
+    "Enclosed Ideographic Supplement"
+  ],
+  [
+    "0x01F300",
+    "0x01F5FF",
+    "Miscellaneous Symbols and Pictographs"
+  ],
+  [
+    "0x01F600",
+    "0x01F64F",
+    "Emoticons"
+  ],
+  [
+    "0x01F650",
+    "0x01F67F",
+    "Ornamental Dingbats"
+  ],
+  [
+    "0x01F680",
+    "0x01F6FF",
+    "Transport and Map Symbols"
+  ],
+  [
+    "0x01F700",
+    "0x01F77F",
+    "Alchemical Symbols"
+  ],
+  [
+    "0x01F780",
+    "0x01F7FF",
+    "Geometric Shapes Extended"
+  ],
+  [
+    "0x01F800",
+    "0x01F8FF",
+    "Supplemental Arrows-C"
+  ],
+  [
+    "0x01F900",
+    "0x01F9FF",
+    "Supplemental Symbols and Pictographs"
+  ],
+  [
+    "0x01FA00",
+    "0x01FA6F",
+    "Chess Symbols"
+  ],
+  [
+    "0x01FA70",
+    "0x01FAFF",
+    "Symbols and Pictographs Extended-A"
+  ],
+  [
+    "0x01FB00",
+    "0x01FBFF",
+    "Symbols for Legacy Computing"
+  ],
+  [
+    "0x020000",
+    "0x02A6DF",
+    "CJK Unified Ideographs Extension B"
+  ],
+  [
+    "0x02A700",
+    "0x02B73F",
+    "CJK Unified Ideographs Extension C"
+  ],
+  [
+    "0x02B740",
+    "0x02B81F",
+    "CJK Unified Ideographs Extension D"
+  ],
+  [
+    "0x02B820",
+    "0x02CEAF",
+    "CJK Unified Ideographs Extension E"
+  ],
+  [
+    "0x02CEB0",
+    "0x02EBEF",
+    "CJK Unified Ideographs Extension F"
+  ],
+  [
+    "0x02EBF0",
+    "0x02EE5F",
+    "CJK Unified Ideographs Extension I"
+  ],
+  [
+    "0x02F800",
+    "0x02FA1F",
+    "CJK Compatibility Ideographs Supplement"
+  ],
+  [
+    "0x030000",
+    "0x03134F",
+    "CJK Unified Ideographs Extension G"
+  ],
+  [
+    "0x031350",
+    "0x0323AF",
+    "CJK Unified Ideographs Extension H"
+  ],
+  [
+    "0x0E0000",
+    "0x0E007F",
+    "Tags"
+  ],
+  [
+    "0x0E0100",
+    "0x0E01EF",
+    "Variation Selectors Supplement"
+  ],
+  [
+    "0x0F0000",
+    "0x0FFFFF",
+    "Supplementary Private Use Area-A"
+  ],
+  [
+    "0x100000",
+    "0x10FFFF",
+    "Supplementary Private Use Area-B"
+  ]
+];
