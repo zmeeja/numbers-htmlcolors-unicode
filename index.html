@@ -49,6 +49,9 @@
             style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></button>
         <button onclick="render(Object.keys(entitiesMap).sort().map(x => parseInt(x, 16)))">named HTML <b>entities</b></button>
     </div>
+    <div style="background-color: lightcoral; padding: 5px;">
+        <button onclick="render(range(0x2200, parseInt(0x22FF)+1))"><b>[0x2200, 0x22FF]</b> Mathematical Operators</button>
+    </div>
     <div style="background-color: lightgreen; padding: 5px;">
         <select id="selectUnicodeBlocks" onchange="render(range(selectUnicodeBlocks.value.split('-')[0], parseInt(selectUnicodeBlocks.value.split('-')[1])+1))"></select>
     </div>
