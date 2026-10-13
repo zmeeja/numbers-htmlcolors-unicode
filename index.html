@@ -6,11 +6,11 @@
     <title>Document</title>
     
     <script src="maps/colorsMap.js"></script>
-    <script src="maps/unicodeMap.js"></script>
-    <script src="maps/unicodeMapRu.js"></script>
-    <script src="maps/blocksMap.js"></script>
+    <script src="data/UnicodeData/unicodeMap.js"></script>
+    <script src="data/UnicodeData/unicodeMapRu.js"></script>
+    <script src="data/UnicodeBlocks/blocksMap.js"></script>
     <script src="maps/controlCharactersMap.js"></script>
-    <script src="maps/entitiesMap.js"></script>
+    <script src="data/entities/entitiesMap.js"></script>
     <script src="maps/base64Map.js"></script>
 
     <script src="additionalDataTypes.js"></script>
@@ -23,6 +23,14 @@
 
     <link rel="stylesheet" href="styleTable.css">
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Событие DOMContentLoaded сработает после того, как все скрипты с defer 
+        // завершат своё выполнение, а структура страницы будет полностью готова.
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Все скрипты загружены, выполняем финальный рендеринг...');
+            render(range(128));
+        });
+    </script>
 </head>
 <body>
     <div id="buttonsSelector" style="background-color: plum; padding: 5px;">
@@ -41,6 +49,18 @@
             style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></button>
         <button onclick="render(Object.keys(entitiesMap).sort().map(x => parseInt(x, 16)))">named HTML <b>entities</b></button>
     </div>
+    <div style="background-color: lightgreen; padding: 5px;">
+        <select id="selectUnicodeBlocks" onchange="render(range(selectUnicodeBlocks.value.split('-')[0], parseInt(selectUnicodeBlocks.value.split('-')[1])+1))"></select>
+    </div>
+    <script>
+        const selectUnicodeBlocks = document.getElementById("selectUnicodeBlocks");
+        for (let i of blocksMap) {
+            let option = document.createElement("option");
+            option.value = i[0] + "-" + i[1];
+            option.textContent = i[2] + " [" + i[0] + ".." + i[1] + "]";
+            selectUnicodeBlocks.appendChild(option);
+        }
+    </script>
     <div style="background-color: palevioletred; padding: 5px;">
         <span>UNI:</span>
         <input type="text" id="textInput">

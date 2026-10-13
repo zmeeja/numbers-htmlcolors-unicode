@@ -1,7 +1,15 @@
 //const { start } = require("repl");
 
 function* range(x1, x2 = undefined, step = 1) {
+    if (typeof x1 == "string") {
+        x1 = parseInt(x1, 16);
+    }
+    if (typeof x2 == "string") {
+        x2 = parseInt(x2, 16);
+    }
+
     let start, stop;
+    
     if (x2 === undefined) {
         [start, stop] = [0, x1];
     }

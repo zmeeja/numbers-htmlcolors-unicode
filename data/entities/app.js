@@ -28,7 +28,5 @@ for (let i in entitiesMap) {
     entitiesMap[i] = entitiesMap[i].sort((a, b) => a.length - b.length);
 }
 
-console.log(maxLength);
-
-// const jsContent = `const entitiesMap = ${JSON.stringify(entitiesMap)};\n\nexport default entitiesMap;`;
-// fs.writeFileSync("entitiesMap.js", jsContent, "utf8");
+const jsContent = `const entitiesMap = ${JSON.stringify(entitiesMap, null, 2)};`;
+fs.writeFileSync("entitiesMap.js", jsContent, "utf8");

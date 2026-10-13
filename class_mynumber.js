@@ -4,6 +4,11 @@ class mynumber{
 
     constructor(x){
 
+        if(typeof x == "string"){
+            if(x.startsWith("0x")){
+                x = parseInt(x, 16);
+            }
+        }
         this.x = x;
 
         //Integer

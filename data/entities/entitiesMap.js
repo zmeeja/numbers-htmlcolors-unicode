@@ -1,3 +1,5032 @@
-const entitiesMap = {"0000C6":["&AElig","&AElig;"],"000026":["&AMP","&amp","&AMP;","&amp;"],"0000C1":["&Aacute","&Aacute;"],"000102":["&Abreve;"],"0000C2":["&Acirc","&Acirc;"],"000410":["&Acy;"],"01D504":["&Afr;"],"0000C0":["&Agrave","&Agrave;"],"000391":["&Alpha;"],"000100":["&Amacr;"],"002A53":["&And;"],"000104":["&Aogon;"],"01D538":["&Aopf;"],"002061":["&af;","&ApplyFunction;"],"0000C5":["&Aring","&Aring;","&angst;"],"01D49C":["&Ascr;"],"002254":["&Assign;","&colone;","&coloneq;"],"0000C3":["&Atilde","&Atilde;"],"0000C4":["&Auml","&Auml;"],"002216":["&setmn;","&ssetmn;","&setminus;","&Backslash;","&smallsetminus;"],"002AE7":["&Barv;"],"002306":["&Barwed;","&doublebarwedge;"],"000411":["&Bcy;"],"002235":["&becaus;","&Because;","&because;"],"00212C":["&Bscr;","&bernou;","&Bernoullis;"],"000392":["&Beta;"],"01D505":["&Bfr;"],"01D539":["&Bopf;"],"0002D8":["&Breve;","&breve;"],"00224E":["&bump;","&Bumpeq;","&HumpDownHump;"],"000427":["&CHcy;"],"0000A9":["&COPY","&copy","&COPY;","&copy;"],"000106":["&Cacute;"],"0022D2":["&Cap;"],"002145":["&DD;","&CapitalDifferentialD;"],"00212D":["&Cfr;","&Cayleys;"],"00010C":["&Ccaron;"],"0000C7":["&Ccedil","&Ccedil;"],"000108":["&Ccirc;"],"002230":["&Cconint;"],"00010A":["&Cdot;"],"0000B8":["&cedil","&cedil;","&Cedilla;"],"0000B7":["&middot","&middot;","&CenterDot;","&centerdot;"],"0003A7":["&Chi;"],"002299":["&odot;","&CircleDot;"],"002296":["&ominus;","&CircleMinus;"],"002295":["&oplus;","&CirclePlus;"],"002297":["&otimes;","&CircleTimes;"],"002232":["&cwconint;","&ClockwiseContourIntegral;"],"00201D":["&rdquo;","&rdquor;","&CloseCurlyDoubleQuote;"],"002019":["&rsquo;","&rsquor;","&CloseCurlyQuote;"],"002237":["&Colon;","&Proportion;"],"002A74":["&Colone;"],"002261":["&equiv;","&Congruent;"],"00222F":["&Conint;","&DoubleContourIntegral;"],"00222E":["&oint;","&conint;","&ContourIntegral;"],"002102":["&Copf;","&complexes;"],"002210":["&coprod;","&Coproduct;"],"002233":["&awconint;","&CounterClockwiseContourIntegral;"],"002A2F":["&Cross;"],"01D49E":["&Cscr;"],"0022D3":["&Cup;"],"00224D":["&CupCap;","&asympeq;"],"002911":["&DDotrahd;"],"000402":["&DJcy;"],"000405":["&DScy;"],"00040F":["&DZcy;"],"002021":["&Dagger;","&ddagger;"],"0021A1":["&Darr;"],"002AE4":["&Dashv;","&DoubleLeftTee;"],"00010E":["&Dcaron;"],"000414":["&Dcy;"],"002207":["&Del;","&nabla;"],"000394":["&Delta;"],"01D507":["&Dfr;"],"0000B4":["&acute","&acute;","&DiacriticalAcute;"],"0002D9":["&dot;","&DiacriticalDot;"],"0002DD":["&dblac;","&DiacriticalDoubleAcute;"],"000060":["&grave;","&DiacriticalGrave;"],"0002DC":["&tilde;","&DiacriticalTilde;"],"0022C4":["&diam;","&Diamond;","&diamond;"],"002146":["&dd;","&DifferentialD;"],"01D53B":["&Dopf;"],"0000A8":["&uml","&Dot;","&die;","&uml;","&DoubleDot;"],"0020DC":["&DotDot;"],"002250":["&doteq;","&esdot;","&DotEqual;"],"0021D3":["&dArr;","&Downarrow;","&DoubleDownArrow;"],"0021D0":["&lArr;","&Leftarrow;","&DoubleLeftArrow;"],"0021D4":["&iff;","&hArr;","&Leftrightarrow;","&DoubleLeftRightArrow;"],"0027F8":["&xlArr;","&Longleftarrow;","&DoubleLongLeftArrow;"],"0027FA":["&xhArr;","&Longleftrightarrow;","&DoubleLongLeftRightArrow;"],"0027F9":["&xrArr;","&Longrightarrow;","&DoubleLongRightArrow;"],"0021D2":["&rArr;","&Implies;","&Rightarrow;","&DoubleRightArrow;"],"0022A8":["&vDash;","&DoubleRightTee;"],"0021D1":["&uArr;","&Uparrow;","&DoubleUpArrow;"],"0021D5":["&vArr;","&Updownarrow;","&DoubleUpDownArrow;"],"002225":["&par;","&spar;","&parallel;","&shortparallel;","&DoubleVerticalBar;"],"002193":["&darr;","&DownArrow;","&downarrow;","&ShortDownArrow;"],"002913":["&DownArrowBar;"],"0021F5":["&duarr;","&DownArrowUpArrow;"],"000311":["&DownBreve;"],"002950":["&DownLeftRightVector;"],"00295E":["&DownLeftTeeVector;"],"0021BD":["&lhard;","&DownLeftVector;","&leftharpoondown;"],"002956":["&DownLeftVectorBar;"],"00295F":["&DownRightTeeVector;"],"0021C1":["&rhard;","&DownRightVector;","&rightharpoondown;"],"002957":["&DownRightVectorBar;"],"0022A4":["&top;","&DownTee;"],"0021A7":["&mapstodown;","&DownTeeArrow;"],"01D49F":["&Dscr;"],"000110":["&Dstrok;"],"00014A":["&ENG;"],"0000D0":["&ETH","&ETH;"],"0000C9":["&Eacute","&Eacute;"],"00011A":["&Ecaron;"],"0000CA":["&Ecirc","&Ecirc;"],"00042D":["&Ecy;"],"000116":["&Edot;"],"01D508":["&Efr;"],"0000C8":["&Egrave","&Egrave;"],"002208":["&in;","&isin;","&isinv;","&Element;"],"000112":["&Emacr;"],"0025FB":["&EmptySmallSquare;"],"0025AB":["&EmptyVerySmallSquare;"],"000118":["&Eogon;"],"01D53C":["&Eopf;"],"000395":["&Epsilon;"],"002A75":["&Equal;"],"002242":["&esim;","&eqsim;","&EqualTilde;"],"0021CC":["&rlhar;","&Equilibrium;","&rightleftharpoons;"],"002130":["&Escr;","&expectation;"],"002A73":["&Esim;"],"000397":["&Eta;"],"0000CB":["&Euml","&Euml;"],"002203":["&exist;","&Exists;"],"002147":["&ee;","&ExponentialE;","&exponentiale;"],"000424":["&Fcy;"],"01D509":["&Ffr;"],"0025FC":["&FilledSmallSquare;"],"0025AA":["&squf;","&squarf;","&blacksquare;","&FilledVerySmallSquare;"],"01D53D":["&Fopf;"],"002200":["&ForAll;","&forall;"],"002131":["&Fscr;","&Fouriertrf;"],"000403":["&GJcy;"],"00003E":["&GT","&gt","&GT;","&gt;"],"000393":["&Gamma;"],"0003DC":["&Gammad;"],"00011E":["&Gbreve;"],"000122":["&Gcedil;"],"00011C":["&Gcirc;"],"000413":["&Gcy;"],"000120":["&Gdot;"],"01D50A":["&Gfr;"],"0022D9":["&Gg;","&ggg;"],"01D53E":["&Gopf;"],"002265":["&ge;","&geq;","&GreaterEqual;"],"0022DB":["&gel;","&gtreqless;","&GreaterEqualLess;"],"002267":["&gE;","&geqq;","&GreaterFullEqual;"],"002AA2":["&GreaterGreater;"],"002277":["&gl;","&gtrless;","&GreaterLess;"],"002A7E":["&ges;","&geqslant;","&GreaterSlantEqual;"],"002273":["&gsim;","&gtrsim;","&GreaterTilde;"],"01D4A2":["&Gscr;"],"00226B":["&Gt;","&gg;","&NestedGreaterGreater;"],"00042A":["&HARDcy;"],"0002C7":["&Hacek;","&caron;"],"00005E":["&Hat;"],"000124":["&Hcirc;"],"00210C":["&Hfr;","&Poincareplane;"],"00210B":["&Hscr;","&hamilt;","&HilbertSpace;"],"00210D":["&Hopf;","&quaternions;"],"002500":["&boxh;","&HorizontalLine;"],"000126":["&Hstrok;"],"00224F":["&bumpe;","&bumpeq;","&HumpEqual;"],"000415":["&IEcy;"],"000132":["&IJlig;"],"000401":["&IOcy;"],"0000CD":["&Iacute","&Iacute;"],"0000CE":["&Icirc","&Icirc;"],"000418":["&Icy;"],"000130":["&Idot;"],"002111":["&Im;","&Ifr;","&image;","&imagpart;"],"0000CC":["&Igrave","&Igrave;"],"00012A":["&Imacr;"],"002148":["&ii;","&ImaginaryI;"],"00222C":["&Int;"],"00222B":["&int;","&Integral;"],"0022C2":["&xcap;","&bigcap;","&Intersection;"],"002063":["&ic;","&InvisibleComma;"],"002062":["&it;","&InvisibleTimes;"],"00012E":["&Iogon;"],"01D540":["&Iopf;"],"000399":["&Iota;"],"002110":["&Iscr;","&imagline;"],"000128":["&Itilde;"],"000406":["&Iukcy;"],"0000CF":["&Iuml","&Iuml;"],"000134":["&Jcirc;"],"000419":["&Jcy;"],"01D50D":["&Jfr;"],"01D541":["&Jopf;"],"01D4A5":["&Jscr;"],"000408":["&Jsercy;"],"000404":["&Jukcy;"],"000425":["&KHcy;"],"00040C":["&KJcy;"],"00039A":["&Kappa;"],"000136":["&Kcedil;"],"00041A":["&Kcy;"],"01D50E":["&Kfr;"],"01D542":["&Kopf;"],"01D4A6":["&Kscr;"],"000409":["&LJcy;"],"00003C":["&LT","&lt","&LT;","&lt;"],"000139":["&Lacute;"],"00039B":["&Lambda;"],"0027EA":["&Lang;"],"002112":["&Lscr;","&lagran;","&Laplacetrf;"],"00219E":["&Larr;","&twoheadleftarrow;"],"00013D":["&Lcaron;"],"00013B":["&Lcedil;"],"00041B":["&Lcy;"],"0027E8":["&lang;","&langle;","&LeftAngleBracket;"],"002190":["&larr;","&slarr;","&LeftArrow;","&leftarrow;","&ShortLeftArrow;"],"0021E4":["&larrb;","&LeftArrowBar;"],"0021C6":["&lrarr;","&leftrightarrows;","&LeftArrowRightArrow;"],"002308":["&lceil;","&LeftCeiling;"],"0027E6":["&lobrk;","&LeftDoubleBracket;"],"002961":["&LeftDownTeeVector;"],"0021C3":["&dharl;","&LeftDownVector;","&downharpoonleft;"],"002959":["&LeftDownVectorBar;"],"00230A":["&lfloor;","&LeftFloor;"],"002194":["&harr;","&LeftRightArrow;","&leftrightarrow;"],"00294E":["&LeftRightVector;"],"0022A3":["&dashv;","&LeftTee;"],"0021A4":["&mapstoleft;","&LeftTeeArrow;"],"00295A":["&LeftTeeVector;"],"0022B2":["&vltri;","&LeftTriangle;","&vartriangleleft;"],"0029CF":["&LeftTriangleBar;"],"0022B4":["&ltrie;","&trianglelefteq;","&LeftTriangleEqual;"],"002951":["&LeftUpDownVector;"],"002960":["&LeftUpTeeVector;"],"0021BF":["&uharl;","&LeftUpVector;","&upharpoonleft;"],"002958":["&LeftUpVectorBar;"],"0021BC":["&lharu;","&LeftVector;","&leftharpoonup;"],"002952":["&LeftVectorBar;"],"0022DA":["&leg;","&lesseqgtr;","&LessEqualGreater;"],"002266":["&lE;","&leqq;","&LessFullEqual;"],"002276":["&lg;","&lessgtr;","&LessGreater;"],"002AA1":["&LessLess;"],"002A7D":["&les;","&leqslant;","&LessSlantEqual;"],"002272":["&lsim;","&lesssim;","&LessTilde;"],"01D50F":["&Lfr;"],"0022D8":["&Ll;"],"0021DA":["&lAarr;","&Lleftarrow;"],"00013F":["&Lmidot;"],"0027F5":["&xlarr;","&LongLeftArrow;","&longleftarrow;"],"0027F7":["&xharr;","&LongLeftRightArrow;","&longleftrightarrow;"],"0027F6":["&xrarr;","&LongRightArrow;","&longrightarrow;"],"01D543":["&Lopf;"],"002199":["&swarr;","&swarrow;","&LowerLeftArrow;"],"002198":["&searr;","&searrow;","&LowerRightArrow;"],"0021B0":["&Lsh;","&lsh;"],"000141":["&Lstrok;"],"00226A":["&Lt;","&ll;","&NestedLessLess;"],"002905":["&Map;"],"00041C":["&Mcy;"],"00205F":["&MediumSpace;"],"002133":["&Mscr;","&phmmat;","&Mellintrf;"],"01D510":["&Mfr;"],"002213":["&mp;","&mnplus;","&MinusPlus;"],"01D544":["&Mopf;"],"00039C":["&Mu;"],"00040A":["&NJcy;"],"000143":["&Nacute;"],"000147":["&Ncaron;"],"000145":["&Ncedil;"],"00041D":["&Ncy;"],"00200B":["&ZeroWidthSpace;","&NegativeThinSpace;","&NegativeThickSpace;","&NegativeMediumSpace;","&NegativeVeryThinSpace;"],"00000A":["&NewLine;"],"01D511":["&Nfr;"],"002060":["&NoBreak;"],"0000A0":["&nbsp","&nbsp;","&NonBreakingSpace;"],"002115":["&Nopf;","&naturals;"],"002AEC":["&Not;"],"002262":["&nequiv;","&NotCongruent;"],"00226D":["&NotCupCap;"],"002226":["&npar;","&nspar;","&nparallel;","&nshortparallel;","&NotDoubleVerticalBar;"],"002209":["&notin;","&notinva;","&NotElement;"],"002260":["&ne;","&NotEqual;"],"002204":["&nexist;","&nexists;","&NotExists;"],"00226F":["&ngt;","&ngtr;","&NotGreater;"],"002271":["&nge;","&ngeq;","&NotGreaterEqual;"],"002279":["&ntgl;","&NotGreaterLess;"],"002275":["&ngsim;","&NotGreaterTilde;"],"0022EA":["&nltri;","&ntriangleleft;","&NotLeftTriangle;"],"0022EC":["&nltrie;","&ntrianglelefteq;","&NotLeftTriangleEqual;"],"00226E":["&nlt;","&nless;","&NotLess;"],"002270":["&nle;","&nleq;","&NotLessEqual;"],"002278":["&ntlg;","&NotLessGreater;"],"002274":["&nlsim;","&NotLessTilde;"],"002280":["&npr;","&nprec;","&NotPrecedes;"],"0022E0":["&nprcue;","&NotPrecedesSlantEqual;"],"00220C":["&notni;","&notniva;","&NotReverseElement;"],"0022EB":["&nrtri;","&ntriangleright;","&NotRightTriangle;"],"0022ED":["&nrtrie;","&ntrianglerighteq;","&NotRightTriangleEqual;"],"0022E2":["&nsqsube;","&NotSquareSubsetEqual;"],"0022E3":["&nsqsupe;","&NotSquareSupersetEqual;"],"002288":["&nsube;","&nsubseteq;","&NotSubsetEqual;"],"002281":["&nsc;","&nsucc;","&NotSucceeds;"],"0022E1":["&nsccue;","&NotSucceedsSlantEqual;"],"002289":["&nsupe;","&nsupseteq;","&NotSupersetEqual;"],"002241":["&nsim;","&NotTilde;"],"002244":["&nsime;","&nsimeq;","&NotTildeEqual;"],"002247":["&ncong;","&NotTildeFullEqual;"],"002249":["&nap;","&napprox;","&NotTildeTilde;"],"002224":["&nmid;","&nsmid;","&nshortmid;","&NotVerticalBar;"],"01D4A9":["&Nscr;"],"0000D1":["&Ntilde","&Ntilde;"],"00039D":["&Nu;"],"000152":["&OElig;"],"0000D3":["&Oacute","&Oacute;"],"0000D4":["&Ocirc","&Ocirc;"],"00041E":["&Ocy;"],"000150":["&Odblac;"],"01D512":["&Ofr;"],"0000D2":["&Ograve","&Ograve;"],"00014C":["&Omacr;"],"0003A9":["&ohm;","&Omega;"],"00039F":["&Omicron;"],"01D546":["&Oopf;"],"00201C":["&ldquo;","&OpenCurlyDoubleQuote;"],"002018":["&lsquo;","&OpenCurlyQuote;"],"002A54":["&Or;"],"01D4AA":["&Oscr;"],"0000D8":["&Oslash","&Oslash;"],"0000D5":["&Otilde","&Otilde;"],"002A37":["&Otimes;"],"0000D6":["&Ouml","&Ouml;"],"00203E":["&oline;","&OverBar;"],"0023DE":["&OverBrace;"],"0023B4":["&tbrk;","&OverBracket;"],"0023DC":["&OverParenthesis;"],"002202":["&part;","&PartialD;"],"00041F":["&Pcy;"],"01D513":["&Pfr;"],"0003A6":["&Phi;"],"0003A0":["&Pi;"],"0000B1":["&pm;","&plusmn","&plusmn;","&PlusMinus;"],"002119":["&Popf;","&primes;"],"002ABB":["&Pr;"],"00227A":["&pr;","&prec;","&Precedes;"],"002AAF":["&pre;","&preceq;","&PrecedesEqual;"],"00227C":["&prcue;","&preccurlyeq;","&PrecedesSlantEqual;"],"00227E":["&prsim;","&precsim;","&PrecedesTilde;"],"002033":["&Prime;"],"00220F":["&prod;","&Product;"],"00221D":["&prop;","&vprop;","&propto;","&varpropto;","&Proportional;"],"01D4AB":["&Pscr;"],"0003A8":["&Psi;"],"000022":["&QUOT","&quot","&QUOT;","&quot;"],"01D514":["&Qfr;"],"00211A":["&Qopf;","&rationals;"],"01D4AC":["&Qscr;"],"002910":["&RBarr;","&drbkarow;"],"0000AE":["&REG","&reg","&REG;","&reg;","&circledR;"],"000154":["&Racute;"],"0027EB":["&Rang;"],"0021A0":["&Rarr;","&twoheadrightarrow;"],"002916":["&Rarrtl;"],"000158":["&Rcaron;"],"000156":["&Rcedil;"],"000420":["&Rcy;"],"00211C":["&Re;","&Rfr;","&real;","&realpart;"],"00220B":["&ni;","&niv;","&SuchThat;","&ReverseElement;"],"0021CB":["&lrhar;","&leftrightharpoons;","&ReverseEquilibrium;"],"00296F":["&duhar;","&ReverseUpEquilibrium;"],"0003A1":["&Rho;"],"0027E9":["&rang;","&rangle;","&RightAngleBracket;"],"002192":["&rarr;","&srarr;","&RightArrow;","&rightarrow;","&ShortRightArrow;"],"0021E5":["&rarrb;","&RightArrowBar;"],"0021C4":["&rlarr;","&rightleftarrows;","&RightArrowLeftArrow;"],"002309":["&rceil;","&RightCeiling;"],"0027E7":["&robrk;","&RightDoubleBracket;"],"00295D":["&RightDownTeeVector;"],"0021C2":["&dharr;","&RightDownVector;","&downharpoonright;"],"002955":["&RightDownVectorBar;"],"00230B":["&rfloor;","&RightFloor;"],"0022A2":["&vdash;","&RightTee;"],"0021A6":["&map;","&mapsto;","&RightTeeArrow;"],"00295B":["&RightTeeVector;"],"0022B3":["&vrtri;","&RightTriangle;","&vartriangleright;"],"0029D0":["&RightTriangleBar;"],"0022B5":["&rtrie;","&trianglerighteq;","&RightTriangleEqual;"],"00294F":["&RightUpDownVector;"],"00295C":["&RightUpTeeVector;"],"0021BE":["&uharr;","&RightUpVector;","&upharpoonright;"],"002954":["&RightUpVectorBar;"],"0021C0":["&rharu;","&RightVector;","&rightharpoonup;"],"002953":["&RightVectorBar;"],"00211D":["&Ropf;","&reals;"],"002970":["&RoundImplies;"],"0021DB":["&rAarr;","&Rrightarrow;"],"00211B":["&Rscr;","&realine;"],"0021B1":["&Rsh;","&rsh;"],"0029F4":["&RuleDelayed;"],"000429":["&SHCHcy;"],"000428":["&SHcy;"],"00042C":["&SOFTcy;"],"00015A":["&Sacute;"],"002ABC":["&Sc;"],"000160":["&Scaron;"],"00015E":["&Scedil;"],"00015C":["&Scirc;"],"000421":["&Scy;"],"01D516":["&Sfr;"],"002191":["&uarr;","&UpArrow;","&uparrow;","&ShortUpArrow;"],"0003A3":["&Sigma;"],"002218":["&compfn;","&SmallCircle;"],"01D54A":["&Sopf;"],"00221A":["&Sqrt;","&radic;"],"0025A1":["&squ;","&Square;","&square;"],"002293":["&sqcap;","&SquareIntersection;"],"00228F":["&sqsub;","&sqsubset;","&SquareSubset;"],"002291":["&sqsube;","&sqsubseteq;","&SquareSubsetEqual;"],"002290":["&sqsup;","&sqsupset;","&SquareSuperset;"],"002292":["&sqsupe;","&sqsupseteq;","&SquareSupersetEqual;"],"002294":["&sqcup;","&SquareUnion;"],"01D4AE":["&Sscr;"],"0022C6":["&Star;","&sstarf;"],"0022D0":["&Sub;","&Subset;"],"002286":["&sube;","&subseteq;","&SubsetEqual;"],"00227B":["&sc;","&succ;","&Succeeds;"],"002AB0":["&sce;","&succeq;","&SucceedsEqual;"],"00227D":["&sccue;","&succcurlyeq;","&SucceedsSlantEqual;"],"00227F":["&scsim;","&succsim;","&SucceedsTilde;"],"002211":["&Sum;","&sum;"],"0022D1":["&Sup;","&Supset;"],"002283":["&sup;","&supset;","&Superset;"],"002287":["&supe;","&supseteq;","&SupersetEqual;"],"0000DE":["&THORN","&THORN;"],"002122":["&TRADE;","&trade;"],"00040B":["&TSHcy;"],"000426":["&TScy;"],"000009":["&Tab;"],"0003A4":["&Tau;"],"000164":["&Tcaron;"],"000162":["&Tcedil;"],"000422":["&Tcy;"],"01D517":["&Tfr;"],"002234":["&there4;","&Therefore;","&therefore;"],"000398":["&Theta;"],"002009":["&thinsp;","&ThinSpace;"],"00223C":["&sim;","&Tilde;","&thksim;","&thicksim;"],"002243":["&sime;","&simeq;","&TildeEqual;"],"002245":["&cong;","&TildeFullEqual;"],"002248":["&ap;","&asymp;","&thkap;","&approx;","&TildeTilde;","&thickapprox;"],"01D54B":["&Topf;"],"0020DB":["&tdot;","&TripleDot;"],"01D4AF":["&Tscr;"],"000166":["&Tstrok;"],"0000DA":["&Uacute","&Uacute;"],"00219F":["&Uarr;"],"002949":["&Uarrocir;"],"00040E":["&Ubrcy;"],"00016C":["&Ubreve;"],"0000DB":["&Ucirc","&Ucirc;"],"000423":["&Ucy;"],"000170":["&Udblac;"],"01D518":["&Ufr;"],"0000D9":["&Ugrave","&Ugrave;"],"00016A":["&Umacr;"],"00005F":["&lowbar;","&UnderBar;"],"0023DF":["&UnderBrace;"],"0023B5":["&bbrk;","&UnderBracket;"],"0023DD":["&UnderParenthesis;"],"0022C3":["&xcup;","&Union;","&bigcup;"],"00228E":["&uplus;","&UnionPlus;"],"000172":["&Uogon;"],"01D54C":["&Uopf;"],"002912":["&UpArrowBar;"],"0021C5":["&udarr;","&UpArrowDownArrow;"],"002195":["&varr;","&UpDownArrow;","&updownarrow;"],"00296E":["&udhar;","&UpEquilibrium;"],"0022A5":["&bot;","&perp;","&UpTee;","&bottom;"],"0021A5":["&mapstoup;","&UpTeeArrow;"],"002196":["&nwarr;","&nwarrow;","&UpperLeftArrow;"],"002197":["&nearr;","&nearrow;","&UpperRightArrow;"],"0003D2":["&Upsi;","&upsih;"],"0003A5":["&Upsilon;"],"00016E":["&Uring;"],"01D4B0":["&Uscr;"],"000168":["&Utilde;"],"0000DC":["&Uuml","&Uuml;"],"0022AB":["&VDash;"],"002AEB":["&Vbar;"],"000412":["&Vcy;"],"0022A9":["&Vdash;"],"002AE6":["&Vdashl;"],"0022C1":["&Vee;","&xvee;","&bigvee;"],"002016":["&Vert;","&Verbar;"],"002223":["&mid;","&smid;","&shortmid;","&VerticalBar;"],"00007C":["&vert;","&verbar;","&VerticalLine;"],"002758":["&VerticalSeparator;"],"002240":["&wr;","&wreath;","&VerticalTilde;"],"00200A":["&hairsp;","&VeryThinSpace;"],"01D519":["&Vfr;"],"01D54D":["&Vopf;"],"01D4B1":["&Vscr;"],"0022AA":["&Vvdash;"],"000174":["&Wcirc;"],"0022C0":["&Wedge;","&xwedge;","&bigwedge;"],"01D51A":["&Wfr;"],"01D54E":["&Wopf;"],"01D4B2":["&Wscr;"],"01D51B":["&Xfr;"],"00039E":["&Xi;"],"01D54F":["&Xopf;"],"01D4B3":["&Xscr;"],"00042F":["&YAcy;"],"000407":["&YIcy;"],"00042E":["&YUcy;"],"0000DD":["&Yacute","&Yacute;"],"000176":["&Ycirc;"],"00042B":["&Ycy;"],"01D51C":["&Yfr;"],"01D550":["&Yopf;"],"01D4B4":["&Yscr;"],"000178":["&Yuml;"],"000416":["&ZHcy;"],"000179":["&Zacute;"],"00017D":["&Zcaron;"],"000417":["&Zcy;"],"00017B":["&Zdot;"],"000396":["&Zeta;"],"002128":["&Zfr;","&zeetrf;"],"002124":["&Zopf;","&integers;"],"01D4B5":["&Zscr;"],"0000E1":["&aacute","&aacute;"],"000103":["&abreve;"],"00223E":["&ac;","&mstpos;"],"00223F":["&acd;"],"0000E2":["&acirc","&acirc;"],"000430":["&acy;"],"0000E6":["&aelig","&aelig;"],"01D51E":["&afr;"],"0000E0":["&agrave","&agrave;"],"002135":["&aleph;","&alefsym;"],"0003B1":["&alpha;"],"000101":["&amacr;"],"002A3F":["&amalg;"],"002227":["&and;","&wedge;"],"002A55":["&andand;"],"002A5C":["&andd;"],"002A58":["&andslope;"],"002A5A":["&andv;"],"002220":["&ang;","&angle;"],"0029A4":["&ange;"],"002221":["&angmsd;","&measuredangle;"],"0029A8":["&angmsdaa;"],"0029A9":["&angmsdab;"],"0029AA":["&angmsdac;"],"0029AB":["&angmsdad;"],"0029AC":["&angmsdae;"],"0029AD":["&angmsdaf;"],"0029AE":["&angmsdag;"],"0029AF":["&angmsdah;"],"00221F":["&angrt;"],"0022BE":["&angrtvb;"],"00299D":["&angrtvbd;"],"002222":["&angsph;"],"00237C":["&angzarr;"],"000105":["&aogon;"],"01D552":["&aopf;"],"002A70":["&apE;"],"002A6F":["&apacir;"],"00224A":["&ape;","&approxeq;"],"00224B":["&apid;"],"000027":["&apos;"],"0000E5":["&aring","&aring;"],"01D4B6":["&ascr;"],"00002A":["&ast;","&midast;"],"0000E3":["&atilde","&atilde;"],"0000E4":["&auml","&auml;"],"002A11":["&awint;"],"002AED":["&bNot;"],"00224C":["&bcong;","&backcong;"],"0003F6":["&bepsi;","&backepsilon;"],"002035":["&bprime;","&backprime;"],"00223D":["&bsim;","&backsim;"],"0022CD":["&bsime;","&backsimeq;"],"0022BD":["&barvee;"],"002305":["&barwed;","&barwedge;"],"0023B6":["&bbrktbrk;"],"000431":["&bcy;"],"00201E":["&bdquo;","&ldquor;"],"0029B0":["&bemptyv;"],"0003B2":["&beta;"],"002136":["&beth;"],"00226C":["&twixt;","&between;"],"01D51F":["&bfr;"],"0025EF":["&xcirc;","&bigcirc;"],"002A00":["&xodot;","&bigodot;"],"002A01":["&xoplus;","&bigoplus;"],"002A02":["&xotime;","&bigotimes;"],"002A06":["&xsqcup;","&bigsqcup;"],"002605":["&starf;","&bigstar;"],"0025BD":["&xdtri;","&bigtriangledown;"],"0025B3":["&xutri;","&bigtriangleup;"],"002A04":["&xuplus;","&biguplus;"],"00290D":["&rbarr;","&bkarow;"],"0029EB":["&lozf;","&blacklozenge;"],"0025B4":["&utrif;","&blacktriangle;"],"0025BE":["&dtrif;","&blacktriangledown;"],"0025C2":["&ltrif;","&blacktriangleleft;"],"0025B8":["&rtrif;","&blacktriangleright;"],"002423":["&blank;"],"002592":["&blk12;"],"002591":["&blk14;"],"002593":["&blk34;"],"002588":["&block;"],"002310":["&bnot;"],"01D553":["&bopf;"],"0022C8":["&bowtie;"],"002557":["&boxDL;"],"002554":["&boxDR;"],"002556":["&boxDl;"],"002553":["&boxDr;"],"002550":["&boxH;"],"002566":["&boxHD;"],"002569":["&boxHU;"],"002564":["&boxHd;"],"002567":["&boxHu;"],"00255D":["&boxUL;"],"00255A":["&boxUR;"],"00255C":["&boxUl;"],"002559":["&boxUr;"],"002551":["&boxV;"],"00256C":["&boxVH;"],"002563":["&boxVL;"],"002560":["&boxVR;"],"00256B":["&boxVh;"],"002562":["&boxVl;"],"00255F":["&boxVr;"],"0029C9":["&boxbox;"],"002555":["&boxdL;"],"002552":["&boxdR;"],"002510":["&boxdl;"],"00250C":["&boxdr;"],"002565":["&boxhD;"],"002568":["&boxhU;"],"00252C":["&boxhd;"],"002534":["&boxhu;"],"00229F":["&minusb;","&boxminus;"],"00229E":["&plusb;","&boxplus;"],"0022A0":["&timesb;","&boxtimes;"],"00255B":["&boxuL;"],"002558":["&boxuR;"],"002518":["&boxul;"],"002514":["&boxur;"],"002502":["&boxv;"],"00256A":["&boxvH;"],"002561":["&boxvL;"],"00255E":["&boxvR;"],"00253C":["&boxvh;"],"002524":["&boxvl;"],"00251C":["&boxvr;"],"0000A6":["&brvbar","&brvbar;"],"01D4B7":["&bscr;"],"00204F":["&bsemi;"],"00005C":["&bsol;"],"0029C5":["&bsolb;"],"0027C8":["&bsolhsub;"],"002022":["&bull;","&bullet;"],"002AAE":["&bumpE;"],"000107":["&cacute;"],"002229":["&cap;"],"002A44":["&capand;"],"002A49":["&capbrcup;"],"002A4B":["&capcap;"],"002A47":["&capcup;"],"002A40":["&capdot;"],"002041":["&caret;"],"002A4D":["&ccaps;"],"00010D":["&ccaron;"],"0000E7":["&ccedil","&ccedil;"],"000109":["&ccirc;"],"002A4C":["&ccups;"],"002A50":["&ccupssm;"],"00010B":["&cdot;"],"0029B2":["&cemptyv;"],"0000A2":["&cent","&cent;"],"01D520":["&cfr;"],"000447":["&chcy;"],"002713":["&check;","&checkmark;"],"0003C7":["&chi;"],"0025CB":["&cir;"],"0029C3":["&cirE;"],"0002C6":["&circ;"],"002257":["&cire;","&circeq;"],"0021BA":["&olarr;","&circlearrowleft;"],"0021BB":["&orarr;","&circlearrowright;"],"0024C8":["&oS;","&circledS;"],"00229B":["&oast;","&circledast;"],"00229A":["&ocir;","&circledcirc;"],"00229D":["&odash;","&circleddash;"],"002A10":["&cirfnint;"],"002AEF":["&cirmid;"],"0029C2":["&cirscir;"],"002663":["&clubs;","&clubsuit;"],"00003A":["&colon;"],"00002C":["&comma;"],"000040":["&commat;"],"002201":["&comp;","&complement;"],"002A6D":["&congdot;"],"01D554":["&copf;"],"002117":["&copysr;"],"0021B5":["&crarr;"],"002717":["&cross;"],"01D4B8":["&cscr;"],"002ACF":["&csub;"],"002AD1":["&csube;"],"002AD0":["&csup;"],"002AD2":["&csupe;"],"0022EF":["&ctdot;"],"002938":["&cudarrl;"],"002935":["&cudarrr;"],"0022DE":["&cuepr;","&curlyeqprec;"],"0022DF":["&cuesc;","&curlyeqsucc;"],"0021B6":["&cularr;","&curvearrowleft;"],"00293D":["&cularrp;"],"00222A":["&cup;"],"002A48":["&cupbrcap;"],"002A46":["&cupcap;"],"002A4A":["&cupcup;"],"00228D":["&cupdot;"],"002A45":["&cupor;"],"0021B7":["&curarr;","&curvearrowright;"],"00293C":["&curarrm;"],"0022CE":["&cuvee;","&curlyvee;"],"0022CF":["&cuwed;","&curlywedge;"],"0000A4":["&curren","&curren;"],"002231":["&cwint;"],"00232D":["&cylcty;"],"002965":["&dHar;"],"002020":["&dagger;"],"002138":["&daleth;"],"002010":["&dash;","&hyphen;"],"00290F":["&rBarr;","&dbkarow;"],"00010F":["&dcaron;"],"000434":["&dcy;"],"0021CA":["&ddarr;","&downdownarrows;"],"002A77":["&eDDot;","&ddotseq;"],"0000B0":["&deg","&deg;"],"0003B4":["&delta;"],"0029B1":["&demptyv;"],"00297F":["&dfisht;"],"01D521":["&dfr;"],"002666":["&diams;","&diamondsuit;"],"0003DD":["&gammad;","&digamma;"],"0022F2":["&disin;"],"0000F7":["&div;","&divide","&divide;"],"0022C7":["&divonx;","&divideontimes;"],"000452":["&djcy;"],"00231E":["&dlcorn;","&llcorner;"],"00230D":["&dlcrop;"],"000024":["&dollar;"],"01D555":["&dopf;"],"002251":["&eDot;","&doteqdot;"],"002238":["&minusd;","&dotminus;"],"002214":["&plusdo;","&dotplus;"],"0022A1":["&sdotb;","&dotsquare;"],"00231F":["&drcorn;","&lrcorner;"],"00230C":["&drcrop;"],"01D4B9":["&dscr;"],"000455":["&dscy;"],"0029F6":["&dsol;"],"000111":["&dstrok;"],"0022F1":["&dtdot;"],"0025BF":["&dtri;","&triangledown;"],"0029A6":["&dwangle;"],"00045F":["&dzcy;"],"0027FF":["&dzigrarr;"],"0000E9":["&eacute","&eacute;"],"002A6E":["&easter;"],"00011B":["&ecaron;"],"002256":["&ecir;","&eqcirc;"],"0000EA":["&ecirc","&ecirc;"],"002255":["&ecolon;","&eqcolon;"],"00044D":["&ecy;"],"000117":["&edot;"],"002252":["&efDot;","&fallingdotseq;"],"01D522":["&efr;"],"002A9A":["&eg;"],"0000E8":["&egrave","&egrave;"],"002A96":["&egs;","&eqslantgtr;"],"002A98":["&egsdot;"],"002A99":["&el;"],"0023E7":["&elinters;"],"002113":["&ell;"],"002A95":["&els;","&eqslantless;"],"002A97":["&elsdot;"],"000113":["&emacr;"],"002205":["&empty;","&emptyv;","&emptyset;","&varnothing;"],"002004":["&emsp13;"],"002005":["&emsp14;"],"002003":["&emsp;"],"00014B":["&eng;"],"002002":["&ensp;"],"000119":["&eogon;"],"01D556":["&eopf;"],"0022D5":["&epar;"],"0029E3":["&eparsl;"],"002A71":["&eplus;"],"0003B5":["&epsi;","&epsilon;"],"0003F5":["&epsiv;","&varepsilon;","&straightepsilon;"],"00003D":["&equals;"],"00225F":["&equest;","&questeq;"],"002A78":["&equivDD;"],"0029E5":["&eqvparsl;"],"002253":["&erDot;","&risingdotseq;"],"002971":["&erarr;"],"00212F":["&escr;"],"0003B7":["&eta;"],"0000F0":["&eth","&eth;"],"0000EB":["&euml","&euml;"],"0020AC":["&euro;"],"000021":["&excl;"],"000444":["&fcy;"],"002640":["&female;"],"00FB03":["&ffilig;"],"00FB00":["&fflig;"],"00FB04":["&ffllig;"],"01D523":["&ffr;"],"00FB01":["&filig;"],"00266D":["&flat;"],"00FB02":["&fllig;"],"0025B1":["&fltns;"],"000192":["&fnof;"],"01D557":["&fopf;"],"0022D4":["&fork;","&pitchfork;"],"002AD9":["&forkv;"],"002A0D":["&fpartint;"],"0000BD":["&half;","&frac12","&frac12;"],"002153":["&frac13;"],"0000BC":["&frac14","&frac14;"],"002155":["&frac15;"],"002159":["&frac16;"],"00215B":["&frac18;"],"002154":["&frac23;"],"002156":["&frac25;"],"0000BE":["&frac34","&frac34;"],"002157":["&frac35;"],"00215C":["&frac38;"],"002158":["&frac45;"],"00215A":["&frac56;"],"00215D":["&frac58;"],"00215E":["&frac78;"],"002044":["&frasl;"],"002322":["&frown;","&sfrown;"],"01D4BB":["&fscr;"],"002A8C":["&gEl;","&gtreqqless;"],"0001F5":["&gacute;"],"0003B3":["&gamma;"],"002A86":["&gap;","&gtrapprox;"],"00011F":["&gbreve;"],"00011D":["&gcirc;"],"000433":["&gcy;"],"000121":["&gdot;"],"002AA9":["&gescc;"],"002A80":["&gesdot;"],"002A82":["&gesdoto;"],"002A84":["&gesdotol;"],"002A94":["&gesles;"],"01D524":["&gfr;"],"002137":["&gimel;"],"000453":["&gjcy;"],"002A92":["&glE;"],"002AA5":["&gla;"],"002AA4":["&glj;"],"002269":["&gnE;","&gneqq;"],"002A8A":["&gnap;","&gnapprox;"],"002A88":["&gne;","&gneq;"],"0022E7":["&gnsim;"],"01D558":["&gopf;"],"00210A":["&gscr;"],"002A8E":["&gsime;"],"002A90":["&gsiml;"],"002AA7":["&gtcc;"],"002A7A":["&gtcir;"],"0022D7":["&gtdot;","&gtrdot;"],"002995":["&gtlPar;"],"002A7C":["&gtquest;"],"002978":["&gtrarr;"],"00044A":["&hardcy;"],"002948":["&harrcir;"],"0021AD":["&harrw;","&leftrightsquigarrow;"],"00210F":["&hbar;","&hslash;","&planck;","&plankv;"],"000125":["&hcirc;"],"002665":["&hearts;","&heartsuit;"],"002026":["&mldr;","&hellip;"],"0022B9":["&hercon;"],"01D525":["&hfr;"],"002925":["&searhk;","&hksearow;"],"002926":["&swarhk;","&hkswarow;"],"0021FF":["&hoarr;"],"00223B":["&homtht;"],"0021A9":["&larrhk;","&hookleftarrow;"],"0021AA":["&rarrhk;","&hookrightarrow;"],"01D559":["&hopf;"],"002015":["&horbar;"],"01D4BD":["&hscr;"],"000127":["&hstrok;"],"002043":["&hybull;"],"0000ED":["&iacute","&iacute;"],"0000EE":["&icirc","&icirc;"],"000438":["&icy;"],"000435":["&iecy;"],"0000A1":["&iexcl","&iexcl;"],"01D526":["&ifr;"],"0000EC":["&igrave","&igrave;"],"002A0C":["&qint;","&iiiint;"],"00222D":["&tint;","&iiint;"],"0029DC":["&iinfin;"],"002129":["&iiota;"],"000133":["&ijlig;"],"00012B":["&imacr;"],"000131":["&imath;","&inodot;"],"0022B7":["&imof;"],"0001B5":["&imped;"],"002105":["&incare;"],"00221E":["&infin;"],"0029DD":["&infintie;"],"0022BA":["&intcal;","&intercal;"],"002A17":["&intlarhk;"],"002A3C":["&iprod;","&intprod;"],"000451":["&iocy;"],"00012F":["&iogon;"],"01D55A":["&iopf;"],"0003B9":["&iota;"],"0000BF":["&iquest","&iquest;"],"01D4BE":["&iscr;"],"0022F9":["&isinE;"],"0022F5":["&isindot;"],"0022F4":["&isins;"],"0022F3":["&isinsv;"],"000129":["&itilde;"],"000456":["&iukcy;"],"0000EF":["&iuml","&iuml;"],"000135":["&jcirc;"],"000439":["&jcy;"],"01D527":["&jfr;"],"000237":["&jmath;"],"01D55B":["&jopf;"],"01D4BF":["&jscr;"],"000458":["&jsercy;"],"000454":["&jukcy;"],"0003BA":["&kappa;"],"0003F0":["&kappav;","&varkappa;"],"000137":["&kcedil;"],"00043A":["&kcy;"],"01D528":["&kfr;"],"000138":["&kgreen;"],"000445":["&khcy;"],"00045C":["&kjcy;"],"01D55C":["&kopf;"],"01D4C0":["&kscr;"],"00291B":["&lAtail;"],"00290E":["&lBarr;"],"002A8B":["&lEg;","&lesseqqgtr;"],"002962":["&lHar;"],"00013A":["&lacute;"],"0029B4":["&laemptyv;"],"0003BB":["&lambda;"],"002991":["&langd;"],"002A85":["&lap;","&lessapprox;"],"0000AB":["&laquo","&laquo;"],"00291F":["&larrbfs;"],"00291D":["&larrfs;"],"0021AB":["&larrlp;","&looparrowleft;"],"002939":["&larrpl;"],"002973":["&larrsim;"],"0021A2":["&larrtl;","&leftarrowtail;"],"002AAB":["&lat;"],"002919":["&latail;"],"002AAD":["&late;"],"00290C":["&lbarr;"],"002772":["&lbbrk;"],"00007B":["&lcub;","&lbrace;"],"00005B":["&lsqb;","&lbrack;"],"00298B":["&lbrke;"],"00298F":["&lbrksld;"],"00298D":["&lbrkslu;"],"00013E":["&lcaron;"],"00013C":["&lcedil;"],"00043B":["&lcy;"],"002936":["&ldca;"],"002967":["&ldrdhar;"],"00294B":["&ldrushar;"],"0021B2":["&ldsh;"],"002264":["&le;","&leq;"],"0021C7":["&llarr;","&leftleftarrows;"],"0022CB":["&lthree;","&leftthreetimes;"],"002AA8":["&lescc;"],"002A7F":["&lesdot;"],"002A81":["&lesdoto;"],"002A83":["&lesdotor;"],"002A93":["&lesges;"],"0022D6":["&ltdot;","&lessdot;"],"00297C":["&lfisht;"],"01D529":["&lfr;"],"002A91":["&lgE;"],"00296A":["&lharul;"],"002584":["&lhblk;"],"000459":["&ljcy;"],"00296B":["&llhard;"],"0025FA":["&lltri;"],"000140":["&lmidot;"],"0023B0":["&lmoust;","&lmoustache;"],"002268":["&lnE;","&lneqq;"],"002A89":["&lnap;","&lnapprox;"],"002A87":["&lne;","&lneq;"],"0022E6":["&lnsim;"],"0027EC":["&loang;"],"0021FD":["&loarr;"],"0027FC":["&xmap;","&longmapsto;"],"0021AC":["&rarrlp;","&looparrowright;"],"002985":["&lopar;"],"01D55D":["&lopf;"],"002A2D":["&loplus;"],"002A34":["&lotimes;"],"002217":["&lowast;"],"0025CA":["&loz;","&lozenge;"],"000028":["&lpar;"],"002993":["&lparlt;"],"00296D":["&lrhard;"],"00200E":["&lrm;"],"0022BF":["&lrtri;"],"002039":["&lsaquo;"],"01D4C1":["&lscr;"],"002A8D":["&lsime;"],"002A8F":["&lsimg;"],"00201A":["&sbquo;","&lsquor;"],"000142":["&lstrok;"],"002AA6":["&ltcc;"],"002A79":["&ltcir;"],"0022C9":["&ltimes;"],"002976":["&ltlarr;"],"002A7B":["&ltquest;"],"002996":["&ltrPar;"],"0025C3":["&ltri;","&triangleleft;"],"00294A":["&lurdshar;"],"002966":["&luruhar;"],"00223A":["&mDDot;"],"0000AF":["&macr","&macr;","&strns;"],"002642":["&male;"],"002720":["&malt;","&maltese;"],"0025AE":["&marker;"],"002A29":["&mcomma;"],"00043C":["&mcy;"],"002014":["&mdash;"],"01D52A":["&mfr;"],"002127":["&mho;"],"0000B5":["&micro","&micro;"],"002AF0":["&midcir;"],"002212":["&minus;"],"002A2A":["&minusdu;"],"002ADB":["&mlcp;"],"0022A7":["&models;"],"01D55E":["&mopf;"],"01D4C2":["&mscr;"],"0003BC":["&mu;"],"0022B8":["&mumap;","&multimap;"],"0021CD":["&nlArr;","&nLeftarrow;"],"0021CE":["&nhArr;","&nLeftrightarrow;"],"0021CF":["&nrArr;","&nRightarrow;"],"0022AF":["&nVDash;"],"0022AE":["&nVdash;"],"000144":["&nacute;"],"000149":["&napos;"],"00266E":["&natur;","&natural;"],"002A43":["&ncap;"],"000148":["&ncaron;"],"000146":["&ncedil;"],"002A42":["&ncup;"],"00043D":["&ncy;"],"002013":["&ndash;"],"0021D7":["&neArr;"],"002924":["&nearhk;"],"002928":["&toea;","&nesear;"],"01D52B":["&nfr;"],"0021AE":["&nharr;","&nleftrightarrow;"],"002AF2":["&nhpar;"],"0022FC":["&nis;"],"0022FA":["&nisd;"],"00045A":["&njcy;"],"00219A":["&nlarr;","&nleftarrow;"],"002025":["&nldr;"],"01D55F":["&nopf;"],"0000AC":["&not","&not;"],"0022F7":["&notinvb;"],"0022F6":["&notinvc;"],"0022FE":["&notnivb;"],"0022FD":["&notnivc;"],"002A14":["&npolint;"],"00219B":["&nrarr;","&nrightarrow;"],"01D4C3":["&nscr;"],"002284":["&nsub;"],"002285":["&nsup;"],"0000F1":["&ntilde","&ntilde;"],"0003BD":["&nu;"],"000023":["&num;"],"002116":["&numero;"],"002007":["&numsp;"],"0022AD":["&nvDash;"],"002904":["&nvHarr;"],"0022AC":["&nvdash;"],"0029DE":["&nvinfin;"],"002902":["&nvlArr;"],"002903":["&nvrArr;"],"0021D6":["&nwArr;"],"002923":["&nwarhk;"],"002927":["&nwnear;"],"0000F3":["&oacute","&oacute;"],"0000F4":["&ocirc","&ocirc;"],"00043E":["&ocy;"],"000151":["&odblac;"],"002A38":["&odiv;"],"0029BC":["&odsold;"],"000153":["&oelig;"],"0029BF":["&ofcir;"],"01D52C":["&ofr;"],"0002DB":["&ogon;"],"0000F2":["&ograve","&ograve;"],"0029C1":["&ogt;"],"0029B5":["&ohbar;"],"0029BE":["&olcir;"],"0029BB":["&olcross;"],"0029C0":["&olt;"],"00014D":["&omacr;"],"0003C9":["&omega;"],"0003BF":["&omicron;"],"0029B6":["&omid;"],"01D560":["&oopf;"],"0029B7":["&opar;"],"0029B9":["&operp;"],"002228":["&or;","&vee;"],"002A5D":["&ord;"],"002134":["&oscr;","&order;","&orderof;"],"0000AA":["&ordf","&ordf;"],"0000BA":["&ordm","&ordm;"],"0022B6":["&origof;"],"002A56":["&oror;"],"002A57":["&orslope;"],"002A5B":["&orv;"],"0000F8":["&oslash","&oslash;"],"002298":["&osol;"],"0000F5":["&otilde","&otilde;"],"002A36":["&otimesas;"],"0000F6":["&ouml","&ouml;"],"00233D":["&ovbar;"],"0000B6":["&para","&para;"],"002AF3":["&parsim;"],"002AFD":["&parsl;"],"00043F":["&pcy;"],"000025":["&percnt;"],"00002E":["&period;"],"002030":["&permil;"],"002031":["&pertenk;"],"01D52D":["&pfr;"],"0003C6":["&phi;"],"0003D5":["&phiv;","&varphi;","&straightphi;"],"00260E":["&phone;"],"0003C0":["&pi;"],"0003D6":["&piv;","&varpi;"],"00210E":["&planckh;"],"00002B":["&plus;"],"002A23":["&plusacir;"],"002A22":["&pluscir;"],"002A25":["&plusdu;"],"002A72":["&pluse;"],"002A26":["&plussim;"],"002A27":["&plustwo;"],"002A15":["&pointint;"],"01D561":["&popf;"],"0000A3":["&pound","&pound;"],"002AB3":["&prE;"],"002AB7":["&prap;","&precapprox;"],"002AB9":["&prnap;","&precnapprox;"],"002AB5":["&prnE;","&precneqq;"],"0022E8":["&prnsim;","&precnsim;"],"002032":["&prime;"],"00232E":["&profalar;"],"002312":["&profline;"],"002313":["&profsurf;"],"0022B0":["&prurel;"],"01D4C5":["&pscr;"],"0003C8":["&psi;"],"002008":["&puncsp;"],"01D52E":["&qfr;"],"01D562":["&qopf;"],"002057":["&qprime;"],"01D4C6":["&qscr;"],"002A16":["&quatint;"],"00003F":["&quest;"],"00291C":["&rAtail;"],"002964":["&rHar;"],"000155":["&racute;"],"0029B3":["&raemptyv;"],"002992":["&rangd;"],"0029A5":["&range;"],"0000BB":["&raquo","&raquo;"],"002975":["&rarrap;"],"002920":["&rarrbfs;"],"002933":["&rarrc;"],"00291E":["&rarrfs;"],"002945":["&rarrpl;"],"002974":["&rarrsim;"],"0021A3":["&rarrtl;","&rightarrowtail;"],"00219D":["&rarrw;","&rightsquigarrow;"],"00291A":["&ratail;"],"002236":["&ratio;"],"002773":["&rbbrk;"],"00007D":["&rcub;","&rbrace;"],"00005D":["&rsqb;","&rbrack;"],"00298C":["&rbrke;"],"00298E":["&rbrksld;"],"002990":["&rbrkslu;"],"000159":["&rcaron;"],"000157":["&rcedil;"],"000440":["&rcy;"],"002937":["&rdca;"],"002969":["&rdldhar;"],"0021B3":["&rdsh;"],"0025AD":["&rect;"],"00297D":["&rfisht;"],"01D52F":["&rfr;"],"00296C":["&rharul;"],"0003C1":["&rho;"],"0003F1":["&rhov;","&varrho;"],"0021C9":["&rrarr;","&rightrightarrows;"],"0022CC":["&rthree;","&rightthreetimes;"],"0002DA":["&ring;"],"00200F":["&rlm;"],"0023B1":["&rmoust;","&rmoustache;"],"002AEE":["&rnmid;"],"0027ED":["&roang;"],"0021FE":["&roarr;"],"002986":["&ropar;"],"01D563":["&ropf;"],"002A2E":["&roplus;"],"002A35":["&rotimes;"],"000029":["&rpar;"],"002994":["&rpargt;"],"002A12":["&rppolint;"],"00203A":["&rsaquo;"],"01D4C7":["&rscr;"],"0022CA":["&rtimes;"],"0025B9":["&rtri;","&triangleright;"],"0029CE":["&rtriltri;"],"002968":["&ruluhar;"],"00211E":["&rx;"],"00015B":["&sacute;"],"002AB4":["&scE;"],"002AB8":["&scap;","&succapprox;"],"000161":["&scaron;"],"00015F":["&scedil;"],"00015D":["&scirc;"],"002AB6":["&scnE;","&succneqq;"],"002ABA":["&scnap;","&succnapprox;"],"0022E9":["&scnsim;","&succnsim;"],"002A13":["&scpolint;"],"000441":["&scy;"],"0022C5":["&sdot;"],"002A66":["&sdote;"],"0021D8":["&seArr;"],"0000A7":["&sect","&sect;"],"00003B":["&semi;"],"002929":["&tosa;","&seswar;"],"002736":["&sext;"],"01D530":["&sfr;"],"00266F":["&sharp;"],"000449":["&shchcy;"],"000448":["&shcy;"],"0000AD":["&shy","&shy;"],"0003C3":["&sigma;"],"0003C2":["&sigmaf;","&sigmav;","&varsigma;"],"002A6A":["&simdot;"],"002A9E":["&simg;"],"002AA0":["&simgE;"],"002A9D":["&siml;"],"002A9F":["&simlE;"],"002246":["&simne;"],"002A24":["&simplus;"],"002972":["&simrarr;"],"002A33":["&smashp;"],"0029E4":["&smeparsl;"],"002323":["&smile;","&ssmile;"],"002AAA":["&smt;"],"002AAC":["&smte;"],"00044C":["&softcy;"],"00002F":["&sol;"],"0029C4":["&solb;"],"00233F":["&solbar;"],"01D564":["&sopf;"],"002660":["&spades;","&spadesuit;"],"01D4C8":["&sscr;"],"002606":["&star;"],"002282":["&sub;","&subset;"],"002AC5":["&subE;","&subseteqq;"],"002ABD":["&subdot;"],"002AC3":["&subedot;"],"002AC1":["&submult;"],"002ACB":["&subnE;","&subsetneqq;"],"00228A":["&subne;","&subsetneq;"],"002ABF":["&subplus;"],"002979":["&subrarr;"],"002AC7":["&subsim;"],"002AD5":["&subsub;"],"002AD3":["&subsup;"],"00266A":["&sung;"],"0000B9":["&sup1","&sup1;"],"0000B2":["&sup2","&sup2;"],"0000B3":["&sup3","&sup3;"],"002AC6":["&supE;","&supseteqq;"],"002ABE":["&supdot;"],"002AD8":["&supdsub;"],"002AC4":["&supedot;"],"0027C9":["&suphsol;"],"002AD7":["&suphsub;"],"00297B":["&suplarr;"],"002AC2":["&supmult;"],"002ACC":["&supnE;","&supsetneqq;"],"00228B":["&supne;","&supsetneq;"],"002AC0":["&supplus;"],"002AC8":["&supsim;"],"002AD4":["&supsub;"],"002AD6":["&supsup;"],"0021D9":["&swArr;"],"00292A":["&swnwar;"],"0000DF":["&szlig","&szlig;"],"002316":["&target;"],"0003C4":["&tau;"],"000165":["&tcaron;"],"000163":["&tcedil;"],"000442":["&tcy;"],"002315":["&telrec;"],"01D531":["&tfr;"],"0003B8":["&theta;"],"0003D1":["&thetav;","&thetasym;","&vartheta;"],"0000FE":["&thorn","&thorn;"],"0000D7":["&times","&times;"],"002A31":["&timesbar;"],"002A30":["&timesd;"],"002336":["&topbot;"],"002AF1":["&topcir;"],"01D565":["&topf;"],"002ADA":["&topfork;"],"002034":["&tprime;"],"0025B5":["&utri;","&triangle;"],"00225C":["&trie;","&triangleq;"],"0025EC":["&tridot;"],"002A3A":["&triminus;"],"002A39":["&triplus;"],"0029CD":["&trisb;"],"002A3B":["&tritime;"],"0023E2":["&trpezium;"],"01D4C9":["&tscr;"],"000446":["&tscy;"],"00045B":["&tshcy;"],"000167":["&tstrok;"],"002963":["&uHar;"],"0000FA":["&uacute","&uacute;"],"00045E":["&ubrcy;"],"00016D":["&ubreve;"],"0000FB":["&ucirc","&ucirc;"],"000443":["&ucy;"],"000171":["&udblac;"],"00297E":["&ufisht;"],"01D532":["&ufr;"],"0000F9":["&ugrave","&ugrave;"],"002580":["&uhblk;"],"00231C":["&ulcorn;","&ulcorner;"],"00230F":["&ulcrop;"],"0025F8":["&ultri;"],"00016B":["&umacr;"],"000173":["&uogon;"],"01D566":["&uopf;"],"0003C5":["&upsi;","&upsilon;"],"0021C8":["&uuarr;","&upuparrows;"],"00231D":["&urcorn;","&urcorner;"],"00230E":["&urcrop;"],"00016F":["&uring;"],"0025F9":["&urtri;"],"01D4CA":["&uscr;"],"0022F0":["&utdot;"],"000169":["&utilde;"],"0000FC":["&uuml","&uuml;"],"0029A7":["&uwangle;"],"002AE8":["&vBar;"],"002AE9":["&vBarv;"],"00299C":["&vangrt;"],"000432":["&vcy;"],"0022BB":["&veebar;"],"00225A":["&veeeq;"],"0022EE":["&vellip;"],"01D533":["&vfr;"],"01D567":["&vopf;"],"01D4CB":["&vscr;"],"00299A":["&vzigzag;"],"000175":["&wcirc;"],"002A5F":["&wedbar;"],"002259":["&wedgeq;"],"002118":["&wp;","&weierp;"],"01D534":["&wfr;"],"01D568":["&wopf;"],"01D4CC":["&wscr;"],"01D535":["&xfr;"],"0003BE":["&xi;"],"0022FB":["&xnis;"],"01D569":["&xopf;"],"01D4CD":["&xscr;"],"0000FD":["&yacute","&yacute;"],"00044F":["&yacy;"],"000177":["&ycirc;"],"00044B":["&ycy;"],"0000A5":["&yen","&yen;"],"01D536":["&yfr;"],"000457":["&yicy;"],"01D56A":["&yopf;"],"01D4CE":["&yscr;"],"00044E":["&yucy;"],"0000FF":["&yuml","&yuml;"],"00017A":["&zacute;"],"00017E":["&zcaron;"],"000437":["&zcy;"],"00017C":["&zdot;"],"0003B6":["&zeta;"],"01D537":["&zfr;"],"000436":["&zhcy;"],"0021DD":["&zigrarr;"],"01D56B":["&zopf;"],"01D4CF":["&zscr;"],"00200D":["&zwj;"],"00200C":["&zwnj;"]};
-
-export default entitiesMap;
+const entitiesMap = {
+  "0000C6": [
+    "&AElig",
+    "&AElig;"
+  ],
+  "000026": [
+    "&AMP",
+    "&amp",
+    "&AMP;",
+    "&amp;"
+  ],
+  "0000C1": [
+    "&Aacute",
+    "&Aacute;"
+  ],
+  "000102": [
+    "&Abreve;"
+  ],
+  "0000C2": [
+    "&Acirc",
+    "&Acirc;"
+  ],
+  "000410": [
+    "&Acy;"
+  ],
+  "01D504": [
+    "&Afr;"
+  ],
+  "0000C0": [
+    "&Agrave",
+    "&Agrave;"
+  ],
+  "000391": [
+    "&Alpha;"
+  ],
+  "000100": [
+    "&Amacr;"
+  ],
+  "002A53": [
+    "&And;"
+  ],
+  "000104": [
+    "&Aogon;"
+  ],
+  "01D538": [
+    "&Aopf;"
+  ],
+  "002061": [
+    "&af;",
+    "&ApplyFunction;"
+  ],
+  "0000C5": [
+    "&Aring",
+    "&Aring;",
+    "&angst;"
+  ],
+  "01D49C": [
+    "&Ascr;"
+  ],
+  "002254": [
+    "&Assign;",
+    "&colone;",
+    "&coloneq;"
+  ],
+  "0000C3": [
+    "&Atilde",
+    "&Atilde;"
+  ],
+  "0000C4": [
+    "&Auml",
+    "&Auml;"
+  ],
+  "002216": [
+    "&setmn;",
+    "&ssetmn;",
+    "&setminus;",
+    "&Backslash;",
+    "&smallsetminus;"
+  ],
+  "002AE7": [
+    "&Barv;"
+  ],
+  "002306": [
+    "&Barwed;",
+    "&doublebarwedge;"
+  ],
+  "000411": [
+    "&Bcy;"
+  ],
+  "002235": [
+    "&becaus;",
+    "&Because;",
+    "&because;"
+  ],
+  "00212C": [
+    "&Bscr;",
+    "&bernou;",
+    "&Bernoullis;"
+  ],
+  "000392": [
+    "&Beta;"
+  ],
+  "01D505": [
+    "&Bfr;"
+  ],
+  "01D539": [
+    "&Bopf;"
+  ],
+  "0002D8": [
+    "&Breve;",
+    "&breve;"
+  ],
+  "00224E": [
+    "&bump;",
+    "&Bumpeq;",
+    "&HumpDownHump;"
+  ],
+  "000427": [
+    "&CHcy;"
+  ],
+  "0000A9": [
+    "&COPY",
+    "&copy",
+    "&COPY;",
+    "&copy;"
+  ],
+  "000106": [
+    "&Cacute;"
+  ],
+  "0022D2": [
+    "&Cap;"
+  ],
+  "002145": [
+    "&DD;",
+    "&CapitalDifferentialD;"
+  ],
+  "00212D": [
+    "&Cfr;",
+    "&Cayleys;"
+  ],
+  "00010C": [
+    "&Ccaron;"
+  ],
+  "0000C7": [
+    "&Ccedil",
+    "&Ccedil;"
+  ],
+  "000108": [
+    "&Ccirc;"
+  ],
+  "002230": [
+    "&Cconint;"
+  ],
+  "00010A": [
+    "&Cdot;"
+  ],
+  "0000B8": [
+    "&cedil",
+    "&cedil;",
+    "&Cedilla;"
+  ],
+  "0000B7": [
+    "&middot",
+    "&middot;",
+    "&CenterDot;",
+    "&centerdot;"
+  ],
+  "0003A7": [
+    "&Chi;"
+  ],
+  "002299": [
+    "&odot;",
+    "&CircleDot;"
+  ],
+  "002296": [
+    "&ominus;",
+    "&CircleMinus;"
+  ],
+  "002295": [
+    "&oplus;",
+    "&CirclePlus;"
+  ],
+  "002297": [
+    "&otimes;",
+    "&CircleTimes;"
+  ],
+  "002232": [
+    "&cwconint;",
+    "&ClockwiseContourIntegral;"
+  ],
+  "00201D": [
+    "&rdquo;",
+    "&rdquor;",
+    "&CloseCurlyDoubleQuote;"
+  ],
+  "002019": [
+    "&rsquo;",
+    "&rsquor;",
+    "&CloseCurlyQuote;"
+  ],
+  "002237": [
+    "&Colon;",
+    "&Proportion;"
+  ],
+  "002A74": [
+    "&Colone;"
+  ],
+  "002261": [
+    "&equiv;",
+    "&Congruent;"
+  ],
+  "00222F": [
+    "&Conint;",
+    "&DoubleContourIntegral;"
+  ],
+  "00222E": [
+    "&oint;",
+    "&conint;",
+    "&ContourIntegral;"
+  ],
+  "002102": [
+    "&Copf;",
+    "&complexes;"
+  ],
+  "002210": [
+    "&coprod;",
+    "&Coproduct;"
+  ],
+  "002233": [
+    "&awconint;",
+    "&CounterClockwiseContourIntegral;"
+  ],
+  "002A2F": [
+    "&Cross;"
+  ],
+  "01D49E": [
+    "&Cscr;"
+  ],
+  "0022D3": [
+    "&Cup;"
+  ],
+  "00224D": [
+    "&CupCap;",
+    "&asympeq;"
+  ],
+  "002911": [
+    "&DDotrahd;"
+  ],
+  "000402": [
+    "&DJcy;"
+  ],
+  "000405": [
+    "&DScy;"
+  ],
+  "00040F": [
+    "&DZcy;"
+  ],
+  "002021": [
+    "&Dagger;",
+    "&ddagger;"
+  ],
+  "0021A1": [
+    "&Darr;"
+  ],
+  "002AE4": [
+    "&Dashv;",
+    "&DoubleLeftTee;"
+  ],
+  "00010E": [
+    "&Dcaron;"
+  ],
+  "000414": [
+    "&Dcy;"
+  ],
+  "002207": [
+    "&Del;",
+    "&nabla;"
+  ],
+  "000394": [
+    "&Delta;"
+  ],
+  "01D507": [
+    "&Dfr;"
+  ],
+  "0000B4": [
+    "&acute",
+    "&acute;",
+    "&DiacriticalAcute;"
+  ],
+  "0002D9": [
+    "&dot;",
+    "&DiacriticalDot;"
+  ],
+  "0002DD": [
+    "&dblac;",
+    "&DiacriticalDoubleAcute;"
+  ],
+  "000060": [
+    "&grave;",
+    "&DiacriticalGrave;"
+  ],
+  "0002DC": [
+    "&tilde;",
+    "&DiacriticalTilde;"
+  ],
+  "0022C4": [
+    "&diam;",
+    "&Diamond;",
+    "&diamond;"
+  ],
+  "002146": [
+    "&dd;",
+    "&DifferentialD;"
+  ],
+  "01D53B": [
+    "&Dopf;"
+  ],
+  "0000A8": [
+    "&uml",
+    "&Dot;",
+    "&die;",
+    "&uml;",
+    "&DoubleDot;"
+  ],
+  "0020DC": [
+    "&DotDot;"
+  ],
+  "002250": [
+    "&doteq;",
+    "&esdot;",
+    "&DotEqual;"
+  ],
+  "0021D3": [
+    "&dArr;",
+    "&Downarrow;",
+    "&DoubleDownArrow;"
+  ],
+  "0021D0": [
+    "&lArr;",
+    "&Leftarrow;",
+    "&DoubleLeftArrow;"
+  ],
+  "0021D4": [
+    "&iff;",
+    "&hArr;",
+    "&Leftrightarrow;",
+    "&DoubleLeftRightArrow;"
+  ],
+  "0027F8": [
+    "&xlArr;",
+    "&Longleftarrow;",
+    "&DoubleLongLeftArrow;"
+  ],
+  "0027FA": [
+    "&xhArr;",
+    "&Longleftrightarrow;",
+    "&DoubleLongLeftRightArrow;"
+  ],
+  "0027F9": [
+    "&xrArr;",
+    "&Longrightarrow;",
+    "&DoubleLongRightArrow;"
+  ],
+  "0021D2": [
+    "&rArr;",
+    "&Implies;",
+    "&Rightarrow;",
+    "&DoubleRightArrow;"
+  ],
+  "0022A8": [
+    "&vDash;",
+    "&DoubleRightTee;"
+  ],
+  "0021D1": [
+    "&uArr;",
+    "&Uparrow;",
+    "&DoubleUpArrow;"
+  ],
+  "0021D5": [
+    "&vArr;",
+    "&Updownarrow;",
+    "&DoubleUpDownArrow;"
+  ],
+  "002225": [
+    "&par;",
+    "&spar;",
+    "&parallel;",
+    "&shortparallel;",
+    "&DoubleVerticalBar;"
+  ],
+  "002193": [
+    "&darr;",
+    "&DownArrow;",
+    "&downarrow;",
+    "&ShortDownArrow;"
+  ],
+  "002913": [
+    "&DownArrowBar;"
+  ],
+  "0021F5": [
+    "&duarr;",
+    "&DownArrowUpArrow;"
+  ],
+  "000311": [
+    "&DownBreve;"
+  ],
+  "002950": [
+    "&DownLeftRightVector;"
+  ],
+  "00295E": [
+    "&DownLeftTeeVector;"
+  ],
+  "0021BD": [
+    "&lhard;",
+    "&DownLeftVector;",
+    "&leftharpoondown;"
+  ],
+  "002956": [
+    "&DownLeftVectorBar;"
+  ],
+  "00295F": [
+    "&DownRightTeeVector;"
+  ],
+  "0021C1": [
+    "&rhard;",
+    "&DownRightVector;",
+    "&rightharpoondown;"
+  ],
+  "002957": [
+    "&DownRightVectorBar;"
+  ],
+  "0022A4": [
+    "&top;",
+    "&DownTee;"
+  ],
+  "0021A7": [
+    "&mapstodown;",
+    "&DownTeeArrow;"
+  ],
+  "01D49F": [
+    "&Dscr;"
+  ],
+  "000110": [
+    "&Dstrok;"
+  ],
+  "00014A": [
+    "&ENG;"
+  ],
+  "0000D0": [
+    "&ETH",
+    "&ETH;"
+  ],
+  "0000C9": [
+    "&Eacute",
+    "&Eacute;"
+  ],
+  "00011A": [
+    "&Ecaron;"
+  ],
+  "0000CA": [
+    "&Ecirc",
+    "&Ecirc;"
+  ],
+  "00042D": [
+    "&Ecy;"
+  ],
+  "000116": [
+    "&Edot;"
+  ],
+  "01D508": [
+    "&Efr;"
+  ],
+  "0000C8": [
+    "&Egrave",
+    "&Egrave;"
+  ],
+  "002208": [
+    "&in;",
+    "&isin;",
+    "&isinv;",
+    "&Element;"
+  ],
+  "000112": [
+    "&Emacr;"
+  ],
+  "0025FB": [
+    "&EmptySmallSquare;"
+  ],
+  "0025AB": [
+    "&EmptyVerySmallSquare;"
+  ],
+  "000118": [
+    "&Eogon;"
+  ],
+  "01D53C": [
+    "&Eopf;"
+  ],
+  "000395": [
+    "&Epsilon;"
+  ],
+  "002A75": [
+    "&Equal;"
+  ],
+  "002242": [
+    "&esim;",
+    "&eqsim;",
+    "&EqualTilde;"
+  ],
+  "0021CC": [
+    "&rlhar;",
+    "&Equilibrium;",
+    "&rightleftharpoons;"
+  ],
+  "002130": [
+    "&Escr;",
+    "&expectation;"
+  ],
+  "002A73": [
+    "&Esim;"
+  ],
+  "000397": [
+    "&Eta;"
+  ],
+  "0000CB": [
+    "&Euml",
+    "&Euml;"
+  ],
+  "002203": [
+    "&exist;",
+    "&Exists;"
+  ],
+  "002147": [
+    "&ee;",
+    "&ExponentialE;",
+    "&exponentiale;"
+  ],
+  "000424": [
+    "&Fcy;"
+  ],
+  "01D509": [
+    "&Ffr;"
+  ],
+  "0025FC": [
+    "&FilledSmallSquare;"
+  ],
+  "0025AA": [
+    "&squf;",
+    "&squarf;",
+    "&blacksquare;",
+    "&FilledVerySmallSquare;"
+  ],
+  "01D53D": [
+    "&Fopf;"
+  ],
+  "002200": [
+    "&ForAll;",
+    "&forall;"
+  ],
+  "002131": [
+    "&Fscr;",
+    "&Fouriertrf;"
+  ],
+  "000403": [
+    "&GJcy;"
+  ],
+  "00003E": [
+    "&GT",
+    "&gt",
+    "&GT;",
+    "&gt;"
+  ],
+  "000393": [
+    "&Gamma;"
+  ],
+  "0003DC": [
+    "&Gammad;"
+  ],
+  "00011E": [
+    "&Gbreve;"
+  ],
+  "000122": [
+    "&Gcedil;"
+  ],
+  "00011C": [
+    "&Gcirc;"
+  ],
+  "000413": [
+    "&Gcy;"
+  ],
+  "000120": [
+    "&Gdot;"
+  ],
+  "01D50A": [
+    "&Gfr;"
+  ],
+  "0022D9": [
+    "&Gg;",
+    "&ggg;"
+  ],
+  "01D53E": [
+    "&Gopf;"
+  ],
+  "002265": [
+    "&ge;",
+    "&geq;",
+    "&GreaterEqual;"
+  ],
+  "0022DB": [
+    "&gel;",
+    "&gtreqless;",
+    "&GreaterEqualLess;"
+  ],
+  "002267": [
+    "&gE;",
+    "&geqq;",
+    "&GreaterFullEqual;"
+  ],
+  "002AA2": [
+    "&GreaterGreater;"
+  ],
+  "002277": [
+    "&gl;",
+    "&gtrless;",
+    "&GreaterLess;"
+  ],
+  "002A7E": [
+    "&ges;",
+    "&geqslant;",
+    "&GreaterSlantEqual;"
+  ],
+  "002273": [
+    "&gsim;",
+    "&gtrsim;",
+    "&GreaterTilde;"
+  ],
+  "01D4A2": [
+    "&Gscr;"
+  ],
+  "00226B": [
+    "&Gt;",
+    "&gg;",
+    "&NestedGreaterGreater;"
+  ],
+  "00042A": [
+    "&HARDcy;"
+  ],
+  "0002C7": [
+    "&Hacek;",
+    "&caron;"
+  ],
+  "00005E": [
+    "&Hat;"
+  ],
+  "000124": [
+    "&Hcirc;"
+  ],
+  "00210C": [
+    "&Hfr;",
+    "&Poincareplane;"
+  ],
+  "00210B": [
+    "&Hscr;",
+    "&hamilt;",
+    "&HilbertSpace;"
+  ],
+  "00210D": [
+    "&Hopf;",
+    "&quaternions;"
+  ],
+  "002500": [
+    "&boxh;",
+    "&HorizontalLine;"
+  ],
+  "000126": [
+    "&Hstrok;"
+  ],
+  "00224F": [
+    "&bumpe;",
+    "&bumpeq;",
+    "&HumpEqual;"
+  ],
+  "000415": [
+    "&IEcy;"
+  ],
+  "000132": [
+    "&IJlig;"
+  ],
+  "000401": [
+    "&IOcy;"
+  ],
+  "0000CD": [
+    "&Iacute",
+    "&Iacute;"
+  ],
+  "0000CE": [
+    "&Icirc",
+    "&Icirc;"
+  ],
+  "000418": [
+    "&Icy;"
+  ],
+  "000130": [
+    "&Idot;"
+  ],
+  "002111": [
+    "&Im;",
+    "&Ifr;",
+    "&image;",
+    "&imagpart;"
+  ],
+  "0000CC": [
+    "&Igrave",
+    "&Igrave;"
+  ],
+  "00012A": [
+    "&Imacr;"
+  ],
+  "002148": [
+    "&ii;",
+    "&ImaginaryI;"
+  ],
+  "00222C": [
+    "&Int;"
+  ],
+  "00222B": [
+    "&int;",
+    "&Integral;"
+  ],
+  "0022C2": [
+    "&xcap;",
+    "&bigcap;",
+    "&Intersection;"
+  ],
+  "002063": [
+    "&ic;",
+    "&InvisibleComma;"
+  ],
+  "002062": [
+    "&it;",
+    "&InvisibleTimes;"
+  ],
+  "00012E": [
+    "&Iogon;"
+  ],
+  "01D540": [
+    "&Iopf;"
+  ],
+  "000399": [
+    "&Iota;"
+  ],
+  "002110": [
+    "&Iscr;",
+    "&imagline;"
+  ],
+  "000128": [
+    "&Itilde;"
+  ],
+  "000406": [
+    "&Iukcy;"
+  ],
+  "0000CF": [
+    "&Iuml",
+    "&Iuml;"
+  ],
+  "000134": [
+    "&Jcirc;"
+  ],
+  "000419": [
+    "&Jcy;"
+  ],
+  "01D50D": [
+    "&Jfr;"
+  ],
+  "01D541": [
+    "&Jopf;"
+  ],
+  "01D4A5": [
+    "&Jscr;"
+  ],
+  "000408": [
+    "&Jsercy;"
+  ],
+  "000404": [
+    "&Jukcy;"
+  ],
+  "000425": [
+    "&KHcy;"
+  ],
+  "00040C": [
+    "&KJcy;"
+  ],
+  "00039A": [
+    "&Kappa;"
+  ],
+  "000136": [
+    "&Kcedil;"
+  ],
+  "00041A": [
+    "&Kcy;"
+  ],
+  "01D50E": [
+    "&Kfr;"
+  ],
+  "01D542": [
+    "&Kopf;"
+  ],
+  "01D4A6": [
+    "&Kscr;"
+  ],
+  "000409": [
+    "&LJcy;"
+  ],
+  "00003C": [
+    "&LT",
+    "&lt",
+    "&LT;",
+    "&lt;"
+  ],
+  "000139": [
+    "&Lacute;"
+  ],
+  "00039B": [
+    "&Lambda;"
+  ],
+  "0027EA": [
+    "&Lang;"
+  ],
+  "002112": [
+    "&Lscr;",
+    "&lagran;",
+    "&Laplacetrf;"
+  ],
+  "00219E": [
+    "&Larr;",
+    "&twoheadleftarrow;"
+  ],
+  "00013D": [
+    "&Lcaron;"
+  ],
+  "00013B": [
+    "&Lcedil;"
+  ],
+  "00041B": [
+    "&Lcy;"
+  ],
+  "0027E8": [
+    "&lang;",
+    "&langle;",
+    "&LeftAngleBracket;"
+  ],
+  "002190": [
+    "&larr;",
+    "&slarr;",
+    "&LeftArrow;",
+    "&leftarrow;",
+    "&ShortLeftArrow;"
+  ],
+  "0021E4": [
+    "&larrb;",
+    "&LeftArrowBar;"
+  ],
+  "0021C6": [
+    "&lrarr;",
+    "&leftrightarrows;",
+    "&LeftArrowRightArrow;"
+  ],
+  "002308": [
+    "&lceil;",
+    "&LeftCeiling;"
+  ],
+  "0027E6": [
+    "&lobrk;",
+    "&LeftDoubleBracket;"
+  ],
+  "002961": [
+    "&LeftDownTeeVector;"
+  ],
+  "0021C3": [
+    "&dharl;",
+    "&LeftDownVector;",
+    "&downharpoonleft;"
+  ],
+  "002959": [
+    "&LeftDownVectorBar;"
+  ],
+  "00230A": [
+    "&lfloor;",
+    "&LeftFloor;"
+  ],
+  "002194": [
+    "&harr;",
+    "&LeftRightArrow;",
+    "&leftrightarrow;"
+  ],
+  "00294E": [
+    "&LeftRightVector;"
+  ],
+  "0022A3": [
+    "&dashv;",
+    "&LeftTee;"
+  ],
+  "0021A4": [
+    "&mapstoleft;",
+    "&LeftTeeArrow;"
+  ],
+  "00295A": [
+    "&LeftTeeVector;"
+  ],
+  "0022B2": [
+    "&vltri;",
+    "&LeftTriangle;",
+    "&vartriangleleft;"
+  ],
+  "0029CF": [
+    "&LeftTriangleBar;"
+  ],
+  "0022B4": [
+    "&ltrie;",
+    "&trianglelefteq;",
+    "&LeftTriangleEqual;"
+  ],
+  "002951": [
+    "&LeftUpDownVector;"
+  ],
+  "002960": [
+    "&LeftUpTeeVector;"
+  ],
+  "0021BF": [
+    "&uharl;",
+    "&LeftUpVector;",
+    "&upharpoonleft;"
+  ],
+  "002958": [
+    "&LeftUpVectorBar;"
+  ],
+  "0021BC": [
+    "&lharu;",
+    "&LeftVector;",
+    "&leftharpoonup;"
+  ],
+  "002952": [
+    "&LeftVectorBar;"
+  ],
+  "0022DA": [
+    "&leg;",
+    "&lesseqgtr;",
+    "&LessEqualGreater;"
+  ],
+  "002266": [
+    "&lE;",
+    "&leqq;",
+    "&LessFullEqual;"
+  ],
+  "002276": [
+    "&lg;",
+    "&lessgtr;",
+    "&LessGreater;"
+  ],
+  "002AA1": [
+    "&LessLess;"
+  ],
+  "002A7D": [
+    "&les;",
+    "&leqslant;",
+    "&LessSlantEqual;"
+  ],
+  "002272": [
+    "&lsim;",
+    "&lesssim;",
+    "&LessTilde;"
+  ],
+  "01D50F": [
+    "&Lfr;"
+  ],
+  "0022D8": [
+    "&Ll;"
+  ],
+  "0021DA": [
+    "&lAarr;",
+    "&Lleftarrow;"
+  ],
+  "00013F": [
+    "&Lmidot;"
+  ],
+  "0027F5": [
+    "&xlarr;",
+    "&LongLeftArrow;",
+    "&longleftarrow;"
+  ],
+  "0027F7": [
+    "&xharr;",
+    "&LongLeftRightArrow;",
+    "&longleftrightarrow;"
+  ],
+  "0027F6": [
+    "&xrarr;",
+    "&LongRightArrow;",
+    "&longrightarrow;"
+  ],
+  "01D543": [
+    "&Lopf;"
+  ],
+  "002199": [
+    "&swarr;",
+    "&swarrow;",
+    "&LowerLeftArrow;"
+  ],
+  "002198": [
+    "&searr;",
+    "&searrow;",
+    "&LowerRightArrow;"
+  ],
+  "0021B0": [
+    "&Lsh;",
+    "&lsh;"
+  ],
+  "000141": [
+    "&Lstrok;"
+  ],
+  "00226A": [
+    "&Lt;",
+    "&ll;",
+    "&NestedLessLess;"
+  ],
+  "002905": [
+    "&Map;"
+  ],
+  "00041C": [
+    "&Mcy;"
+  ],
+  "00205F": [
+    "&MediumSpace;"
+  ],
+  "002133": [
+    "&Mscr;",
+    "&phmmat;",
+    "&Mellintrf;"
+  ],
+  "01D510": [
+    "&Mfr;"
+  ],
+  "002213": [
+    "&mp;",
+    "&mnplus;",
+    "&MinusPlus;"
+  ],
+  "01D544": [
+    "&Mopf;"
+  ],
+  "00039C": [
+    "&Mu;"
+  ],
+  "00040A": [
+    "&NJcy;"
+  ],
+  "000143": [
+    "&Nacute;"
+  ],
+  "000147": [
+    "&Ncaron;"
+  ],
+  "000145": [
+    "&Ncedil;"
+  ],
+  "00041D": [
+    "&Ncy;"
+  ],
+  "00200B": [
+    "&ZeroWidthSpace;",
+    "&NegativeThinSpace;",
+    "&NegativeThickSpace;",
+    "&NegativeMediumSpace;",
+    "&NegativeVeryThinSpace;"
+  ],
+  "00000A": [
+    "&NewLine;"
+  ],
+  "01D511": [
+    "&Nfr;"
+  ],
+  "002060": [
+    "&NoBreak;"
+  ],
+  "0000A0": [
+    "&nbsp",
+    "&nbsp;",
+    "&NonBreakingSpace;"
+  ],
+  "002115": [
+    "&Nopf;",
+    "&naturals;"
+  ],
+  "002AEC": [
+    "&Not;"
+  ],
+  "002262": [
+    "&nequiv;",
+    "&NotCongruent;"
+  ],
+  "00226D": [
+    "&NotCupCap;"
+  ],
+  "002226": [
+    "&npar;",
+    "&nspar;",
+    "&nparallel;",
+    "&nshortparallel;",
+    "&NotDoubleVerticalBar;"
+  ],
+  "002209": [
+    "&notin;",
+    "&notinva;",
+    "&NotElement;"
+  ],
+  "002260": [
+    "&ne;",
+    "&NotEqual;"
+  ],
+  "002204": [
+    "&nexist;",
+    "&nexists;",
+    "&NotExists;"
+  ],
+  "00226F": [
+    "&ngt;",
+    "&ngtr;",
+    "&NotGreater;"
+  ],
+  "002271": [
+    "&nge;",
+    "&ngeq;",
+    "&NotGreaterEqual;"
+  ],
+  "002279": [
+    "&ntgl;",
+    "&NotGreaterLess;"
+  ],
+  "002275": [
+    "&ngsim;",
+    "&NotGreaterTilde;"
+  ],
+  "0022EA": [
+    "&nltri;",
+    "&ntriangleleft;",
+    "&NotLeftTriangle;"
+  ],
+  "0022EC": [
+    "&nltrie;",
+    "&ntrianglelefteq;",
+    "&NotLeftTriangleEqual;"
+  ],
+  "00226E": [
+    "&nlt;",
+    "&nless;",
+    "&NotLess;"
+  ],
+  "002270": [
+    "&nle;",
+    "&nleq;",
+    "&NotLessEqual;"
+  ],
+  "002278": [
+    "&ntlg;",
+    "&NotLessGreater;"
+  ],
+  "002274": [
+    "&nlsim;",
+    "&NotLessTilde;"
+  ],
+  "002280": [
+    "&npr;",
+    "&nprec;",
+    "&NotPrecedes;"
+  ],
+  "0022E0": [
+    "&nprcue;",
+    "&NotPrecedesSlantEqual;"
+  ],
+  "00220C": [
+    "&notni;",
+    "&notniva;",
+    "&NotReverseElement;"
+  ],
+  "0022EB": [
+    "&nrtri;",
+    "&ntriangleright;",
+    "&NotRightTriangle;"
+  ],
+  "0022ED": [
+    "&nrtrie;",
+    "&ntrianglerighteq;",
+    "&NotRightTriangleEqual;"
+  ],
+  "0022E2": [
+    "&nsqsube;",
+    "&NotSquareSubsetEqual;"
+  ],
+  "0022E3": [
+    "&nsqsupe;",
+    "&NotSquareSupersetEqual;"
+  ],
+  "002288": [
+    "&nsube;",
+    "&nsubseteq;",
+    "&NotSubsetEqual;"
+  ],
+  "002281": [
+    "&nsc;",
+    "&nsucc;",
+    "&NotSucceeds;"
+  ],
+  "0022E1": [
+    "&nsccue;",
+    "&NotSucceedsSlantEqual;"
+  ],
+  "002289": [
+    "&nsupe;",
+    "&nsupseteq;",
+    "&NotSupersetEqual;"
+  ],
+  "002241": [
+    "&nsim;",
+    "&NotTilde;"
+  ],
+  "002244": [
+    "&nsime;",
+    "&nsimeq;",
+    "&NotTildeEqual;"
+  ],
+  "002247": [
+    "&ncong;",
+    "&NotTildeFullEqual;"
+  ],
+  "002249": [
+    "&nap;",
+    "&napprox;",
+    "&NotTildeTilde;"
+  ],
+  "002224": [
+    "&nmid;",
+    "&nsmid;",
+    "&nshortmid;",
+    "&NotVerticalBar;"
+  ],
+  "01D4A9": [
+    "&Nscr;"
+  ],
+  "0000D1": [
+    "&Ntilde",
+    "&Ntilde;"
+  ],
+  "00039D": [
+    "&Nu;"
+  ],
+  "000152": [
+    "&OElig;"
+  ],
+  "0000D3": [
+    "&Oacute",
+    "&Oacute;"
+  ],
+  "0000D4": [
+    "&Ocirc",
+    "&Ocirc;"
+  ],
+  "00041E": [
+    "&Ocy;"
+  ],
+  "000150": [
+    "&Odblac;"
+  ],
+  "01D512": [
+    "&Ofr;"
+  ],
+  "0000D2": [
+    "&Ograve",
+    "&Ograve;"
+  ],
+  "00014C": [
+    "&Omacr;"
+  ],
+  "0003A9": [
+    "&ohm;",
+    "&Omega;"
+  ],
+  "00039F": [
+    "&Omicron;"
+  ],
+  "01D546": [
+    "&Oopf;"
+  ],
+  "00201C": [
+    "&ldquo;",
+    "&OpenCurlyDoubleQuote;"
+  ],
+  "002018": [
+    "&lsquo;",
+    "&OpenCurlyQuote;"
+  ],
+  "002A54": [
+    "&Or;"
+  ],
+  "01D4AA": [
+    "&Oscr;"
+  ],
+  "0000D8": [
+    "&Oslash",
+    "&Oslash;"
+  ],
+  "0000D5": [
+    "&Otilde",
+    "&Otilde;"
+  ],
+  "002A37": [
+    "&Otimes;"
+  ],
+  "0000D6": [
+    "&Ouml",
+    "&Ouml;"
+  ],
+  "00203E": [
+    "&oline;",
+    "&OverBar;"
+  ],
+  "0023DE": [
+    "&OverBrace;"
+  ],
+  "0023B4": [
+    "&tbrk;",
+    "&OverBracket;"
+  ],
+  "0023DC": [
+    "&OverParenthesis;"
+  ],
+  "002202": [
+    "&part;",
+    "&PartialD;"
+  ],
+  "00041F": [
+    "&Pcy;"
+  ],
+  "01D513": [
+    "&Pfr;"
+  ],
+  "0003A6": [
+    "&Phi;"
+  ],
+  "0003A0": [
+    "&Pi;"
+  ],
+  "0000B1": [
+    "&pm;",
+    "&plusmn",
+    "&plusmn;",
+    "&PlusMinus;"
+  ],
+  "002119": [
+    "&Popf;",
+    "&primes;"
+  ],
+  "002ABB": [
+    "&Pr;"
+  ],
+  "00227A": [
+    "&pr;",
+    "&prec;",
+    "&Precedes;"
+  ],
+  "002AAF": [
+    "&pre;",
+    "&preceq;",
+    "&PrecedesEqual;"
+  ],
+  "00227C": [
+    "&prcue;",
+    "&preccurlyeq;",
+    "&PrecedesSlantEqual;"
+  ],
+  "00227E": [
+    "&prsim;",
+    "&precsim;",
+    "&PrecedesTilde;"
+  ],
+  "002033": [
+    "&Prime;"
+  ],
+  "00220F": [
+    "&prod;",
+    "&Product;"
+  ],
+  "00221D": [
+    "&prop;",
+    "&vprop;",
+    "&propto;",
+    "&varpropto;",
+    "&Proportional;"
+  ],
+  "01D4AB": [
+    "&Pscr;"
+  ],
+  "0003A8": [
+    "&Psi;"
+  ],
+  "000022": [
+    "&QUOT",
+    "&quot",
+    "&QUOT;",
+    "&quot;"
+  ],
+  "01D514": [
+    "&Qfr;"
+  ],
+  "00211A": [
+    "&Qopf;",
+    "&rationals;"
+  ],
+  "01D4AC": [
+    "&Qscr;"
+  ],
+  "002910": [
+    "&RBarr;",
+    "&drbkarow;"
+  ],
+  "0000AE": [
+    "&REG",
+    "&reg",
+    "&REG;",
+    "&reg;",
+    "&circledR;"
+  ],
+  "000154": [
+    "&Racute;"
+  ],
+  "0027EB": [
+    "&Rang;"
+  ],
+  "0021A0": [
+    "&Rarr;",
+    "&twoheadrightarrow;"
+  ],
+  "002916": [
+    "&Rarrtl;"
+  ],
+  "000158": [
+    "&Rcaron;"
+  ],
+  "000156": [
+    "&Rcedil;"
+  ],
+  "000420": [
+    "&Rcy;"
+  ],
+  "00211C": [
+    "&Re;",
+    "&Rfr;",
+    "&real;",
+    "&realpart;"
+  ],
+  "00220B": [
+    "&ni;",
+    "&niv;",
+    "&SuchThat;",
+    "&ReverseElement;"
+  ],
+  "0021CB": [
+    "&lrhar;",
+    "&leftrightharpoons;",
+    "&ReverseEquilibrium;"
+  ],
+  "00296F": [
+    "&duhar;",
+    "&ReverseUpEquilibrium;"
+  ],
+  "0003A1": [
+    "&Rho;"
+  ],
+  "0027E9": [
+    "&rang;",
+    "&rangle;",
+    "&RightAngleBracket;"
+  ],
+  "002192": [
+    "&rarr;",
+    "&srarr;",
+    "&RightArrow;",
+    "&rightarrow;",
+    "&ShortRightArrow;"
+  ],
+  "0021E5": [
+    "&rarrb;",
+    "&RightArrowBar;"
+  ],
+  "0021C4": [
+    "&rlarr;",
+    "&rightleftarrows;",
+    "&RightArrowLeftArrow;"
+  ],
+  "002309": [
+    "&rceil;",
+    "&RightCeiling;"
+  ],
+  "0027E7": [
+    "&robrk;",
+    "&RightDoubleBracket;"
+  ],
+  "00295D": [
+    "&RightDownTeeVector;"
+  ],
+  "0021C2": [
+    "&dharr;",
+    "&RightDownVector;",
+    "&downharpoonright;"
+  ],
+  "002955": [
+    "&RightDownVectorBar;"
+  ],
+  "00230B": [
+    "&rfloor;",
+    "&RightFloor;"
+  ],
+  "0022A2": [
+    "&vdash;",
+    "&RightTee;"
+  ],
+  "0021A6": [
+    "&map;",
+    "&mapsto;",
+    "&RightTeeArrow;"
+  ],
+  "00295B": [
+    "&RightTeeVector;"
+  ],
+  "0022B3": [
+    "&vrtri;",
+    "&RightTriangle;",
+    "&vartriangleright;"
+  ],
+  "0029D0": [
+    "&RightTriangleBar;"
+  ],
+  "0022B5": [
+    "&rtrie;",
+    "&trianglerighteq;",
+    "&RightTriangleEqual;"
+  ],
+  "00294F": [
+    "&RightUpDownVector;"
+  ],
+  "00295C": [
+    "&RightUpTeeVector;"
+  ],
+  "0021BE": [
+    "&uharr;",
+    "&RightUpVector;",
+    "&upharpoonright;"
+  ],
+  "002954": [
+    "&RightUpVectorBar;"
+  ],
+  "0021C0": [
+    "&rharu;",
+    "&RightVector;",
+    "&rightharpoonup;"
+  ],
+  "002953": [
+    "&RightVectorBar;"
+  ],
+  "00211D": [
+    "&Ropf;",
+    "&reals;"
+  ],
+  "002970": [
+    "&RoundImplies;"
+  ],
+  "0021DB": [
+    "&rAarr;",
+    "&Rrightarrow;"
+  ],
+  "00211B": [
+    "&Rscr;",
+    "&realine;"
+  ],
+  "0021B1": [
+    "&Rsh;",
+    "&rsh;"
+  ],
+  "0029F4": [
+    "&RuleDelayed;"
+  ],
+  "000429": [
+    "&SHCHcy;"
+  ],
+  "000428": [
+    "&SHcy;"
+  ],
+  "00042C": [
+    "&SOFTcy;"
+  ],
+  "00015A": [
+    "&Sacute;"
+  ],
+  "002ABC": [
+    "&Sc;"
+  ],
+  "000160": [
+    "&Scaron;"
+  ],
+  "00015E": [
+    "&Scedil;"
+  ],
+  "00015C": [
+    "&Scirc;"
+  ],
+  "000421": [
+    "&Scy;"
+  ],
+  "01D516": [
+    "&Sfr;"
+  ],
+  "002191": [
+    "&uarr;",
+    "&UpArrow;",
+    "&uparrow;",
+    "&ShortUpArrow;"
+  ],
+  "0003A3": [
+    "&Sigma;"
+  ],
+  "002218": [
+    "&compfn;",
+    "&SmallCircle;"
+  ],
+  "01D54A": [
+    "&Sopf;"
+  ],
+  "00221A": [
+    "&Sqrt;",
+    "&radic;"
+  ],
+  "0025A1": [
+    "&squ;",
+    "&Square;",
+    "&square;"
+  ],
+  "002293": [
+    "&sqcap;",
+    "&SquareIntersection;"
+  ],
+  "00228F": [
+    "&sqsub;",
+    "&sqsubset;",
+    "&SquareSubset;"
+  ],
+  "002291": [
+    "&sqsube;",
+    "&sqsubseteq;",
+    "&SquareSubsetEqual;"
+  ],
+  "002290": [
+    "&sqsup;",
+    "&sqsupset;",
+    "&SquareSuperset;"
+  ],
+  "002292": [
+    "&sqsupe;",
+    "&sqsupseteq;",
+    "&SquareSupersetEqual;"
+  ],
+  "002294": [
+    "&sqcup;",
+    "&SquareUnion;"
+  ],
+  "01D4AE": [
+    "&Sscr;"
+  ],
+  "0022C6": [
+    "&Star;",
+    "&sstarf;"
+  ],
+  "0022D0": [
+    "&Sub;",
+    "&Subset;"
+  ],
+  "002286": [
+    "&sube;",
+    "&subseteq;",
+    "&SubsetEqual;"
+  ],
+  "00227B": [
+    "&sc;",
+    "&succ;",
+    "&Succeeds;"
+  ],
+  "002AB0": [
+    "&sce;",
+    "&succeq;",
+    "&SucceedsEqual;"
+  ],
+  "00227D": [
+    "&sccue;",
+    "&succcurlyeq;",
+    "&SucceedsSlantEqual;"
+  ],
+  "00227F": [
+    "&scsim;",
+    "&succsim;",
+    "&SucceedsTilde;"
+  ],
+  "002211": [
+    "&Sum;",
+    "&sum;"
+  ],
+  "0022D1": [
+    "&Sup;",
+    "&Supset;"
+  ],
+  "002283": [
+    "&sup;",
+    "&supset;",
+    "&Superset;"
+  ],
+  "002287": [
+    "&supe;",
+    "&supseteq;",
+    "&SupersetEqual;"
+  ],
+  "0000DE": [
+    "&THORN",
+    "&THORN;"
+  ],
+  "002122": [
+    "&TRADE;",
+    "&trade;"
+  ],
+  "00040B": [
+    "&TSHcy;"
+  ],
+  "000426": [
+    "&TScy;"
+  ],
+  "000009": [
+    "&Tab;"
+  ],
+  "0003A4": [
+    "&Tau;"
+  ],
+  "000164": [
+    "&Tcaron;"
+  ],
+  "000162": [
+    "&Tcedil;"
+  ],
+  "000422": [
+    "&Tcy;"
+  ],
+  "01D517": [
+    "&Tfr;"
+  ],
+  "002234": [
+    "&there4;",
+    "&Therefore;",
+    "&therefore;"
+  ],
+  "000398": [
+    "&Theta;"
+  ],
+  "002009": [
+    "&thinsp;",
+    "&ThinSpace;"
+  ],
+  "00223C": [
+    "&sim;",
+    "&Tilde;",
+    "&thksim;",
+    "&thicksim;"
+  ],
+  "002243": [
+    "&sime;",
+    "&simeq;",
+    "&TildeEqual;"
+  ],
+  "002245": [
+    "&cong;",
+    "&TildeFullEqual;"
+  ],
+  "002248": [
+    "&ap;",
+    "&asymp;",
+    "&thkap;",
+    "&approx;",
+    "&TildeTilde;",
+    "&thickapprox;"
+  ],
+  "01D54B": [
+    "&Topf;"
+  ],
+  "0020DB": [
+    "&tdot;",
+    "&TripleDot;"
+  ],
+  "01D4AF": [
+    "&Tscr;"
+  ],
+  "000166": [
+    "&Tstrok;"
+  ],
+  "0000DA": [
+    "&Uacute",
+    "&Uacute;"
+  ],
+  "00219F": [
+    "&Uarr;"
+  ],
+  "002949": [
+    "&Uarrocir;"
+  ],
+  "00040E": [
+    "&Ubrcy;"
+  ],
+  "00016C": [
+    "&Ubreve;"
+  ],
+  "0000DB": [
+    "&Ucirc",
+    "&Ucirc;"
+  ],
+  "000423": [
+    "&Ucy;"
+  ],
+  "000170": [
+    "&Udblac;"
+  ],
+  "01D518": [
+    "&Ufr;"
+  ],
+  "0000D9": [
+    "&Ugrave",
+    "&Ugrave;"
+  ],
+  "00016A": [
+    "&Umacr;"
+  ],
+  "00005F": [
+    "&lowbar;",
+    "&UnderBar;"
+  ],
+  "0023DF": [
+    "&UnderBrace;"
+  ],
+  "0023B5": [
+    "&bbrk;",
+    "&UnderBracket;"
+  ],
+  "0023DD": [
+    "&UnderParenthesis;"
+  ],
+  "0022C3": [
+    "&xcup;",
+    "&Union;",
+    "&bigcup;"
+  ],
+  "00228E": [
+    "&uplus;",
+    "&UnionPlus;"
+  ],
+  "000172": [
+    "&Uogon;"
+  ],
+  "01D54C": [
+    "&Uopf;"
+  ],
+  "002912": [
+    "&UpArrowBar;"
+  ],
+  "0021C5": [
+    "&udarr;",
+    "&UpArrowDownArrow;"
+  ],
+  "002195": [
+    "&varr;",
+    "&UpDownArrow;",
+    "&updownarrow;"
+  ],
+  "00296E": [
+    "&udhar;",
+    "&UpEquilibrium;"
+  ],
+  "0022A5": [
+    "&bot;",
+    "&perp;",
+    "&UpTee;",
+    "&bottom;"
+  ],
+  "0021A5": [
+    "&mapstoup;",
+    "&UpTeeArrow;"
+  ],
+  "002196": [
+    "&nwarr;",
+    "&nwarrow;",
+    "&UpperLeftArrow;"
+  ],
+  "002197": [
+    "&nearr;",
+    "&nearrow;",
+    "&UpperRightArrow;"
+  ],
+  "0003D2": [
+    "&Upsi;",
+    "&upsih;"
+  ],
+  "0003A5": [
+    "&Upsilon;"
+  ],
+  "00016E": [
+    "&Uring;"
+  ],
+  "01D4B0": [
+    "&Uscr;"
+  ],
+  "000168": [
+    "&Utilde;"
+  ],
+  "0000DC": [
+    "&Uuml",
+    "&Uuml;"
+  ],
+  "0022AB": [
+    "&VDash;"
+  ],
+  "002AEB": [
+    "&Vbar;"
+  ],
+  "000412": [
+    "&Vcy;"
+  ],
+  "0022A9": [
+    "&Vdash;"
+  ],
+  "002AE6": [
+    "&Vdashl;"
+  ],
+  "0022C1": [
+    "&Vee;",
+    "&xvee;",
+    "&bigvee;"
+  ],
+  "002016": [
+    "&Vert;",
+    "&Verbar;"
+  ],
+  "002223": [
+    "&mid;",
+    "&smid;",
+    "&shortmid;",
+    "&VerticalBar;"
+  ],
+  "00007C": [
+    "&vert;",
+    "&verbar;",
+    "&VerticalLine;"
+  ],
+  "002758": [
+    "&VerticalSeparator;"
+  ],
+  "002240": [
+    "&wr;",
+    "&wreath;",
+    "&VerticalTilde;"
+  ],
+  "00200A": [
+    "&hairsp;",
+    "&VeryThinSpace;"
+  ],
+  "01D519": [
+    "&Vfr;"
+  ],
+  "01D54D": [
+    "&Vopf;"
+  ],
+  "01D4B1": [
+    "&Vscr;"
+  ],
+  "0022AA": [
+    "&Vvdash;"
+  ],
+  "000174": [
+    "&Wcirc;"
+  ],
+  "0022C0": [
+    "&Wedge;",
+    "&xwedge;",
+    "&bigwedge;"
+  ],
+  "01D51A": [
+    "&Wfr;"
+  ],
+  "01D54E": [
+    "&Wopf;"
+  ],
+  "01D4B2": [
+    "&Wscr;"
+  ],
+  "01D51B": [
+    "&Xfr;"
+  ],
+  "00039E": [
+    "&Xi;"
+  ],
+  "01D54F": [
+    "&Xopf;"
+  ],
+  "01D4B3": [
+    "&Xscr;"
+  ],
+  "00042F": [
+    "&YAcy;"
+  ],
+  "000407": [
+    "&YIcy;"
+  ],
+  "00042E": [
+    "&YUcy;"
+  ],
+  "0000DD": [
+    "&Yacute",
+    "&Yacute;"
+  ],
+  "000176": [
+    "&Ycirc;"
+  ],
+  "00042B": [
+    "&Ycy;"
+  ],
+  "01D51C": [
+    "&Yfr;"
+  ],
+  "01D550": [
+    "&Yopf;"
+  ],
+  "01D4B4": [
+    "&Yscr;"
+  ],
+  "000178": [
+    "&Yuml;"
+  ],
+  "000416": [
+    "&ZHcy;"
+  ],
+  "000179": [
+    "&Zacute;"
+  ],
+  "00017D": [
+    "&Zcaron;"
+  ],
+  "000417": [
+    "&Zcy;"
+  ],
+  "00017B": [
+    "&Zdot;"
+  ],
+  "000396": [
+    "&Zeta;"
+  ],
+  "002128": [
+    "&Zfr;",
+    "&zeetrf;"
+  ],
+  "002124": [
+    "&Zopf;",
+    "&integers;"
+  ],
+  "01D4B5": [
+    "&Zscr;"
+  ],
+  "0000E1": [
+    "&aacute",
+    "&aacute;"
+  ],
+  "000103": [
+    "&abreve;"
+  ],
+  "00223E": [
+    "&ac;",
+    "&mstpos;"
+  ],
+  "00223F": [
+    "&acd;"
+  ],
+  "0000E2": [
+    "&acirc",
+    "&acirc;"
+  ],
+  "000430": [
+    "&acy;"
+  ],
+  "0000E6": [
+    "&aelig",
+    "&aelig;"
+  ],
+  "01D51E": [
+    "&afr;"
+  ],
+  "0000E0": [
+    "&agrave",
+    "&agrave;"
+  ],
+  "002135": [
+    "&aleph;",
+    "&alefsym;"
+  ],
+  "0003B1": [
+    "&alpha;"
+  ],
+  "000101": [
+    "&amacr;"
+  ],
+  "002A3F": [
+    "&amalg;"
+  ],
+  "002227": [
+    "&and;",
+    "&wedge;"
+  ],
+  "002A55": [
+    "&andand;"
+  ],
+  "002A5C": [
+    "&andd;"
+  ],
+  "002A58": [
+    "&andslope;"
+  ],
+  "002A5A": [
+    "&andv;"
+  ],
+  "002220": [
+    "&ang;",
+    "&angle;"
+  ],
+  "0029A4": [
+    "&ange;"
+  ],
+  "002221": [
+    "&angmsd;",
+    "&measuredangle;"
+  ],
+  "0029A8": [
+    "&angmsdaa;"
+  ],
+  "0029A9": [
+    "&angmsdab;"
+  ],
+  "0029AA": [
+    "&angmsdac;"
+  ],
+  "0029AB": [
+    "&angmsdad;"
+  ],
+  "0029AC": [
+    "&angmsdae;"
+  ],
+  "0029AD": [
+    "&angmsdaf;"
+  ],
+  "0029AE": [
+    "&angmsdag;"
+  ],
+  "0029AF": [
+    "&angmsdah;"
+  ],
+  "00221F": [
+    "&angrt;"
+  ],
+  "0022BE": [
+    "&angrtvb;"
+  ],
+  "00299D": [
+    "&angrtvbd;"
+  ],
+  "002222": [
+    "&angsph;"
+  ],
+  "00237C": [
+    "&angzarr;"
+  ],
+  "000105": [
+    "&aogon;"
+  ],
+  "01D552": [
+    "&aopf;"
+  ],
+  "002A70": [
+    "&apE;"
+  ],
+  "002A6F": [
+    "&apacir;"
+  ],
+  "00224A": [
+    "&ape;",
+    "&approxeq;"
+  ],
+  "00224B": [
+    "&apid;"
+  ],
+  "000027": [
+    "&apos;"
+  ],
+  "0000E5": [
+    "&aring",
+    "&aring;"
+  ],
+  "01D4B6": [
+    "&ascr;"
+  ],
+  "00002A": [
+    "&ast;",
+    "&midast;"
+  ],
+  "0000E3": [
+    "&atilde",
+    "&atilde;"
+  ],
+  "0000E4": [
+    "&auml",
+    "&auml;"
+  ],
+  "002A11": [
+    "&awint;"
+  ],
+  "002AED": [
+    "&bNot;"
+  ],
+  "00224C": [
+    "&bcong;",
+    "&backcong;"
+  ],
+  "0003F6": [
+    "&bepsi;",
+    "&backepsilon;"
+  ],
+  "002035": [
+    "&bprime;",
+    "&backprime;"
+  ],
+  "00223D": [
+    "&bsim;",
+    "&backsim;"
+  ],
+  "0022CD": [
+    "&bsime;",
+    "&backsimeq;"
+  ],
+  "0022BD": [
+    "&barvee;"
+  ],
+  "002305": [
+    "&barwed;",
+    "&barwedge;"
+  ],
+  "0023B6": [
+    "&bbrktbrk;"
+  ],
+  "000431": [
+    "&bcy;"
+  ],
+  "00201E": [
+    "&bdquo;",
+    "&ldquor;"
+  ],
+  "0029B0": [
+    "&bemptyv;"
+  ],
+  "0003B2": [
+    "&beta;"
+  ],
+  "002136": [
+    "&beth;"
+  ],
+  "00226C": [
+    "&twixt;",
+    "&between;"
+  ],
+  "01D51F": [
+    "&bfr;"
+  ],
+  "0025EF": [
+    "&xcirc;",
+    "&bigcirc;"
+  ],
+  "002A00": [
+    "&xodot;",
+    "&bigodot;"
+  ],
+  "002A01": [
+    "&xoplus;",
+    "&bigoplus;"
+  ],
+  "002A02": [
+    "&xotime;",
+    "&bigotimes;"
+  ],
+  "002A06": [
+    "&xsqcup;",
+    "&bigsqcup;"
+  ],
+  "002605": [
+    "&starf;",
+    "&bigstar;"
+  ],
+  "0025BD": [
+    "&xdtri;",
+    "&bigtriangledown;"
+  ],
+  "0025B3": [
+    "&xutri;",
+    "&bigtriangleup;"
+  ],
+  "002A04": [
+    "&xuplus;",
+    "&biguplus;"
+  ],
+  "00290D": [
+    "&rbarr;",
+    "&bkarow;"
+  ],
+  "0029EB": [
+    "&lozf;",
+    "&blacklozenge;"
+  ],
+  "0025B4": [
+    "&utrif;",
+    "&blacktriangle;"
+  ],
+  "0025BE": [
+    "&dtrif;",
+    "&blacktriangledown;"
+  ],
+  "0025C2": [
+    "&ltrif;",
+    "&blacktriangleleft;"
+  ],
+  "0025B8": [
+    "&rtrif;",
+    "&blacktriangleright;"
+  ],
+  "002423": [
+    "&blank;"
+  ],
+  "002592": [
+    "&blk12;"
+  ],
+  "002591": [
+    "&blk14;"
+  ],
+  "002593": [
+    "&blk34;"
+  ],
+  "002588": [
+    "&block;"
+  ],
+  "002310": [
+    "&bnot;"
+  ],
+  "01D553": [
+    "&bopf;"
+  ],
+  "0022C8": [
+    "&bowtie;"
+  ],
+  "002557": [
+    "&boxDL;"
+  ],
+  "002554": [
+    "&boxDR;"
+  ],
+  "002556": [
+    "&boxDl;"
+  ],
+  "002553": [
+    "&boxDr;"
+  ],
+  "002550": [
+    "&boxH;"
+  ],
+  "002566": [
+    "&boxHD;"
+  ],
+  "002569": [
+    "&boxHU;"
+  ],
+  "002564": [
+    "&boxHd;"
+  ],
+  "002567": [
+    "&boxHu;"
+  ],
+  "00255D": [
+    "&boxUL;"
+  ],
+  "00255A": [
+    "&boxUR;"
+  ],
+  "00255C": [
+    "&boxUl;"
+  ],
+  "002559": [
+    "&boxUr;"
+  ],
+  "002551": [
+    "&boxV;"
+  ],
+  "00256C": [
+    "&boxVH;"
+  ],
+  "002563": [
+    "&boxVL;"
+  ],
+  "002560": [
+    "&boxVR;"
+  ],
+  "00256B": [
+    "&boxVh;"
+  ],
+  "002562": [
+    "&boxVl;"
+  ],
+  "00255F": [
+    "&boxVr;"
+  ],
+  "0029C9": [
+    "&boxbox;"
+  ],
+  "002555": [
+    "&boxdL;"
+  ],
+  "002552": [
+    "&boxdR;"
+  ],
+  "002510": [
+    "&boxdl;"
+  ],
+  "00250C": [
+    "&boxdr;"
+  ],
+  "002565": [
+    "&boxhD;"
+  ],
+  "002568": [
+    "&boxhU;"
+  ],
+  "00252C": [
+    "&boxhd;"
+  ],
+  "002534": [
+    "&boxhu;"
+  ],
+  "00229F": [
+    "&minusb;",
+    "&boxminus;"
+  ],
+  "00229E": [
+    "&plusb;",
+    "&boxplus;"
+  ],
+  "0022A0": [
+    "&timesb;",
+    "&boxtimes;"
+  ],
+  "00255B": [
+    "&boxuL;"
+  ],
+  "002558": [
+    "&boxuR;"
+  ],
+  "002518": [
+    "&boxul;"
+  ],
+  "002514": [
+    "&boxur;"
+  ],
+  "002502": [
+    "&boxv;"
+  ],
+  "00256A": [
+    "&boxvH;"
+  ],
+  "002561": [
+    "&boxvL;"
+  ],
+  "00255E": [
+    "&boxvR;"
+  ],
+  "00253C": [
+    "&boxvh;"
+  ],
+  "002524": [
+    "&boxvl;"
+  ],
+  "00251C": [
+    "&boxvr;"
+  ],
+  "0000A6": [
+    "&brvbar",
+    "&brvbar;"
+  ],
+  "01D4B7": [
+    "&bscr;"
+  ],
+  "00204F": [
+    "&bsemi;"
+  ],
+  "00005C": [
+    "&bsol;"
+  ],
+  "0029C5": [
+    "&bsolb;"
+  ],
+  "0027C8": [
+    "&bsolhsub;"
+  ],
+  "002022": [
+    "&bull;",
+    "&bullet;"
+  ],
+  "002AAE": [
+    "&bumpE;"
+  ],
+  "000107": [
+    "&cacute;"
+  ],
+  "002229": [
+    "&cap;"
+  ],
+  "002A44": [
+    "&capand;"
+  ],
+  "002A49": [
+    "&capbrcup;"
+  ],
+  "002A4B": [
+    "&capcap;"
+  ],
+  "002A47": [
+    "&capcup;"
+  ],
+  "002A40": [
+    "&capdot;"
+  ],
+  "002041": [
+    "&caret;"
+  ],
+  "002A4D": [
+    "&ccaps;"
+  ],
+  "00010D": [
+    "&ccaron;"
+  ],
+  "0000E7": [
+    "&ccedil",
+    "&ccedil;"
+  ],
+  "000109": [
+    "&ccirc;"
+  ],
+  "002A4C": [
+    "&ccups;"
+  ],
+  "002A50": [
+    "&ccupssm;"
+  ],
+  "00010B": [
+    "&cdot;"
+  ],
+  "0029B2": [
+    "&cemptyv;"
+  ],
+  "0000A2": [
+    "&cent",
+    "&cent;"
+  ],
+  "01D520": [
+    "&cfr;"
+  ],
+  "000447": [
+    "&chcy;"
+  ],
+  "002713": [
+    "&check;",
+    "&checkmark;"
+  ],
+  "0003C7": [
+    "&chi;"
+  ],
+  "0025CB": [
+    "&cir;"
+  ],
+  "0029C3": [
+    "&cirE;"
+  ],
+  "0002C6": [
+    "&circ;"
+  ],
+  "002257": [
+    "&cire;",
+    "&circeq;"
+  ],
+  "0021BA": [
+    "&olarr;",
+    "&circlearrowleft;"
+  ],
+  "0021BB": [
+    "&orarr;",
+    "&circlearrowright;"
+  ],
+  "0024C8": [
+    "&oS;",
+    "&circledS;"
+  ],
+  "00229B": [
+    "&oast;",
+    "&circledast;"
+  ],
+  "00229A": [
+    "&ocir;",
+    "&circledcirc;"
+  ],
+  "00229D": [
+    "&odash;",
+    "&circleddash;"
+  ],
+  "002A10": [
+    "&cirfnint;"
+  ],
+  "002AEF": [
+    "&cirmid;"
+  ],
+  "0029C2": [
+    "&cirscir;"
+  ],
+  "002663": [
+    "&clubs;",
+    "&clubsuit;"
+  ],
+  "00003A": [
+    "&colon;"
+  ],
+  "00002C": [
+    "&comma;"
+  ],
+  "000040": [
+    "&commat;"
+  ],
+  "002201": [
+    "&comp;",
+    "&complement;"
+  ],
+  "002A6D": [
+    "&congdot;"
+  ],
+  "01D554": [
+    "&copf;"
+  ],
+  "002117": [
+    "&copysr;"
+  ],
+  "0021B5": [
+    "&crarr;"
+  ],
+  "002717": [
+    "&cross;"
+  ],
+  "01D4B8": [
+    "&cscr;"
+  ],
+  "002ACF": [
+    "&csub;"
+  ],
+  "002AD1": [
+    "&csube;"
+  ],
+  "002AD0": [
+    "&csup;"
+  ],
+  "002AD2": [
+    "&csupe;"
+  ],
+  "0022EF": [
+    "&ctdot;"
+  ],
+  "002938": [
+    "&cudarrl;"
+  ],
+  "002935": [
+    "&cudarrr;"
+  ],
+  "0022DE": [
+    "&cuepr;",
+    "&curlyeqprec;"
+  ],
+  "0022DF": [
+    "&cuesc;",
+    "&curlyeqsucc;"
+  ],
+  "0021B6": [
+    "&cularr;",
+    "&curvearrowleft;"
+  ],
+  "00293D": [
+    "&cularrp;"
+  ],
+  "00222A": [
+    "&cup;"
+  ],
+  "002A48": [
+    "&cupbrcap;"
+  ],
+  "002A46": [
+    "&cupcap;"
+  ],
+  "002A4A": [
+    "&cupcup;"
+  ],
+  "00228D": [
+    "&cupdot;"
+  ],
+  "002A45": [
+    "&cupor;"
+  ],
+  "0021B7": [
+    "&curarr;",
+    "&curvearrowright;"
+  ],
+  "00293C": [
+    "&curarrm;"
+  ],
+  "0022CE": [
+    "&cuvee;",
+    "&curlyvee;"
+  ],
+  "0022CF": [
+    "&cuwed;",
+    "&curlywedge;"
+  ],
+  "0000A4": [
+    "&curren",
+    "&curren;"
+  ],
+  "002231": [
+    "&cwint;"
+  ],
+  "00232D": [
+    "&cylcty;"
+  ],
+  "002965": [
+    "&dHar;"
+  ],
+  "002020": [
+    "&dagger;"
+  ],
+  "002138": [
+    "&daleth;"
+  ],
+  "002010": [
+    "&dash;",
+    "&hyphen;"
+  ],
+  "00290F": [
+    "&rBarr;",
+    "&dbkarow;"
+  ],
+  "00010F": [
+    "&dcaron;"
+  ],
+  "000434": [
+    "&dcy;"
+  ],
+  "0021CA": [
+    "&ddarr;",
+    "&downdownarrows;"
+  ],
+  "002A77": [
+    "&eDDot;",
+    "&ddotseq;"
+  ],
+  "0000B0": [
+    "&deg",
+    "&deg;"
+  ],
+  "0003B4": [
+    "&delta;"
+  ],
+  "0029B1": [
+    "&demptyv;"
+  ],
+  "00297F": [
+    "&dfisht;"
+  ],
+  "01D521": [
+    "&dfr;"
+  ],
+  "002666": [
+    "&diams;",
+    "&diamondsuit;"
+  ],
+  "0003DD": [
+    "&gammad;",
+    "&digamma;"
+  ],
+  "0022F2": [
+    "&disin;"
+  ],
+  "0000F7": [
+    "&div;",
+    "&divide",
+    "&divide;"
+  ],
+  "0022C7": [
+    "&divonx;",
+    "&divideontimes;"
+  ],
+  "000452": [
+    "&djcy;"
+  ],
+  "00231E": [
+    "&dlcorn;",
+    "&llcorner;"
+  ],
+  "00230D": [
+    "&dlcrop;"
+  ],
+  "000024": [
+    "&dollar;"
+  ],
+  "01D555": [
+    "&dopf;"
+  ],
+  "002251": [
+    "&eDot;",
+    "&doteqdot;"
+  ],
+  "002238": [
+    "&minusd;",
+    "&dotminus;"
+  ],
+  "002214": [
+    "&plusdo;",
+    "&dotplus;"
+  ],
+  "0022A1": [
+    "&sdotb;",
+    "&dotsquare;"
+  ],
+  "00231F": [
+    "&drcorn;",
+    "&lrcorner;"
+  ],
+  "00230C": [
+    "&drcrop;"
+  ],
+  "01D4B9": [
+    "&dscr;"
+  ],
+  "000455": [
+    "&dscy;"
+  ],
+  "0029F6": [
+    "&dsol;"
+  ],
+  "000111": [
+    "&dstrok;"
+  ],
+  "0022F1": [
+    "&dtdot;"
+  ],
+  "0025BF": [
+    "&dtri;",
+    "&triangledown;"
+  ],
+  "0029A6": [
+    "&dwangle;"
+  ],
+  "00045F": [
+    "&dzcy;"
+  ],
+  "0027FF": [
+    "&dzigrarr;"
+  ],
+  "0000E9": [
+    "&eacute",
+    "&eacute;"
+  ],
+  "002A6E": [
+    "&easter;"
+  ],
+  "00011B": [
+    "&ecaron;"
+  ],
+  "002256": [
+    "&ecir;",
+    "&eqcirc;"
+  ],
+  "0000EA": [
+    "&ecirc",
+    "&ecirc;"
+  ],
+  "002255": [
+    "&ecolon;",
+    "&eqcolon;"
+  ],
+  "00044D": [
+    "&ecy;"
+  ],
+  "000117": [
+    "&edot;"
+  ],
+  "002252": [
+    "&efDot;",
+    "&fallingdotseq;"
+  ],
+  "01D522": [
+    "&efr;"
+  ],
+  "002A9A": [
+    "&eg;"
+  ],
+  "0000E8": [
+    "&egrave",
+    "&egrave;"
+  ],
+  "002A96": [
+    "&egs;",
+    "&eqslantgtr;"
+  ],
+  "002A98": [
+    "&egsdot;"
+  ],
+  "002A99": [
+    "&el;"
+  ],
+  "0023E7": [
+    "&elinters;"
+  ],
+  "002113": [
+    "&ell;"
+  ],
+  "002A95": [
+    "&els;",
+    "&eqslantless;"
+  ],
+  "002A97": [
+    "&elsdot;"
+  ],
+  "000113": [
+    "&emacr;"
+  ],
+  "002205": [
+    "&empty;",
+    "&emptyv;",
+    "&emptyset;",
+    "&varnothing;"
+  ],
+  "002004": [
+    "&emsp13;"
+  ],
+  "002005": [
+    "&emsp14;"
+  ],
+  "002003": [
+    "&emsp;"
+  ],
+  "00014B": [
+    "&eng;"
+  ],
+  "002002": [
+    "&ensp;"
+  ],
+  "000119": [
+    "&eogon;"
+  ],
+  "01D556": [
+    "&eopf;"
+  ],
+  "0022D5": [
+    "&epar;"
+  ],
+  "0029E3": [
+    "&eparsl;"
+  ],
+  "002A71": [
+    "&eplus;"
+  ],
+  "0003B5": [
+    "&epsi;",
+    "&epsilon;"
+  ],
+  "0003F5": [
+    "&epsiv;",
+    "&varepsilon;",
+    "&straightepsilon;"
+  ],
+  "00003D": [
+    "&equals;"
+  ],
+  "00225F": [
+    "&equest;",
+    "&questeq;"
+  ],
+  "002A78": [
+    "&equivDD;"
+  ],
+  "0029E5": [
+    "&eqvparsl;"
+  ],
+  "002253": [
+    "&erDot;",
+    "&risingdotseq;"
+  ],
+  "002971": [
+    "&erarr;"
+  ],
+  "00212F": [
+    "&escr;"
+  ],
+  "0003B7": [
+    "&eta;"
+  ],
+  "0000F0": [
+    "&eth",
+    "&eth;"
+  ],
+  "0000EB": [
+    "&euml",
+    "&euml;"
+  ],
+  "0020AC": [
+    "&euro;"
+  ],
+  "000021": [
+    "&excl;"
+  ],
+  "000444": [
+    "&fcy;"
+  ],
+  "002640": [
+    "&female;"
+  ],
+  "00FB03": [
+    "&ffilig;"
+  ],
+  "00FB00": [
+    "&fflig;"
+  ],
+  "00FB04": [
+    "&ffllig;"
+  ],
+  "01D523": [
+    "&ffr;"
+  ],
+  "00FB01": [
+    "&filig;"
+  ],
+  "00266D": [
+    "&flat;"
+  ],
+  "00FB02": [
+    "&fllig;"
+  ],
+  "0025B1": [
+    "&fltns;"
+  ],
+  "000192": [
+    "&fnof;"
+  ],
+  "01D557": [
+    "&fopf;"
+  ],
+  "0022D4": [
+    "&fork;",
+    "&pitchfork;"
+  ],
+  "002AD9": [
+    "&forkv;"
+  ],
+  "002A0D": [
+    "&fpartint;"
+  ],
+  "0000BD": [
+    "&half;",
+    "&frac12",
+    "&frac12;"
+  ],
+  "002153": [
+    "&frac13;"
+  ],
+  "0000BC": [
+    "&frac14",
+    "&frac14;"
+  ],
+  "002155": [
+    "&frac15;"
+  ],
+  "002159": [
+    "&frac16;"
+  ],
+  "00215B": [
+    "&frac18;"
+  ],
+  "002154": [
+    "&frac23;"
+  ],
+  "002156": [
+    "&frac25;"
+  ],
+  "0000BE": [
+    "&frac34",
+    "&frac34;"
+  ],
+  "002157": [
+    "&frac35;"
+  ],
+  "00215C": [
+    "&frac38;"
+  ],
+  "002158": [
+    "&frac45;"
+  ],
+  "00215A": [
+    "&frac56;"
+  ],
+  "00215D": [
+    "&frac58;"
+  ],
+  "00215E": [
+    "&frac78;"
+  ],
+  "002044": [
+    "&frasl;"
+  ],
+  "002322": [
+    "&frown;",
+    "&sfrown;"
+  ],
+  "01D4BB": [
+    "&fscr;"
+  ],
+  "002A8C": [
+    "&gEl;",
+    "&gtreqqless;"
+  ],
+  "0001F5": [
+    "&gacute;"
+  ],
+  "0003B3": [
+    "&gamma;"
+  ],
+  "002A86": [
+    "&gap;",
+    "&gtrapprox;"
+  ],
+  "00011F": [
+    "&gbreve;"
+  ],
+  "00011D": [
+    "&gcirc;"
+  ],
+  "000433": [
+    "&gcy;"
+  ],
+  "000121": [
+    "&gdot;"
+  ],
+  "002AA9": [
+    "&gescc;"
+  ],
+  "002A80": [
+    "&gesdot;"
+  ],
+  "002A82": [
+    "&gesdoto;"
+  ],
+  "002A84": [
+    "&gesdotol;"
+  ],
+  "002A94": [
+    "&gesles;"
+  ],
+  "01D524": [
+    "&gfr;"
+  ],
+  "002137": [
+    "&gimel;"
+  ],
+  "000453": [
+    "&gjcy;"
+  ],
+  "002A92": [
+    "&glE;"
+  ],
+  "002AA5": [
+    "&gla;"
+  ],
+  "002AA4": [
+    "&glj;"
+  ],
+  "002269": [
+    "&gnE;",
+    "&gneqq;"
+  ],
+  "002A8A": [
+    "&gnap;",
+    "&gnapprox;"
+  ],
+  "002A88": [
+    "&gne;",
+    "&gneq;"
+  ],
+  "0022E7": [
+    "&gnsim;"
+  ],
+  "01D558": [
+    "&gopf;"
+  ],
+  "00210A": [
+    "&gscr;"
+  ],
+  "002A8E": [
+    "&gsime;"
+  ],
+  "002A90": [
+    "&gsiml;"
+  ],
+  "002AA7": [
+    "&gtcc;"
+  ],
+  "002A7A": [
+    "&gtcir;"
+  ],
+  "0022D7": [
+    "&gtdot;",
+    "&gtrdot;"
+  ],
+  "002995": [
+    "&gtlPar;"
+  ],
+  "002A7C": [
+    "&gtquest;"
+  ],
+  "002978": [
+    "&gtrarr;"
+  ],
+  "00044A": [
+    "&hardcy;"
+  ],
+  "002948": [
+    "&harrcir;"
+  ],
+  "0021AD": [
+    "&harrw;",
+    "&leftrightsquigarrow;"
+  ],
+  "00210F": [
+    "&hbar;",
+    "&hslash;",
+    "&planck;",
+    "&plankv;"
+  ],
+  "000125": [
+    "&hcirc;"
+  ],
+  "002665": [
+    "&hearts;",
+    "&heartsuit;"
+  ],
+  "002026": [
+    "&mldr;",
+    "&hellip;"
+  ],
+  "0022B9": [
+    "&hercon;"
+  ],
+  "01D525": [
+    "&hfr;"
+  ],
+  "002925": [
+    "&searhk;",
+    "&hksearow;"
+  ],
+  "002926": [
+    "&swarhk;",
+    "&hkswarow;"
+  ],
+  "0021FF": [
+    "&hoarr;"
+  ],
+  "00223B": [
+    "&homtht;"
+  ],
+  "0021A9": [
+    "&larrhk;",
+    "&hookleftarrow;"
+  ],
+  "0021AA": [
+    "&rarrhk;",
+    "&hookrightarrow;"
+  ],
+  "01D559": [
+    "&hopf;"
+  ],
+  "002015": [
+    "&horbar;"
+  ],
+  "01D4BD": [
+    "&hscr;"
+  ],
+  "000127": [
+    "&hstrok;"
+  ],
+  "002043": [
+    "&hybull;"
+  ],
+  "0000ED": [
+    "&iacute",
+    "&iacute;"
+  ],
+  "0000EE": [
+    "&icirc",
+    "&icirc;"
+  ],
+  "000438": [
+    "&icy;"
+  ],
+  "000435": [
+    "&iecy;"
+  ],
+  "0000A1": [
+    "&iexcl",
+    "&iexcl;"
+  ],
+  "01D526": [
+    "&ifr;"
+  ],
+  "0000EC": [
+    "&igrave",
+    "&igrave;"
+  ],
+  "002A0C": [
+    "&qint;",
+    "&iiiint;"
+  ],
+  "00222D": [
+    "&tint;",
+    "&iiint;"
+  ],
+  "0029DC": [
+    "&iinfin;"
+  ],
+  "002129": [
+    "&iiota;"
+  ],
+  "000133": [
+    "&ijlig;"
+  ],
+  "00012B": [
+    "&imacr;"
+  ],
+  "000131": [
+    "&imath;",
+    "&inodot;"
+  ],
+  "0022B7": [
+    "&imof;"
+  ],
+  "0001B5": [
+    "&imped;"
+  ],
+  "002105": [
+    "&incare;"
+  ],
+  "00221E": [
+    "&infin;"
+  ],
+  "0029DD": [
+    "&infintie;"
+  ],
+  "0022BA": [
+    "&intcal;",
+    "&intercal;"
+  ],
+  "002A17": [
+    "&intlarhk;"
+  ],
+  "002A3C": [
+    "&iprod;",
+    "&intprod;"
+  ],
+  "000451": [
+    "&iocy;"
+  ],
+  "00012F": [
+    "&iogon;"
+  ],
+  "01D55A": [
+    "&iopf;"
+  ],
+  "0003B9": [
+    "&iota;"
+  ],
+  "0000BF": [
+    "&iquest",
+    "&iquest;"
+  ],
+  "01D4BE": [
+    "&iscr;"
+  ],
+  "0022F9": [
+    "&isinE;"
+  ],
+  "0022F5": [
+    "&isindot;"
+  ],
+  "0022F4": [
+    "&isins;"
+  ],
+  "0022F3": [
+    "&isinsv;"
+  ],
+  "000129": [
+    "&itilde;"
+  ],
+  "000456": [
+    "&iukcy;"
+  ],
+  "0000EF": [
+    "&iuml",
+    "&iuml;"
+  ],
+  "000135": [
+    "&jcirc;"
+  ],
+  "000439": [
+    "&jcy;"
+  ],
+  "01D527": [
+    "&jfr;"
+  ],
+  "000237": [
+    "&jmath;"
+  ],
+  "01D55B": [
+    "&jopf;"
+  ],
+  "01D4BF": [
+    "&jscr;"
+  ],
+  "000458": [
+    "&jsercy;"
+  ],
+  "000454": [
+    "&jukcy;"
+  ],
+  "0003BA": [
+    "&kappa;"
+  ],
+  "0003F0": [
+    "&kappav;",
+    "&varkappa;"
+  ],
+  "000137": [
+    "&kcedil;"
+  ],
+  "00043A": [
+    "&kcy;"
+  ],
+  "01D528": [
+    "&kfr;"
+  ],
+  "000138": [
+    "&kgreen;"
+  ],
+  "000445": [
+    "&khcy;"
+  ],
+  "00045C": [
+    "&kjcy;"
+  ],
+  "01D55C": [
+    "&kopf;"
+  ],
+  "01D4C0": [
+    "&kscr;"
+  ],
+  "00291B": [
+    "&lAtail;"
+  ],
+  "00290E": [
+    "&lBarr;"
+  ],
+  "002A8B": [
+    "&lEg;",
+    "&lesseqqgtr;"
+  ],
+  "002962": [
+    "&lHar;"
+  ],
+  "00013A": [
+    "&lacute;"
+  ],
+  "0029B4": [
+    "&laemptyv;"
+  ],
+  "0003BB": [
+    "&lambda;"
+  ],
+  "002991": [
+    "&langd;"
+  ],
+  "002A85": [
+    "&lap;",
+    "&lessapprox;"
+  ],
+  "0000AB": [
+    "&laquo",
+    "&laquo;"
+  ],
+  "00291F": [
+    "&larrbfs;"
+  ],
+  "00291D": [
+    "&larrfs;"
+  ],
+  "0021AB": [
+    "&larrlp;",
+    "&looparrowleft;"
+  ],
+  "002939": [
+    "&larrpl;"
+  ],
+  "002973": [
+    "&larrsim;"
+  ],
+  "0021A2": [
+    "&larrtl;",
+    "&leftarrowtail;"
+  ],
+  "002AAB": [
+    "&lat;"
+  ],
+  "002919": [
+    "&latail;"
+  ],
+  "002AAD": [
+    "&late;"
+  ],
+  "00290C": [
+    "&lbarr;"
+  ],
+  "002772": [
+    "&lbbrk;"
+  ],
+  "00007B": [
+    "&lcub;",
+    "&lbrace;"
+  ],
+  "00005B": [
+    "&lsqb;",
+    "&lbrack;"
+  ],
+  "00298B": [
+    "&lbrke;"
+  ],
+  "00298F": [
+    "&lbrksld;"
+  ],
+  "00298D": [
+    "&lbrkslu;"
+  ],
+  "00013E": [
+    "&lcaron;"
+  ],
+  "00013C": [
+    "&lcedil;"
+  ],
+  "00043B": [
+    "&lcy;"
+  ],
+  "002936": [
+    "&ldca;"
+  ],
+  "002967": [
+    "&ldrdhar;"
+  ],
+  "00294B": [
+    "&ldrushar;"
+  ],
+  "0021B2": [
+    "&ldsh;"
+  ],
+  "002264": [
+    "&le;",
+    "&leq;"
+  ],
+  "0021C7": [
+    "&llarr;",
+    "&leftleftarrows;"
+  ],
+  "0022CB": [
+    "&lthree;",
+    "&leftthreetimes;"
+  ],
+  "002AA8": [
+    "&lescc;"
+  ],
+  "002A7F": [
+    "&lesdot;"
+  ],
+  "002A81": [
+    "&lesdoto;"
+  ],
+  "002A83": [
+    "&lesdotor;"
+  ],
+  "002A93": [
+    "&lesges;"
+  ],
+  "0022D6": [
+    "&ltdot;",
+    "&lessdot;"
+  ],
+  "00297C": [
+    "&lfisht;"
+  ],
+  "01D529": [
+    "&lfr;"
+  ],
+  "002A91": [
+    "&lgE;"
+  ],
+  "00296A": [
+    "&lharul;"
+  ],
+  "002584": [
+    "&lhblk;"
+  ],
+  "000459": [
+    "&ljcy;"
+  ],
+  "00296B": [
+    "&llhard;"
+  ],
+  "0025FA": [
+    "&lltri;"
+  ],
+  "000140": [
+    "&lmidot;"
+  ],
+  "0023B0": [
+    "&lmoust;",
+    "&lmoustache;"
+  ],
+  "002268": [
+    "&lnE;",
+    "&lneqq;"
+  ],
+  "002A89": [
+    "&lnap;",
+    "&lnapprox;"
+  ],
+  "002A87": [
+    "&lne;",
+    "&lneq;"
+  ],
+  "0022E6": [
+    "&lnsim;"
+  ],
+  "0027EC": [
+    "&loang;"
+  ],
+  "0021FD": [
+    "&loarr;"
+  ],
+  "0027FC": [
+    "&xmap;",
+    "&longmapsto;"
+  ],
+  "0021AC": [
+    "&rarrlp;",
+    "&looparrowright;"
+  ],
+  "002985": [
+    "&lopar;"
+  ],
+  "01D55D": [
+    "&lopf;"
+  ],
+  "002A2D": [
+    "&loplus;"
+  ],
+  "002A34": [
+    "&lotimes;"
+  ],
+  "002217": [
+    "&lowast;"
+  ],
+  "0025CA": [
+    "&loz;",
+    "&lozenge;"
+  ],
+  "000028": [
+    "&lpar;"
+  ],
+  "002993": [
+    "&lparlt;"
+  ],
+  "00296D": [
+    "&lrhard;"
+  ],
+  "00200E": [
+    "&lrm;"
+  ],
+  "0022BF": [
+    "&lrtri;"
+  ],
+  "002039": [
+    "&lsaquo;"
+  ],
+  "01D4C1": [
+    "&lscr;"
+  ],
+  "002A8D": [
+    "&lsime;"
+  ],
+  "002A8F": [
+    "&lsimg;"
+  ],
+  "00201A": [
+    "&sbquo;",
+    "&lsquor;"
+  ],
+  "000142": [
+    "&lstrok;"
+  ],
+  "002AA6": [
+    "&ltcc;"
+  ],
+  "002A79": [
+    "&ltcir;"
+  ],
+  "0022C9": [
+    "&ltimes;"
+  ],
+  "002976": [
+    "&ltlarr;"
+  ],
+  "002A7B": [
+    "&ltquest;"
+  ],
+  "002996": [
+    "&ltrPar;"
+  ],
+  "0025C3": [
+    "&ltri;",
+    "&triangleleft;"
+  ],
+  "00294A": [
+    "&lurdshar;"
+  ],
+  "002966": [
+    "&luruhar;"
+  ],
+  "00223A": [
+    "&mDDot;"
+  ],
+  "0000AF": [
+    "&macr",
+    "&macr;",
+    "&strns;"
+  ],
+  "002642": [
+    "&male;"
+  ],
+  "002720": [
+    "&malt;",
+    "&maltese;"
+  ],
+  "0025AE": [
+    "&marker;"
+  ],
+  "002A29": [
+    "&mcomma;"
+  ],
+  "00043C": [
+    "&mcy;"
+  ],
+  "002014": [
+    "&mdash;"
+  ],
+  "01D52A": [
+    "&mfr;"
+  ],
+  "002127": [
+    "&mho;"
+  ],
+  "0000B5": [
+    "&micro",
+    "&micro;"
+  ],
+  "002AF0": [
+    "&midcir;"
+  ],
+  "002212": [
+    "&minus;"
+  ],
+  "002A2A": [
+    "&minusdu;"
+  ],
+  "002ADB": [
+    "&mlcp;"
+  ],
+  "0022A7": [
+    "&models;"
+  ],
+  "01D55E": [
+    "&mopf;"
+  ],
+  "01D4C2": [
+    "&mscr;"
+  ],
+  "0003BC": [
+    "&mu;"
+  ],
+  "0022B8": [
+    "&mumap;",
+    "&multimap;"
+  ],
+  "0021CD": [
+    "&nlArr;",
+    "&nLeftarrow;"
+  ],
+  "0021CE": [
+    "&nhArr;",
+    "&nLeftrightarrow;"
+  ],
+  "0021CF": [
+    "&nrArr;",
+    "&nRightarrow;"
+  ],
+  "0022AF": [
+    "&nVDash;"
+  ],
+  "0022AE": [
+    "&nVdash;"
+  ],
+  "000144": [
+    "&nacute;"
+  ],
+  "000149": [
+    "&napos;"
+  ],
+  "00266E": [
+    "&natur;",
+    "&natural;"
+  ],
+  "002A43": [
+    "&ncap;"
+  ],
+  "000148": [
+    "&ncaron;"
+  ],
+  "000146": [
+    "&ncedil;"
+  ],
+  "002A42": [
+    "&ncup;"
+  ],
+  "00043D": [
+    "&ncy;"
+  ],
+  "002013": [
+    "&ndash;"
+  ],
+  "0021D7": [
+    "&neArr;"
+  ],
+  "002924": [
+    "&nearhk;"
+  ],
+  "002928": [
+    "&toea;",
+    "&nesear;"
+  ],
+  "01D52B": [
+    "&nfr;"
+  ],
+  "0021AE": [
+    "&nharr;",
+    "&nleftrightarrow;"
+  ],
+  "002AF2": [
+    "&nhpar;"
+  ],
+  "0022FC": [
+    "&nis;"
+  ],
+  "0022FA": [
+    "&nisd;"
+  ],
+  "00045A": [
+    "&njcy;"
+  ],
+  "00219A": [
+    "&nlarr;",
+    "&nleftarrow;"
+  ],
+  "002025": [
+    "&nldr;"
+  ],
+  "01D55F": [
+    "&nopf;"
+  ],
+  "0000AC": [
+    "&not",
+    "&not;"
+  ],
+  "0022F7": [
+    "&notinvb;"
+  ],
+  "0022F6": [
+    "&notinvc;"
+  ],
+  "0022FE": [
+    "&notnivb;"
+  ],
+  "0022FD": [
+    "&notnivc;"
+  ],
+  "002A14": [
+    "&npolint;"
+  ],
+  "00219B": [
+    "&nrarr;",
+    "&nrightarrow;"
+  ],
+  "01D4C3": [
+    "&nscr;"
+  ],
+  "002284": [
+    "&nsub;"
+  ],
+  "002285": [
+    "&nsup;"
+  ],
+  "0000F1": [
+    "&ntilde",
+    "&ntilde;"
+  ],
+  "0003BD": [
+    "&nu;"
+  ],
+  "000023": [
+    "&num;"
+  ],
+  "002116": [
+    "&numero;"
+  ],
+  "002007": [
+    "&numsp;"
+  ],
+  "0022AD": [
+    "&nvDash;"
+  ],
+  "002904": [
+    "&nvHarr;"
+  ],
+  "0022AC": [
+    "&nvdash;"
+  ],
+  "0029DE": [
+    "&nvinfin;"
+  ],
+  "002902": [
+    "&nvlArr;"
+  ],
+  "002903": [
+    "&nvrArr;"
+  ],
+  "0021D6": [
+    "&nwArr;"
+  ],
+  "002923": [
+    "&nwarhk;"
+  ],
+  "002927": [
+    "&nwnear;"
+  ],
+  "0000F3": [
+    "&oacute",
+    "&oacute;"
+  ],
+  "0000F4": [
+    "&ocirc",
+    "&ocirc;"
+  ],
+  "00043E": [
+    "&ocy;"
+  ],
+  "000151": [
+    "&odblac;"
+  ],
+  "002A38": [
+    "&odiv;"
+  ],
+  "0029BC": [
+    "&odsold;"
+  ],
+  "000153": [
+    "&oelig;"
+  ],
+  "0029BF": [
+    "&ofcir;"
+  ],
+  "01D52C": [
+    "&ofr;"
+  ],
+  "0002DB": [
+    "&ogon;"
+  ],
+  "0000F2": [
+    "&ograve",
+    "&ograve;"
+  ],
+  "0029C1": [
+    "&ogt;"
+  ],
+  "0029B5": [
+    "&ohbar;"
+  ],
+  "0029BE": [
+    "&olcir;"
+  ],
+  "0029BB": [
+    "&olcross;"
+  ],
+  "0029C0": [
+    "&olt;"
+  ],
+  "00014D": [
+    "&omacr;"
+  ],
+  "0003C9": [
+    "&omega;"
+  ],
+  "0003BF": [
+    "&omicron;"
+  ],
+  "0029B6": [
+    "&omid;"
+  ],
+  "01D560": [
+    "&oopf;"
+  ],
+  "0029B7": [
+    "&opar;"
+  ],
+  "0029B9": [
+    "&operp;"
+  ],
+  "002228": [
+    "&or;",
+    "&vee;"
+  ],
+  "002A5D": [
+    "&ord;"
+  ],
+  "002134": [
+    "&oscr;",
+    "&order;",
+    "&orderof;"
+  ],
+  "0000AA": [
+    "&ordf",
+    "&ordf;"
+  ],
+  "0000BA": [
+    "&ordm",
+    "&ordm;"
+  ],
+  "0022B6": [
+    "&origof;"
+  ],
+  "002A56": [
+    "&oror;"
+  ],
+  "002A57": [
+    "&orslope;"
+  ],
+  "002A5B": [
+    "&orv;"
+  ],
+  "0000F8": [
+    "&oslash",
+    "&oslash;"
+  ],
+  "002298": [
+    "&osol;"
+  ],
+  "0000F5": [
+    "&otilde",
+    "&otilde;"
+  ],
+  "002A36": [
+    "&otimesas;"
+  ],
+  "0000F6": [
+    "&ouml",
+    "&ouml;"
+  ],
+  "00233D": [
+    "&ovbar;"
+  ],
+  "0000B6": [
+    "&para",
+    "&para;"
+  ],
+  "002AF3": [
+    "&parsim;"
+  ],
+  "002AFD": [
+    "&parsl;"
+  ],
+  "00043F": [
+    "&pcy;"
+  ],
+  "000025": [
+    "&percnt;"
+  ],
+  "00002E": [
+    "&period;"
+  ],
+  "002030": [
+    "&permil;"
+  ],
+  "002031": [
+    "&pertenk;"
+  ],
+  "01D52D": [
+    "&pfr;"
+  ],
+  "0003C6": [
+    "&phi;"
+  ],
+  "0003D5": [
+    "&phiv;",
+    "&varphi;",
+    "&straightphi;"
+  ],
+  "00260E": [
+    "&phone;"
+  ],
+  "0003C0": [
+    "&pi;"
+  ],
+  "0003D6": [
+    "&piv;",
+    "&varpi;"
+  ],
+  "00210E": [
+    "&planckh;"
+  ],
+  "00002B": [
+    "&plus;"
+  ],
+  "002A23": [
+    "&plusacir;"
+  ],
+  "002A22": [
+    "&pluscir;"
+  ],
+  "002A25": [
+    "&plusdu;"
+  ],
+  "002A72": [
+    "&pluse;"
+  ],
+  "002A26": [
+    "&plussim;"
+  ],
+  "002A27": [
+    "&plustwo;"
+  ],
+  "002A15": [
+    "&pointint;"
+  ],
+  "01D561": [
+    "&popf;"
+  ],
+  "0000A3": [
+    "&pound",
+    "&pound;"
+  ],
+  "002AB3": [
+    "&prE;"
+  ],
+  "002AB7": [
+    "&prap;",
+    "&precapprox;"
+  ],
+  "002AB9": [
+    "&prnap;",
+    "&precnapprox;"
+  ],
+  "002AB5": [
+    "&prnE;",
+    "&precneqq;"
+  ],
+  "0022E8": [
+    "&prnsim;",
+    "&precnsim;"
+  ],
+  "002032": [
+    "&prime;"
+  ],
+  "00232E": [
+    "&profalar;"
+  ],
+  "002312": [
+    "&profline;"
+  ],
+  "002313": [
+    "&profsurf;"
+  ],
+  "0022B0": [
+    "&prurel;"
+  ],
+  "01D4C5": [
+    "&pscr;"
+  ],
+  "0003C8": [
+    "&psi;"
+  ],
+  "002008": [
+    "&puncsp;"
+  ],
+  "01D52E": [
+    "&qfr;"
+  ],
+  "01D562": [
+    "&qopf;"
+  ],
+  "002057": [
+    "&qprime;"
+  ],
+  "01D4C6": [
+    "&qscr;"
+  ],
+  "002A16": [
+    "&quatint;"
+  ],
+  "00003F": [
+    "&quest;"
+  ],
+  "00291C": [
+    "&rAtail;"
+  ],
+  "002964": [
+    "&rHar;"
+  ],
+  "000155": [
+    "&racute;"
+  ],
+  "0029B3": [
+    "&raemptyv;"
+  ],
+  "002992": [
+    "&rangd;"
+  ],
+  "0029A5": [
+    "&range;"
+  ],
+  "0000BB": [
+    "&raquo",
+    "&raquo;"
+  ],
+  "002975": [
+    "&rarrap;"
+  ],
+  "002920": [
+    "&rarrbfs;"
+  ],
+  "002933": [
+    "&rarrc;"
+  ],
+  "00291E": [
+    "&rarrfs;"
+  ],
+  "002945": [
+    "&rarrpl;"
+  ],
+  "002974": [
+    "&rarrsim;"
+  ],
+  "0021A3": [
+    "&rarrtl;",
+    "&rightarrowtail;"
+  ],
+  "00219D": [
+    "&rarrw;",
+    "&rightsquigarrow;"
+  ],
+  "00291A": [
+    "&ratail;"
+  ],
+  "002236": [
+    "&ratio;"
+  ],
+  "002773": [
+    "&rbbrk;"
+  ],
+  "00007D": [
+    "&rcub;",
+    "&rbrace;"
+  ],
+  "00005D": [
+    "&rsqb;",
+    "&rbrack;"
+  ],
+  "00298C": [
+    "&rbrke;"
+  ],
+  "00298E": [
+    "&rbrksld;"
+  ],
+  "002990": [
+    "&rbrkslu;"
+  ],
+  "000159": [
+    "&rcaron;"
+  ],
+  "000157": [
+    "&rcedil;"
+  ],
+  "000440": [
+    "&rcy;"
+  ],
+  "002937": [
+    "&rdca;"
+  ],
+  "002969": [
+    "&rdldhar;"
+  ],
+  "0021B3": [
+    "&rdsh;"
+  ],
+  "0025AD": [
+    "&rect;"
+  ],
+  "00297D": [
+    "&rfisht;"
+  ],
+  "01D52F": [
+    "&rfr;"
+  ],
+  "00296C": [
+    "&rharul;"
+  ],
+  "0003C1": [
+    "&rho;"
+  ],
+  "0003F1": [
+    "&rhov;",
+    "&varrho;"
+  ],
+  "0021C9": [
+    "&rrarr;",
+    "&rightrightarrows;"
+  ],
+  "0022CC": [
+    "&rthree;",
+    "&rightthreetimes;"
+  ],
+  "0002DA": [
+    "&ring;"
+  ],
+  "00200F": [
+    "&rlm;"
+  ],
+  "0023B1": [
+    "&rmoust;",
+    "&rmoustache;"
+  ],
+  "002AEE": [
+    "&rnmid;"
+  ],
+  "0027ED": [
+    "&roang;"
+  ],
+  "0021FE": [
+    "&roarr;"
+  ],
+  "002986": [
+    "&ropar;"
+  ],
+  "01D563": [
+    "&ropf;"
+  ],
+  "002A2E": [
+    "&roplus;"
+  ],
+  "002A35": [
+    "&rotimes;"
+  ],
+  "000029": [
+    "&rpar;"
+  ],
+  "002994": [
+    "&rpargt;"
+  ],
+  "002A12": [
+    "&rppolint;"
+  ],
+  "00203A": [
+    "&rsaquo;"
+  ],
+  "01D4C7": [
+    "&rscr;"
+  ],
+  "0022CA": [
+    "&rtimes;"
+  ],
+  "0025B9": [
+    "&rtri;",
+    "&triangleright;"
+  ],
+  "0029CE": [
+    "&rtriltri;"
+  ],
+  "002968": [
+    "&ruluhar;"
+  ],
+  "00211E": [
+    "&rx;"
+  ],
+  "00015B": [
+    "&sacute;"
+  ],
+  "002AB4": [
+    "&scE;"
+  ],
+  "002AB8": [
+    "&scap;",
+    "&succapprox;"
+  ],
+  "000161": [
+    "&scaron;"
+  ],
+  "00015F": [
+    "&scedil;"
+  ],
+  "00015D": [
+    "&scirc;"
+  ],
+  "002AB6": [
+    "&scnE;",
+    "&succneqq;"
+  ],
+  "002ABA": [
+    "&scnap;",
+    "&succnapprox;"
+  ],
+  "0022E9": [
+    "&scnsim;",
+    "&succnsim;"
+  ],
+  "002A13": [
+    "&scpolint;"
+  ],
+  "000441": [
+    "&scy;"
+  ],
+  "0022C5": [
+    "&sdot;"
+  ],
+  "002A66": [
+    "&sdote;"
+  ],
+  "0021D8": [
+    "&seArr;"
+  ],
+  "0000A7": [
+    "&sect",
+    "&sect;"
+  ],
+  "00003B": [
+    "&semi;"
+  ],
+  "002929": [
+    "&tosa;",
+    "&seswar;"
+  ],
+  "002736": [
+    "&sext;"
+  ],
+  "01D530": [
+    "&sfr;"
+  ],
+  "00266F": [
+    "&sharp;"
+  ],
+  "000449": [
+    "&shchcy;"
+  ],
+  "000448": [
+    "&shcy;"
+  ],
+  "0000AD": [
+    "&shy",
+    "&shy;"
+  ],
+  "0003C3": [
+    "&sigma;"
+  ],
+  "0003C2": [
+    "&sigmaf;",
+    "&sigmav;",
+    "&varsigma;"
+  ],
+  "002A6A": [
+    "&simdot;"
+  ],
+  "002A9E": [
+    "&simg;"
+  ],
+  "002AA0": [
+    "&simgE;"
+  ],
+  "002A9D": [
+    "&siml;"
+  ],
+  "002A9F": [
+    "&simlE;"
+  ],
+  "002246": [
+    "&simne;"
+  ],
+  "002A24": [
+    "&simplus;"
+  ],
+  "002972": [
+    "&simrarr;"
+  ],
+  "002A33": [
+    "&smashp;"
+  ],
+  "0029E4": [
+    "&smeparsl;"
+  ],
+  "002323": [
+    "&smile;",
+    "&ssmile;"
+  ],
+  "002AAA": [
+    "&smt;"
+  ],
+  "002AAC": [
+    "&smte;"
+  ],
+  "00044C": [
+    "&softcy;"
+  ],
+  "00002F": [
+    "&sol;"
+  ],
+  "0029C4": [
+    "&solb;"
+  ],
+  "00233F": [
+    "&solbar;"
+  ],
+  "01D564": [
+    "&sopf;"
+  ],
+  "002660": [
+    "&spades;",
+    "&spadesuit;"
+  ],
+  "01D4C8": [
+    "&sscr;"
+  ],
+  "002606": [
+    "&star;"
+  ],
+  "002282": [
+    "&sub;",
+    "&subset;"
+  ],
+  "002AC5": [
+    "&subE;",
+    "&subseteqq;"
+  ],
+  "002ABD": [
+    "&subdot;"
+  ],
+  "002AC3": [
+    "&subedot;"
+  ],
+  "002AC1": [
+    "&submult;"
+  ],
+  "002ACB": [
+    "&subnE;",
+    "&subsetneqq;"
+  ],
+  "00228A": [
+    "&subne;",
+    "&subsetneq;"
+  ],
+  "002ABF": [
+    "&subplus;"
+  ],
+  "002979": [
+    "&subrarr;"
+  ],
+  "002AC7": [
+    "&subsim;"
+  ],
+  "002AD5": [
+    "&subsub;"
+  ],
+  "002AD3": [
+    "&subsup;"
+  ],
+  "00266A": [
+    "&sung;"
+  ],
+  "0000B9": [
+    "&sup1",
+    "&sup1;"
+  ],
+  "0000B2": [
+    "&sup2",
+    "&sup2;"
+  ],
+  "0000B3": [
+    "&sup3",
+    "&sup3;"
+  ],
+  "002AC6": [
+    "&supE;",
+    "&supseteqq;"
+  ],
+  "002ABE": [
+    "&supdot;"
+  ],
+  "002AD8": [
+    "&supdsub;"
+  ],
+  "002AC4": [
+    "&supedot;"
+  ],
+  "0027C9": [
+    "&suphsol;"
+  ],
+  "002AD7": [
+    "&suphsub;"
+  ],
+  "00297B": [
+    "&suplarr;"
+  ],
+  "002AC2": [
+    "&supmult;"
+  ],
+  "002ACC": [
+    "&supnE;",
+    "&supsetneqq;"
+  ],
+  "00228B": [
+    "&supne;",
+    "&supsetneq;"
+  ],
+  "002AC0": [
+    "&supplus;"
+  ],
+  "002AC8": [
+    "&supsim;"
+  ],
+  "002AD4": [
+    "&supsub;"
+  ],
+  "002AD6": [
+    "&supsup;"
+  ],
+  "0021D9": [
+    "&swArr;"
+  ],
+  "00292A": [
+    "&swnwar;"
+  ],
+  "0000DF": [
+    "&szlig",
+    "&szlig;"
+  ],
+  "002316": [
+    "&target;"
+  ],
+  "0003C4": [
+    "&tau;"
+  ],
+  "000165": [
+    "&tcaron;"
+  ],
+  "000163": [
+    "&tcedil;"
+  ],
+  "000442": [
+    "&tcy;"
+  ],
+  "002315": [
+    "&telrec;"
+  ],
+  "01D531": [
+    "&tfr;"
+  ],
+  "0003B8": [
+    "&theta;"
+  ],
+  "0003D1": [
+    "&thetav;",
+    "&thetasym;",
+    "&vartheta;"
+  ],
+  "0000FE": [
+    "&thorn",
+    "&thorn;"
+  ],
+  "0000D7": [
+    "&times",
+    "&times;"
+  ],
+  "002A31": [
+    "&timesbar;"
+  ],
+  "002A30": [
+    "&timesd;"
+  ],
+  "002336": [
+    "&topbot;"
+  ],
+  "002AF1": [
+    "&topcir;"
+  ],
+  "01D565": [
+    "&topf;"
+  ],
+  "002ADA": [
+    "&topfork;"
+  ],
+  "002034": [
+    "&tprime;"
+  ],
+  "0025B5": [
+    "&utri;",
+    "&triangle;"
+  ],
+  "00225C": [
+    "&trie;",
+    "&triangleq;"
+  ],
+  "0025EC": [
+    "&tridot;"
+  ],
+  "002A3A": [
+    "&triminus;"
+  ],
+  "002A39": [
+    "&triplus;"
+  ],
+  "0029CD": [
+    "&trisb;"
+  ],
+  "002A3B": [
+    "&tritime;"
+  ],
+  "0023E2": [
+    "&trpezium;"
+  ],
+  "01D4C9": [
+    "&tscr;"
+  ],
+  "000446": [
+    "&tscy;"
+  ],
+  "00045B": [
+    "&tshcy;"
+  ],
+  "000167": [
+    "&tstrok;"
+  ],
+  "002963": [
+    "&uHar;"
+  ],
+  "0000FA": [
+    "&uacute",
+    "&uacute;"
+  ],
+  "00045E": [
+    "&ubrcy;"
+  ],
+  "00016D": [
+    "&ubreve;"
+  ],
+  "0000FB": [
+    "&ucirc",
+    "&ucirc;"
+  ],
+  "000443": [
+    "&ucy;"
+  ],
+  "000171": [
+    "&udblac;"
+  ],
+  "00297E": [
+    "&ufisht;"
+  ],
+  "01D532": [
+    "&ufr;"
+  ],
+  "0000F9": [
+    "&ugrave",
+    "&ugrave;"
+  ],
+  "002580": [
+    "&uhblk;"
+  ],
+  "00231C": [
+    "&ulcorn;",
+    "&ulcorner;"
+  ],
+  "00230F": [
+    "&ulcrop;"
+  ],
+  "0025F8": [
+    "&ultri;"
+  ],
+  "00016B": [
+    "&umacr;"
+  ],
+  "000173": [
+    "&uogon;"
+  ],
+  "01D566": [
+    "&uopf;"
+  ],
+  "0003C5": [
+    "&upsi;",
+    "&upsilon;"
+  ],
+  "0021C8": [
+    "&uuarr;",
+    "&upuparrows;"
+  ],
+  "00231D": [
+    "&urcorn;",
+    "&urcorner;"
+  ],
+  "00230E": [
+    "&urcrop;"
+  ],
+  "00016F": [
+    "&uring;"
+  ],
+  "0025F9": [
+    "&urtri;"
+  ],
+  "01D4CA": [
+    "&uscr;"
+  ],
+  "0022F0": [
+    "&utdot;"
+  ],
+  "000169": [
+    "&utilde;"
+  ],
+  "0000FC": [
+    "&uuml",
+    "&uuml;"
+  ],
+  "0029A7": [
+    "&uwangle;"
+  ],
+  "002AE8": [
+    "&vBar;"
+  ],
+  "002AE9": [
+    "&vBarv;"
+  ],
+  "00299C": [
+    "&vangrt;"
+  ],
+  "000432": [
+    "&vcy;"
+  ],
+  "0022BB": [
+    "&veebar;"
+  ],
+  "00225A": [
+    "&veeeq;"
+  ],
+  "0022EE": [
+    "&vellip;"
+  ],
+  "01D533": [
+    "&vfr;"
+  ],
+  "01D567": [
+    "&vopf;"
+  ],
+  "01D4CB": [
+    "&vscr;"
+  ],
+  "00299A": [
+    "&vzigzag;"
+  ],
+  "000175": [
+    "&wcirc;"
+  ],
+  "002A5F": [
+    "&wedbar;"
+  ],
+  "002259": [
+    "&wedgeq;"
+  ],
+  "002118": [
+    "&wp;",
+    "&weierp;"
+  ],
+  "01D534": [
+    "&wfr;"
+  ],
+  "01D568": [
+    "&wopf;"
+  ],
+  "01D4CC": [
+    "&wscr;"
+  ],
+  "01D535": [
+    "&xfr;"
+  ],
+  "0003BE": [
+    "&xi;"
+  ],
+  "0022FB": [
+    "&xnis;"
+  ],
+  "01D569": [
+    "&xopf;"
+  ],
+  "01D4CD": [
+    "&xscr;"
+  ],
+  "0000FD": [
+    "&yacute",
+    "&yacute;"
+  ],
+  "00044F": [
+    "&yacy;"
+  ],
+  "000177": [
+    "&ycirc;"
+  ],
+  "00044B": [
+    "&ycy;"
+  ],
+  "0000A5": [
+    "&yen",
+    "&yen;"
+  ],
+  "01D536": [
+    "&yfr;"
+  ],
+  "000457": [
+    "&yicy;"
+  ],
+  "01D56A": [
+    "&yopf;"
+  ],
+  "01D4CE": [
+    "&yscr;"
+  ],
+  "00044E": [
+    "&yucy;"
+  ],
+  "0000FF": [
+    "&yuml",
+    "&yuml;"
+  ],
+  "00017A": [
+    "&zacute;"
+  ],
+  "00017E": [
+    "&zcaron;"
+  ],
+  "000437": [
+    "&zcy;"
+  ],
+  "00017C": [
+    "&zdot;"
+  ],
+  "0003B6": [
+    "&zeta;"
+  ],
+  "01D537": [
+    "&zfr;"
+  ],
+  "000436": [
+    "&zhcy;"
+  ],
+  "0021DD": [
+    "&zigrarr;"
+  ],
+  "01D56B": [
+    "&zopf;"
+  ],
+  "01D4CF": [
+    "&zscr;"
+  ],
+  "00200D": [
+    "&zwj;"
+  ],
+  "00200C": [
+    "&zwnj;"
+  ]
+};
