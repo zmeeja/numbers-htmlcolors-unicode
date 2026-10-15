@@ -1,5 +1,5 @@
 const fs = require('fs');
-const data = fs.readFileSync('Blocks.txt', 'utf8');
+const data = fs.readFileSync('Blocks.csv', 'utf8');
 
 const lines = data.split('\n');
 let lines2 = [];

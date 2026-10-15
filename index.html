@@ -38,10 +38,8 @@
         <button onclick="selector(this)" id="select2">Line</button>
         <button onclick="selector(this)" id="select3">.....</button>
     </div>
-    <div style="background-color: cadetblue; padding: 5px;">
-        <button onclick="render(range(128))"><b>[0, 127]</b> Basic Latin (ACSII)</button>
-        <button onclick="render(range(128, 256))"><b>[128, 255]</b> Latin-1 Supplement</button>
-        <button onclick="render(Object.keys(controlCharactersMap).sort().map(x => parseInt(x, 16)))"><b>[0, 31]&#8746;{127}&#8746;[128, 159]</b> <span style="color: red;">control</span> characters</button>
+    <div style="background-color: cadetblue; padding: 5px; display: flex; flex-direction: row;">
+        <button onclick="render(Object.keys(controlCharactersMap).sort().map(x => parseInt(x, 16)))"><b>U+0000..U+001F, U+007F, U+0080..U+009F</b><br><b>[0, 31]&#8746;{127}&#8746;[128, 159]</b><br><span style="color: red;">control</span> characters</button>
         <button onclick="render(Object.keys(colorsMap).sort().map(x => parseInt(x, 16)))">named HTML <b><span style="color: blue;">c</span><span style="color: lime;">o</span><span style="color: aqua;">l</span><span style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></button>
         <button onclick="render(colorsMap1.sort().map(x => parseInt(x, 16)))">1</button>
         <button onclick="render(colorsMap2.sort().map(x => parseInt(x, 16)))">2</button>
@@ -49,8 +47,12 @@
             style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></button>
         <button onclick="render(Object.keys(entitiesMap).sort().map(x => parseInt(x, 16)))">named HTML <b>entities</b></button>
     </div>
-    <div style="background-color: lightcoral; padding: 5px;">
-        <button onclick="render(range(0x2200, parseInt(0x22FF)+1))"><img src="images\Mathematical_Operators.png" alt="Mathematical Operators" width="100" height="100"><br><b>U+2200..U+22FF</b><br>Mathematical Operators</button>
+    <div style="background-color: lightcoral; padding: 5px; display: flex; flex-direction: row;">
+        <button onclick="render(range(128))"><b>U+0000..U+007F</b><br><b>[0, 127]<br></b> Basic Latin (ACSII)</button>
+        <button onclick="render(range(128, 256))"><b>U+0080..U+00FF</b><br><b>[128, 255]<br></b> Latin-1 Supplement</button>
+        <button onclick="render(range(0x0370, parseInt(0x03FF)+1))"><b>U+0370..U+03FF</b><br><b>[880, 1023]</b><br> Greek and Coptic</button>
+        <button onclick="render(range(0x0400, parseInt(0x04FF)+1))"><b>U+0400..U+04FF</b><br><b>[1024, 1279]</b><br> Cyrillic</button>
+        <button onclick="render(range(0x2200, parseInt(0x22FF)+1))"><b>U+2200..U+22FF</b><br><b>[8704, 8959]</b><br>Mathematical Operators<br><img src="images\Mathematical_Operators.png" alt="Mathematical Operators" width="50" height="50"></button>
     </div>
     <div style="background-color: lightgreen; padding: 5px;">
         <select id="selectUnicodeBlocks" onchange="render(range(selectUnicodeBlocks.value.split('-')[0], parseInt(selectUnicodeBlocks.value.split('-')[1])+1))"></select>
