@@ -23,27 +23,36 @@ textInput.addEventListener("input", () => {
             break;
         case "select26":
             const entity = textInput.value.trim();
-            // console.log(`Searching for entity: ${entity}`);
+            const result = [];
             for (let i = 0; i <= 120171; i++) {
-                // console.log(i);
                 let num = new mynumber(i);
                 if (num.entities && num.entities.length > 0) {
                     for (j of num.entities) {
-                        if (j.startsWith(entity)) {
-                                // console.log(`Found entity: ${j} for code point: ${i}`);
-                            let arr = Object.keys(entitiesMap).sort().map(x => parseInt(x, 16));
-                            let index = arr.indexOf(i);
-                                // console.log(`Index of code point ${i} in array: ${index}`);
-                                // console.log(typeof i);
-                            let res = arr.slice(index);
-                            res = res.slice(0, 100); // Ограничиваем результат первыми 100 элементами
-                                // console.log(`Resulting array after slicing: ${res}`);
-                            render(res);
-                            return;
+                        if (j.includes(entity)) {
+                            result.push(i);
+                            break; 
                         }
                     }
                 }
             }
+            render(result);
+            break;
+        case "select27":
+            const input2 = textInput.value.trim();
+            const result2 = [];
+            for (let i = 0; i <= 120171; i++) {
+                let num = new mynumber(i);
+                if (num.unicodeName && num.unicodeName.length > 0) {
+                    if (num.unicodeName.includes(input2)) {
+                        result2.push(i);
+                    }
+                }
+                if (result2.length >= 100) {
+                    break; 
+                }
+            }
+            render(result2);
+            break;
         }
 
     // console.log(textInput.value.split(""));
