@@ -12,3 +12,21 @@ function selector(x){
 
     console.log(renderMethod);
 }
+
+let searchType = "select21";
+
+document.getElementById("select21").style.backgroundColor = "yellow";
+
+function selector2(x){
+    document.getElementById("select21").style.backgroundColor = "revert";
+    document.getElementById("select22").style.backgroundColor = "revert";
+    document.getElementById("select23").style.backgroundColor = "revert";
+    document.getElementById("select24").style.backgroundColor = "revert";
+    document.getElementById("select25").style.backgroundColor = "revert";
+    document.getElementById("select26").style.backgroundColor = "revert";
+    x.style.backgroundColor = "yellow";
+
+    searchType = x.id;
+
+    console.log(searchType);
+}

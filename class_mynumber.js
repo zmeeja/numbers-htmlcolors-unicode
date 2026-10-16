@@ -82,7 +82,7 @@ class mynumber{
             this.unicodeBlock = rangeBlocksMap.get(this.xi16_6);
 
             if(this.xi16_6 in entitiesMap){
-                this.entities = entitiesMap[this.xi16_6];
+                this.entities = entitiesMap[this.xi16_6].sort();
             }
         }
         //---------------------------------------------namedHTMLColor---------------------------------------------
