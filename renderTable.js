@@ -1,5 +1,5 @@
 function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener"){
-    console.log(`renderTable(x = ${x}, contenerID = ${contenerID})`);
+    // console.log(`renderTable(x = ${x}, contenerID = ${contenerID})`);
 
     document.getElementById(contenerID).innerHTML = "";
     document.getElementById(contenerID).innerHTML = 

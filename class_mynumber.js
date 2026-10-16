@@ -60,16 +60,22 @@ class mynumber{
 
             if(this.xi16_6 in unicodeMap){
                 if(unicodeMap[this.xi16_6][0] != "<control>"){
-                    this.unicodeName = unicodeMap[this.xi16_6][0].toLowerCase();
-                    this.unicodeNameRu = unicodeMapRu[this.xi16_6][0].toLowerCase();
+                    this.unicodeName = (unicodeMap[this.xi16_6][0]).toLowerCase();
                     this.control = false;
                 }
                 else{
                     this.control = true;
                     this.unicodeName = controlCharactersMap[this.xi16_6][1];
-                    this.unicodeNameRu = controlCharactersMap[this.xi16_6][2];
                     this.namedEscapeSequence = controlCharactersMap[this.xi16_6][3];
                     this.keyboard = controlCharactersMap[this.xi16_6][4];
+                }
+            }
+            if(this.xi16_6 in unicodeMapRu){
+                if(unicodeMapRu[this.xi16_6][0] != "<control>"){
+                    this.unicodeNameRu = unicodeMapRu[this.xi16_6][0].toLowerCase();
+                }
+                else{
+                    this.unicodeNameRu = controlCharactersMap[this.xi16_6][2];
                 }
             }
 
@@ -91,8 +97,15 @@ class mynumber{
         this.uri1;
         this.uri2;
         if(this.unicode){
-            this.uri1 = encodeURI(this.unicode);
-            this.uri2 = encodeURIComponent(this.unicode);
+            try {
+                this.uri1 = encodeURI(this.unicode);
+                this.uri2 = encodeURIComponent(this.unicode);
+            }
+            catch (error) {
+                console.error("Error encoding URI:", error);
+                this.uri1 = "";
+                this.uri2 = "";
+            }
         }
         //---------------------------------------------Brightness---------------------------------------------
         this.brightness = this.getBrightness(this.xi16_6);
