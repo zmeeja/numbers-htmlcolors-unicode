@@ -100,7 +100,7 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
             <td><b>URI</b><br>component</td>
             <td><b>URI</b><br>complete</td>
             <td><b>unicode name</b></td>
-            <td><b>unicode name RU</b></td>
+            <td><b>unicode name Ru</b></td>
             <td><b>unicode block</b></td>
             <td><b>named<br>HTML color</b></td>
             <td><b>named<br>HTML entity</b></td>
