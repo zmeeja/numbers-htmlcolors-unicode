@@ -25,6 +25,7 @@ function selector2(x){
     document.getElementById("select25").style.backgroundColor = "revert";
     document.getElementById("select26").style.backgroundColor = "revert";
     document.getElementById("select27").style.backgroundColor = "revert";
+    document.getElementById("select28").style.backgroundColor = "revert";
     x.style.backgroundColor = "yellow";
 
     searchType = x.id;

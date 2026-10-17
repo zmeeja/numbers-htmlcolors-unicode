@@ -24,26 +24,25 @@ textInput.addEventListener("input", () => {
         case "select26":
             const entity = textInput.value.trim();
             const result = [];
-            for (let i = 0; i <= 120171; i++) {
+            for (let i of Object.keys(entitiesMap).sort().map(x => parseInt(x, 16))) {
                 let num = new mynumber(i);
-                if (num.entities && num.entities.length > 0) {
-                    for (j of num.entities) {
-                        if (j.includes(entity)) {
-                            result.push(i);
-                            break; 
-                        }
+                for (j of num.entities) {
+                    if (j.includes(entity)) {
+                        result.push(i);
+                        break;
                     }
                 }
+                
             }
             render(result);
             break;
         case "select27":
-            const input2 = textInput.value.trim();
+            const input2 = textInput.value.trim().toLowerCase();
             const result2 = [];
-            for (let i = 0; i <= 120171; i++) {
+            for (let i = 0; i <= parseInt("10FFFF", 16); i++) {
                 let num = new mynumber(i);
                 if (num.unicodeName && num.unicodeName.length > 0) {
-                    if (num.unicodeName.includes(input2)) {
+                    if (num.unicodeName.toLowerCase().includes(input2)) {
                         result2.push(i);
                     }
                 }
@@ -52,6 +51,23 @@ textInput.addEventListener("input", () => {
                 }
             }
             render(result2);
+            break;
+        case "select28":
+            const input3 = textInput.value.trim().toLowerCase();
+            const result3 = [];
+            for (let i of Object.keys(colorsMap).sort().map(x => parseInt(x, 16))) {
+                let num = new mynumber(i);
+                if (num.HTMLcolor1.toLowerCase().includes(input3)) {
+                    result3.push(i);
+                    continue;
+                }
+                if (num.HTMLcolor2 && num.HTMLcolor2.length > 0) {
+                    if (num.HTMLcolor2.toLowerCase().includes(input3)) {
+                        result3.push(i);
+                    }
+                }
+            }
+            render(result3);
             break;
         }
 
