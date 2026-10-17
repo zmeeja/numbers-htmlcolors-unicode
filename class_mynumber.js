@@ -70,13 +70,11 @@ class mynumber{
                     this.keyboard = controlCharactersMap[this.xi16_6][4];
                 }
             }
-            if(this.xi16_6 in unicodeMapRu){
-                if(unicodeMapRu[this.xi16_6][0] != "<control>"){
-                    this.unicodeNameRu = unicodeMapRu[this.xi16_6][0].toLowerCase();
-                }
-                else{
-                    this.unicodeNameRu = controlCharactersMap[this.xi16_6][2];
-                }
+            if(this.xi16_6 in unicodeMapRu1){
+                this.unicodeNameRu = unicodeMapRu1[this.xi16_6][0].toLowerCase();
+            }
+            if(this.xi16_6 in controlCharactersMap){
+                this.unicodeNameRu = controlCharactersMap[this.xi16_6][2].toLowerCase();
             }
 
             this.unicodeBlock = rangeBlocksMap.get(this.xi16_6);

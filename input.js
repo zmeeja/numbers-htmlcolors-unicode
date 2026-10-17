@@ -69,6 +69,24 @@ textInput.addEventListener("input", () => {
             }
             render(result3);
             break;
+        case "select29":
+            const input4 = textInput.value.trim().toLowerCase();
+            const result4 = [];
+            const arr1 = Object.keys(unicodeMapRu1);
+            const arr2 = Object.keys(controlCharactersMap);
+            for (let i of [...new Set([...arr1, ...arr2])].sort().map(x => parseInt(x, 16))) {
+                let num = new mynumber(i);
+                if (num.unicodeNameRu && num.unicodeNameRu.length > 0) {
+                    if (num.unicodeNameRu.toLowerCase().includes(input4)) {
+                        result4.push(i);
+                    }
+                }
+                if (result4.length >= 100) {
+                    break; 
+                }
+            }
+            render(result4);
+            break;            
         }
 
     // console.log(textInput.value.split(""));
