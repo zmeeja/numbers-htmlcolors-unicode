@@ -1,6 +1,6 @@
-let renderMethod = "select1";
+let renderMethod = "select2";
 
-document.getElementById("select1").style.backgroundColor = "yellow";
+document.getElementById("select2").style.backgroundColor = "yellow";
 
 function selector(x){
     document.getElementById("select1").style.backgroundColor = "revert";

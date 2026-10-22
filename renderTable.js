@@ -87,7 +87,7 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
             <td></td>
         </tr>
         <tr style="text-align: center; background-color: gold;">
-            <td><b>Unicode symbol</b></td>
+            <td><b>Unicode<br>symbol</b></td>
             <td><b>base64</b><br>6bit</td>
             <td><b>named<br>escape<br>sequence</b></td>
             <td><b>DEC</b><br>10</td>

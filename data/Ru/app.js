@@ -77,5 +77,8 @@ fs.readFile('ru.xml', 'utf-8', (err, data) => {
     const jsContent = `const unicodeMapRu1 = ${JSON.stringify(y1, null, 2)};`;
     fs.writeFileSync("unicodeMapRu1.js", jsContent, "utf8");
 
+    const jsContent2 = `const unicodeMapRu2 = ${JSON.stringify(y3, null, 2)};`;
+    fs.writeFileSync("unicodeMapRu1.js", jsContent2, "utf8");
+
   });
 });

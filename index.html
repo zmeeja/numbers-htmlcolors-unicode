@@ -22,6 +22,7 @@
     <script src="input.js" defer></script>
 
     <link rel="stylesheet" href="styleTable.css">
+    <link rel="stylesheet" href="styleBox.css">
     <link rel="stylesheet" href="style.css">
     <script>
         // Событие DOMContentLoaded сработает после того, как все скрипты с defer 
@@ -35,8 +36,11 @@
 <body>
     <div id="buttonsSelector" style="background-color: plum; padding: 5px;">
         <button onclick="selector(this)" id="select1">Table</button>
-        <button onclick="selector(this)" id="select2">Line</button>
-        <button onclick="selector(this)" id="select3">.....</button>
+        <button onclick="selector(this)" id="select2">Box</button>
+        <button onclick="selector(this)" id="select3" style="display: none;">...</button>
+    </div>
+    <div style="background-color: palevioletred; padding: 5px;">
+        <button onclick="render([47])">path separator<br>in Linux/macOS/Unix<br><span style="font-size: 24px;">/</span></button>
     </div>
     <div style="background-color: cadetblue; padding: 5px; display: flex; flex-direction: row;">
         <button onclick="render(Object.keys(controlCharactersMap).sort().map(x => parseInt(x, 16)))"><b>U+0000..U+001F, U+007F, U+0080..U+009F</b><br><b>[0, 31]&#8746;{127}&#8746;[128, 159]</b><br><span style="color: red;">control</span> characters</button>
@@ -80,9 +84,9 @@
     </div>
     <div style="background-color: SkyBlue; padding: 5px;">
         newline Windows: <span style="color: yellow;" onclick="render([13, 10])">\r\n</span>
-        newline Unix/macOS: <span style="color: yellow;" onclick="render([10])">\n</span><br>
+        newline Linux/macOS/Unix: <span style="color: yellow;" onclick="render([10])">\n</span><br>
         path separator in Windows: <span style="color: yellow;" onclick="render([92])">\</span>
-        path separator in Unix/macOS: <span style="color: yellow;" onclick="render([47])">/</span>
+        path separator in Linux/macOS/Unix: <span style="color: yellow;" onclick="render([47])">/</span>
     </div>
     <!-- <div>
         <b>ip address</b> (32bit), <b>port</b> (16bit) <b>DEC:</b> XXX.XXX.XXX.XXX:XXXXX<br>

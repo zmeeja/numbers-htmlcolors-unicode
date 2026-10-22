@@ -35,22 +35,23 @@ class mynumber{
         //---------------------------------------------(HSL)---------------------------------------------
         this.HSL = this.hexToHSL(this.xi16_6);
         //---------------------------------------------base64---------------------------------------------
+        this.base64 = "";
         if(this.xi16_6 in base64Map){
             this.base64 = base64Map[this.xi16_6];
         }
         //---------------------------------------------Unicode---------------------------------------------
         //---------------------------------------------UTF8encode---------------------------------------------
         //---------------------------------------------UTF16encode---------------------------------------------
-        this.unicode;
-        this.control;
-        this.utf8;
-        this.utf16;
-        this.utf32;
-        this.unicodeName;
-        this.unicodeNameRu;
-        this.unicodeBlock;
-        this.namedEscapeSequence;
-        this.keyboard;
+        this.unicode = "";
+        this.control = false;
+        this.utf8 = "";
+        this.utf16 = "";
+        this.utf32 = "";
+        this.unicodeName = "";
+        this.unicodeNameRu = "";
+        this.unicodeBlock = "";
+        this.namedEscapeSequence = "";
+        this.keyboard = "";
         this.entities = [];
         if((0 <= this.xi10) && (this.xi10 <= 0x10FFFF)){
             this.unicode = String.fromCodePoint(this.xi10);
@@ -66,7 +67,7 @@ class mynumber{
                 else{
                     this.control = true;
                     this.unicodeName = controlCharactersMap[this.xi16_6][1];
-                    this.namedEscapeSequence = controlCharactersMap[this.xi16_6][3];
+                    this.namedEscapeSequence = controlCharactersMap[this.xi16_6][3] ?? "";
                     this.keyboard = controlCharactersMap[this.xi16_6][4];
                 }
             }
@@ -84,8 +85,8 @@ class mynumber{
             }
         }
         //---------------------------------------------namedHTMLColor---------------------------------------------
-        this.HTMLcolor1;
-        this.HTMLcolor2;
+        this.HTMLcolor1 = "";
+        this.HTMLcolor2 = "";
         if(this.xi16_6 in colorsMap){
             this.HTMLcolor1 = colorsMap[this.xi16_6][0];
             if(colorsMap[this.xi16_6][1])
