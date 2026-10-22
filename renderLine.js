@@ -73,15 +73,27 @@ function addbox(ID, x) {
             div22.style.textAlign = "right";
             div2.appendChild(div22);
 
-    const div02 = document.createElement("div");
-    div02.className = "box02";
-    div02.innerHTML = `<span onclick="copyText(this)">${num.unicodeName}</span>`;
-    div02.style.lineHeight = "1.2em";
-    div02.style.minHeight = "1.2em";
-    // div02.style.flexGrow = 1;
-    div.appendChild(div02);
+    if(num.xi10 <= 0x10FFFF){
+        const div02 = document.createElement("div");
+        div02.className = "box02";
+        div02.innerHTML = `<span onclick="copyText(this)">${num.unicodeName}</span>`;
+        div02.style.lineHeight = "1.2em";
+        div02.style.minHeight = "1.2em";
+        // div02.style.flexGrow = 1;
+        div.appendChild(div02);
+    }
 
-    if(num.entities.length > 0){
+    if(num.unicodeNameRu){
+        const div05 = document.createElement("div");
+        div05.className = "box02";
+        div05.innerHTML = `<span onclick="copyText(this)">${num.unicodeNameRu}</span>`;
+        div05.style.lineHeight = "1.2em";
+        div05.style.minHeight = "1.2em";
+        div05.style.color = "silver";
+        div.appendChild(div05);
+    }
+
+    if(num.entities){
         const div04 = document.createElement("div");
         div04.innerHTML = `
             ${num.entities[0] ? `<span onclick="copyText(this)">&amp;${num.entities[0].slice(1)}</span>` : ""} 
