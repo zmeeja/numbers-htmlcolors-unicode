@@ -122,13 +122,7 @@ function addtd(tr, innerHTML, style = "", copyText){
 
     if(copyText === undefined) copyText = innerHTML;
 
-    td.addEventListener('click', () => {
-        navigator.clipboard.writeText(copyText).then(() => {
-            alert(`Текст "${copyText}" скопирован в буфер обмена!`);
-        }).catch(err => {
-            console.error('Не удалось скопировать текст: ', err);
-        });
-    });
+
 
     tr.appendChild(td);
 }
@@ -155,16 +149,16 @@ function addtr(table, i, q){
     addtd(tr, num.unicodeNameRu ?? "");
     addtd(tr, num.unicodeBlock ?? "");
 
-    let clr1 = num.HTMLcolor1 ? `<span>${num.HTMLcolor1}</span>` : "";
-    let clr2 = num.HTMLcolor2 ? `, <span>${num.HTMLcolor2}</span>` : "";
+    let clr1 = `<span onclick="copyText(this)">${num.HTMLcolor1}</span>`;
+    let clr2 = num.HTMLcolor2 ? `, <span onclick="copyText(this)">${num.HTMLcolor2}</span>` : "";
     addtd(tr, `${clr1}${clr2}`, `background-color: ${num.color}; color: ${num.contrastColor};`);
 
-    let ent1 = num.entities[0] ? `<span>&amp;${num.entities[0].slice(1)}</span>` : "";
-    let ent2 = num.entities[1] ? `<span>&amp;${num.entities[1].slice(1)}</span>` : "";
-    let ent3 = num.entities[2] ? `<span>&amp;${num.entities[2].slice(1)}</span>` : "";
-    let ent4 = num.entities[3] ? `<span>&amp;${num.entities[3].slice(1)}</span>` : "";
-    let ent5 = num.entities[4] ? `<span>&amp;${num.entities[4].slice(1)}</span>` : "";
-    let ent6 = num.entities[5] ? `<span>&amp;${num.entities[5].slice(1)}</span>` : "";
+    let ent1 = num.entities[0] ? `<span onclick="copyText(this)">&amp;${num.entities[0].slice(1)}</span>` : "";
+    let ent2 = num.entities[1] ? `<span onclick="copyText(this)">&amp;${num.entities[1].slice(1)}</span>` : "";
+    let ent3 = num.entities[2] ? `<span onclick="copyText(this)">&amp;${num.entities[2].slice(1)}</span>` : "";
+    let ent4 = num.entities[3] ? `<span onclick="copyText(this)">&amp;${num.entities[3].slice(1)}</span>` : "";
+    let ent5 = num.entities[4] ? `<span onclick="copyText(this)">&amp;${num.entities[4].slice(1)}</span>` : "";
+    let ent6 = num.entities[5] ? `<span onclick="copyText(this)">&amp;${num.entities[5].slice(1)}</span>` : "";
     addtd(tr, `${ent1} ${ent2} ${ent3} ${ent4} ${ent5} ${ent6}`);
 
     addtd(tr, q);
@@ -173,3 +167,17 @@ function addtr(table, i, q){
 }
 
 
+function copyText(x) {
+    const text = x.textContent;
+
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            alert(`Текст "${text}" скопирован в буфер обмена!`);
+        })
+        .catch(err => {
+            console.error(
+                'Не удалось скопировать текст:',
+                err
+            );
+        });
+}
