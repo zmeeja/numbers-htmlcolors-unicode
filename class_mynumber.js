@@ -81,7 +81,12 @@ class mynumber{
             this.unicodeBlock = rangeBlocksMap.get(this.xi16_6);
 
             if(this.xi16_6 in entitiesMap){
-                this.entities = entitiesMap[this.xi16_6].sort();
+                this.entities[0] = entitiesMap[this.xi16_6].sort()[0] ?? "";
+                this.entities[1] = entitiesMap[this.xi16_6].sort()[1] ?? "";
+                this.entities[2] = entitiesMap[this.xi16_6].sort()[2] ?? "";
+                this.entities[3] = entitiesMap[this.xi16_6].sort()[3] ?? "";
+                this.entities[4] = entitiesMap[this.xi16_6].sort()[4] ?? "";
+                this.entities[5] = entitiesMap[this.xi16_6].sort()[5] ?? "";
             }
         }
         //---------------------------------------------namedHTMLColor---------------------------------------------

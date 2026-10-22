@@ -74,6 +74,17 @@ function addbox(ID, x) {
     // div02.style.flexGrow = 1;
     div.appendChild(div02);
 
+    const div04 = document.createElement("div");
+    div04.innerHTML = `
+        ${num.entities[0] ? `<span onclick="copyText(this)">&amp;${num.entities[0].slice(1)}</span>` : ""} 
+        ${num.entities[1] ? `<span onclick="copyText(this)">&amp;${num.entities[1].slice(1)}</span>` : ""} 
+        ${num.entities[2] ? `<span onclick="copyText(this)">&amp;${num.entities[2].slice(1)}</span>` : ""} 
+        ${num.entities[3] ? `<span onclick="copyText(this)">&amp;${num.entities[3].slice(1)}</span>` : ""} 
+        ${num.entities[4] ? `<span onclick="copyText(this)">&amp;${num.entities[4].slice(1)}</span>` : ""} 
+        ${num.entities[5] ? `<span onclick="copyText(this)">&amp;${num.entities[5].slice(1)}</span>` : ""}`;
+    div04.style.color = "Orchid";
+    div.appendChild(div04);
+
     const div03 = document.createElement("div");
     div03.className = "box03";
     div03.style.display = "flex";
