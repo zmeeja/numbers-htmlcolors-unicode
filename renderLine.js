@@ -43,10 +43,11 @@ function addbox(ID, x) {
     // div01.style.flexGrow = 1;
     div.appendChild(div01);
 
-        const div1 = document.createElement("div");
-        div1.style.width = "65px";
-        div1.style.height = "1.5em";
+
         if(num.xi10 <= 0x10FFFF){
+            const div1 = document.createElement("div");
+            div1.style.width = "65px";
+            div1.style.height = "1.5em";
             div1.innerHTML = `${num.unicode}`;
             div1.style.lineHeight = "1.5em";
             div1.style.textAlign = "center";
@@ -57,8 +58,9 @@ function addbox(ID, x) {
             });
             div1.addEventListener('mouseenter', () => { div1.innerHTML = `"${num.unicode}"`; });
             div1.addEventListener('mouseleave', () => { div1.innerHTML = `${num.unicode}`; });
+            div01.appendChild(div1);
         }
-        div01.appendChild(div1);
+        
 
         const div2 = document.createElement("div");
         div2.style.display = "flex";

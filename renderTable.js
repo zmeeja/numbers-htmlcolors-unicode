@@ -132,7 +132,15 @@ function addtr(table, i, q){
 
     let tr = document.createElement("tr");
 
-    addtd(tr, num.unicode ? ('"' + num.unicode + '"') : "", `background-color: ${num.control ? "red" : "silver"}; font-family: 'unifont', 'unifont_jp', 'unifont_upper', 'unifont_csur'; text-align: center;`, num.unicode ? num.unicode : "" );
+        let td1 = document.createElement("td");
+        td1.innerHTML = num.unicode;
+        td1.style = `background-color: ${num.control ? "red" : "silver"}; text-align: center;`;
+        td1.addEventListener('click', () => { 
+            navigator.clipboard.writeText(num.unicode).then(() => { alert(`Текст "${num.unicode}" скопирован в буфер обмена!`); }).catch(err => { console.error('Не удалось скопировать текст:', err); }); 
+        });
+        td1.addEventListener('mouseenter', () => { td1.innerHTML = `"${num.unicode}"`; });
+        td1.addEventListener('mouseleave', () => { td1.innerHTML = `${num.unicode}`; });
+        tr.appendChild(td1);
     addtd(tr, num.base64 ?? "");
     addtd(tr, num.namedEscapeSequence ?? "", "text-align: center;");
     // addtd(tr, num.keyboard ?? "");
