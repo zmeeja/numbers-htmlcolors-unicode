@@ -20,6 +20,8 @@
     <script src="renderLine.js"></script>
     <script src="buttonsSelector.js" defer></script>
     <script src="input.js" defer></script>
+    <script src="other.js"></script>
+    <script src="time.js" defer></script>
 
     <link rel="stylesheet" href="styleTable.css">
     <link rel="stylesheet" href="styleBox.css">
@@ -34,10 +36,12 @@
     </script>
 </head>
 <body>
-    <div id="buttonsSelector" style="background-color: plum; padding: 5px;">
+    <div id="buttonsSelector" style="background-color: plum; padding: 5px; display: flex;">
         <button onclick="selector(this)" id="select1">Table</button>
         <button onclick="selector(this)" id="select2">Box</button>
         <button onclick="selector(this)" id="select3" style="display: none;">...</button>
+        <div style="flex-grow: 1;"></div>
+        <div style="background-color: white; padding: 5px;" id="time"></div>
     </div>
     <div style="background-color: palevioletred; padding: 5px;">
         <button onclick="render([47])">path separator<br>in Linux/macOS/Unix<br><span style="font-size: 24px;">/</span></button>

@@ -18,6 +18,8 @@ let searchType = "select21";
 document.getElementById("select21").style.backgroundColor = "yellow";
 
 function selector2(x){
+    document.getElementById("textInput").value = "";
+
     document.getElementById("select21").style.backgroundColor = "revert";
     document.getElementById("select22").style.backgroundColor = "revert";
     document.getElementById("select23").style.backgroundColor = "revert";

@@ -55,7 +55,7 @@ class mynumber{
         this.entities = [];
         if((0 <= this.xi10) && (this.xi10 <= 0x10FFFF)){
             this.unicode = String.fromCodePoint(this.xi10);
-
+            this.unicodeName = "-";
             this.utf8 = Array.from(new TextEncoder().encode(this.unicode)).map(x => x.toString(16).toUpperCase().padStart(2, "0")).join(' ');
             this.utf16 = this.unicode.charCodeAt(0).toString(16).toUpperCase().padStart(4, "0") + (this.unicode.charCodeAt(1) ? (" " + this.unicode.charCodeAt(1).toString(16).toUpperCase().padStart(4, "0")) : "");
 
