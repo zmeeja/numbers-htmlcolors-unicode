@@ -22,6 +22,7 @@ class mynumber{
         this.xi8_8 = this.xi10.toString(8).padStart(8, "0");
         //---------------------------------------------16---------------------------------------------
         this.xi16 = this.xi10.toString(16).toUpperCase();
+        this.xi16_2 = this.xi10.toString(16).toUpperCase().padStart(2, "0");
         this.xi16_6 = this.xi10.toString(16).toUpperCase().padStart(6, "0");
         //---------------------------------------------256---------------------------------------------
         this.xR = String(parseInt(`${this.xi16_6[0]}` + `${this.xi16_6[1]}`, 16));
@@ -109,6 +110,33 @@ class mynumber{
                 console.error("Error encoding URI:", error);
                 this.uri1 = "";
                 this.uri2 = "";
+            }
+        }
+        //---------------------------------------------CP437/866/1251/1252---------------------------------------------
+        this.CP437 = "";
+        this.CP866 = "";
+        this.CP1251 = "";
+        this.CP1252 = "";
+        if("0x" + this.xi16_2 in CP437Map){
+            this.CP437 = String.fromCodePoint(parseInt(CP437Map["0x" + this.xi16_2], 16));
+        }
+        if("0x" + this.xi16_2 in CP866Map){
+            this.CP866 = String.fromCodePoint(parseInt(CP866Map["0x" + this.xi16_2], 16));
+        }
+        if("0x" + this.xi16_2 in CP1251Map){
+            try {
+                this.CP1251 = String.fromCodePoint(parseInt(CP1251Map["0x" + this.xi16_2], 16));
+            }
+            catch (error) {
+                // console.error("Error encoding CP1251:", error);
+            }
+        }
+        if("0x" + this.xi16_2 in CP1252Map){
+            try {
+                this.CP1252 = String.fromCodePoint(parseInt(CP1252Map["0x" + this.xi16_2], 16));
+            }
+            catch (error) {
+                // console.error("Error encoding CP1252:", error);
             }
         }
         //---------------------------------------------Brightness---------------------------------------------

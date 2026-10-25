@@ -7,7 +7,7 @@ function renderLine(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener"){
     q = 1;
     for(let i of x){
         if(i <= 0xFFFFFF){
-            addbox("contener", i);
+            addbox(contener, i);
             q++;
         }
         else{
@@ -23,8 +23,7 @@ function renderLine(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener"){
 
 }
 
-function addbox(ID, x) {
-    contener = document.getElementById(ID);
+function addbox(contener, x) {
     const num = new mynumber(x);
 
     const div = document.createElement("div");
