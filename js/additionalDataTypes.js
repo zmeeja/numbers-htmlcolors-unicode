@@ -121,8 +121,8 @@ class rangeDict {
     }
 }
 
-let x = new rangeDict();
-for(let i in x){
-    console.log(i);
-}
+// let x = new rangeDict();
+// for(let i in x){
+//     console.log(i);
+// }
 
