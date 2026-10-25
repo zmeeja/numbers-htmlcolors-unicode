@@ -205,18 +205,22 @@ function addtr(table, i, q){
 
         const td19 = document.createElement("td");
         td19.innerHTML = `<span onclick="copyText(this)">${num.CP437}</span>`;
+        td19.style.textAlign = "center";
         tr.appendChild(td19);
 
         const td20 = document.createElement("td");
         td20.innerHTML = `<span onclick="copyText(this)">${num.CP866}</span>`;
+        td20.style.textAlign = "center";
         tr.appendChild(td20);
 
         const td21 = document.createElement("td");
         td21.innerHTML = `<span onclick="copyText(this)">${num.CP1251}</span>`;
+        td21.style.textAlign = "center";
         tr.appendChild(td21);
         
         const td22 = document.createElement("td");
         td22.innerHTML = `<span onclick="copyText(this)">${num.CP1252}</span>`;
+        td22.style.textAlign = "center";
         tr.appendChild(td22);
 
         const td18 = document.createElement("td");
