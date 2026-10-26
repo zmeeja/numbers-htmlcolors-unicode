@@ -41,17 +41,20 @@
     </script>
 </head>
 <body>
-    <div id="buttonsSelector" style="background-color: plum; padding: 5px; display: flex;">
+    <div style="padding: 5px; border: 1px solid black; background-color: LightGray;">
+        <span style="font-size: 30px;">Unicode</span>
+    </div>
+    <div id="buttonsSelector" style="border: 1px solid black; padding: 5px; display: flex; background-color: LightGray;">
         <button onclick="selector(this)" id="select1">Table</button>
         <button onclick="selector(this)" id="select2">Box</button>
         <button onclick="selector(this)" id="select3" style="display: none;">...</button>
         <div style="flex-grow: 1; text-align: right; padding: 5px;"><b>Unix time</b> (1 January 1970, 00:00:00 UTC)</div>
         <div style="background-color: white; padding: 5px;" id="time"></div>
     </div>
-    <div style="background-color: palevioletred; padding: 5px;">
+    <div style="border: 1px solid black; padding: 5px; background-color: LightGray;">
         <button onclick="render([47])">path separator<br>in Linux/macOS/Unix<br><span style="font-size: 24px;">/</span></button>
     </div>
-    <div style="background-color: cadetblue; padding: 5px; display: flex; flex-direction: row;">
+    <div style="border: 1px solid black; padding: 5px; display: flex; flex-direction: row; background-color: LightGray;">
         <button onclick="render(Object.keys(controlCharactersMap).sort().map(x => parseInt(x, 16)))"><b>U+0000..U+001F, U+007F, U+0080..U+009F</b><br><b>[0, 31]&#8746;{127}&#8746;[128, 159]</b><br><span style="color: red;">control</span> characters</button>
         <button onclick="render(Object.keys(colorsMap).sort().map(x => parseInt(x, 16)))">named HTML<br><span style="font-size: 24px;"><b><span style="color: blue;">c</span><span style="color: lime;">o</span><span style="color: aqua;">l</span><span style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></span></button>
         <button onclick="render(Object.keys(colorsMap).filter(x => colorsMap[x].length == 1).sort().map(x => parseInt(x, 16)))">1</button>
@@ -60,7 +63,7 @@
         <button onclick="render(Object.keys(entitiesMap).sort().map(x => parseInt(x, 16)))">named HTML <b>entities</b><br><span style="font-size: 24px;"><code>&amp;nbsp;</code></span></button>
         <button onclick="render(Object.keys(LaTeXmap).sort().map(x => parseInt(x, 16)))"><b>LaTeX</b><br><span style="font-size: 24px;"><code>\alpha</code></span></button>
     </div>
-    <div style="background-color: lightcoral; padding: 5px; display: flex; flex-direction: row;">
+    <div style="border: 1px solid black; padding: 5px; display: flex; flex-direction: row; background-color: LightGray;">
         <button onclick="render(range(128))"><b>U+0000..U+007F</b><br><b>[0, 127]<br></b>Basic Latin (ASCII)<br><span style="font-size: 24px;">abc</span></button>
         <button onclick="render(range(128, 256))"><b>U+0080..U+00FF</b><br><b>[128, 255]<br></b>Latin-1 Supplement<br><span style="font-size: 24px;">©®Æ</span></button>
         <button onclick="render(range(0x0370, parseInt(0x03FF)+1))"><b>U+0370..U+03FF</b><br><b>[880, 1023]</b><br>Greek and Coptic<br><span style="font-size: 24px;">αβγ</span></button>
@@ -68,7 +71,7 @@
         <button onclick="render(range(0x2200, parseInt(0x22FF)+1))"><b>U+2200..U+22FF</b><br><b>[8704, 8959]</b><br>Mathematical Operators<br><span style="font-size: 24px;">∑</span></button>
         <button onclick="render(range(0x1F600, parseInt(0x1F64F)+1))"><b>U+1F600..U+1F64F</b><br><b>[8352, 8295]</b><br>Emoticons<br><span style="font-size: 24px;">😀</span></button>
     </div>
-    <div style="background-color: lightgreen; padding: 5px;">
+    <div style="border: 1px solid black; padding: 5px; background-color: LightGray;">
         <select id="selectUnicodeBlocks" onchange="render(range(selectUnicodeBlocks.value.split('-')[0], parseInt(selectUnicodeBlocks.value.split('-')[1])+1))"></select>
     </div>
     <script>
@@ -80,7 +83,7 @@
             selectUnicodeBlocks.appendChild(option);
         }
     </script>
-    <div style="background-color: palevioletred; padding: 5px;">
+    <div style="border: 1px solid black; padding: 5px; background-color: LightGray;">
         <button onclick="selector2(this)" id="select21">UNI</button>
         <button onclick="selector2(this)" id="select22">DEC</button>
         <button onclick="selector2(this)" id="select23">BIN</button>
@@ -93,17 +96,21 @@
         <button onclick="selector2(this)" id="select30">LaTeX</button>
         <input type="text" id="textInput">
     </div>
-    <div style="background-color: SkyBlue; padding: 5px;">
-        newline Windows: <span style="color: yellow;" onclick="render([13, 10])">\r\n</span>
-        newline Linux/macOS/Unix: <span style="color: yellow;" onclick="render([10])">\n</span><br>
-        path separator in Windows: <span style="color: yellow;" onclick="render([92])">\</span>
-        path separator in Linux/macOS/Unix: <span style="color: yellow;" onclick="render([47])">/</span>
+    <div style="border: 1px solid black; padding: 5px; background-color: LightGray;">
+        newline Windows: <span style="color: red;" onclick="render([13, 10])">\r\n</span>
+        newline Linux/macOS/Unix: <span style="color: red;" onclick="render([10])">\n</span><br>
+        path separator in Windows: <span style="color: red;" onclick="render([92])">\</span>
+        path separator in Linux/macOS/Unix: <span style="color: red;" onclick="render([47])">/</span>
     </div>
     <!-- <div>
         <b>ip address</b> (32bit), <b>port</b> (16bit) <b>DEC:</b> XXX.XXX.XXX.XXX:XXXXX<br>
         <b>UTF-32</b> (32bit) <b>HEX:</b> XXXXXXXX
     </div> -->
-    <div id="contener">
+    <div style="border: 1px solid black; padding: 5px; background-color: LightGray;">
+        <input type="range" min="0" max="255" value="0" id="myRange1">
+        <input type="range" min="0" max="255" value="0" id="myRange2">
+        <input type="range" min="0" max="255" value="0" id="myRange3">
     </div>
+    <div id="contener" style="border: 1px solid black; padding: 5px; background-color: white;"></div>
 </body>
 </html>

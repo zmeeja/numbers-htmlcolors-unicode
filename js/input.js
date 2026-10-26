@@ -110,3 +110,31 @@ textInput.addEventListener("input", () => {
 });
 
 //console.log("👋".codePointAt(0));
+
+
+
+document.getElementById("myRange1").addEventListener("input", () => {
+    rangeInput();
+});
+document.getElementById("myRange2").addEventListener("input", () => {
+    rangeInput();
+});
+document.getElementById("myRange3").addEventListener("input", () => {
+    rangeInput();
+});
+
+function rangeInput(){
+    let x = document.getElementById("myRange1").value;
+    let y = document.getElementById("myRange2").value;
+    let z = document.getElementById("myRange3").value;
+    x = parseInt(x, 10);
+    y = parseInt(y, 10);
+    z = parseInt(z, 10);
+    x = x.toString(16).padStart(2, "0");
+    y = y.toString(16).padStart(2, "0");
+    z = z.toString(16).padStart(2, "0");
+
+    let result = x + y + z;
+    
+    render(range(parseInt(result, 16), parseInt(result, 16) + 1));
+}
