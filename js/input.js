@@ -86,7 +86,23 @@ textInput.addEventListener("input", () => {
                 }
             }
             render(result4);
-            break;            
+            break;
+        case "select30":
+            const input5 = textInput.value.trim().toLowerCase();
+            const result5 = [];
+            for (let i of Object.keys(LaTeXmap).sort().map(x => parseInt(x, 16))) {
+                let num = new mynumber(i);
+                if (num.LaTeX && num.LaTeX.length > 0) {
+                    if (num.LaTeX.toLowerCase().includes(input5)) {
+                        result5.push(i);
+                    }
+                }
+                if (result5.length >= 100) {
+                    break; 
+                }
+            }
+            render(result5);
+            break;
         }
 
     // console.log(textInput.value.split(""));

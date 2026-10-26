@@ -33,5 +33,5 @@ for (let i in colorsMap) {
 // console.log(colorsMap1);
 // console.log(colorsMap2);
 
-const jsContent = `const colorsMap = ${JSON.stringify(colorsMap)};\n\nconst colorsMap1 = ${JSON.stringify(colorsMap1)};\n\nconst colorsMap2 = ${JSON.stringify(colorsMap2)};\n\nexport default colorsMap;`;
+const jsContent = `const colorsMap = ${JSON.stringify(colorsMap, null, 2)};`;
 fs.writeFileSync("colorsMap.js", jsContent, "utf8");

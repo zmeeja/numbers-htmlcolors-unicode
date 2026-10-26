@@ -90,6 +90,11 @@ class mynumber{
                 this.entities[5] = entitiesMap[this.xi16_6].sort()[5] ?? "";
             }
         }
+        //---------------------------------------------LaTeX---------------------------------------------
+        this.LaTeX = "";
+        if(this.xi16_6 in LaTeXmap){
+            this.LaTeX = LaTeXmap[this.xi16_6];
+        }
         //---------------------------------------------namedHTMLColor---------------------------------------------
         this.HTMLcolor1 = "";
         this.HTMLcolor2 = "";

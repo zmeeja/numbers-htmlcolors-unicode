@@ -32,7 +32,7 @@ function addbox(contener, x) {
     div.style.flexDirection = "column";
     // div.style.margin = "1px";
     // div.style.border = "1px solid black";
-    div.style.width = "200px";
+    div.style.width = "250px";
     // div.style.backgroundColor = num.color;
     contener.appendChild(div);
     
@@ -115,7 +115,21 @@ function addbox(contener, x) {
         div04.style.color = "Orchid";
         div04.style.lineHeight = "1.2em";
         div04.style.paddingLeft = "2px";
+        div04.style.paddingRight = "2px";
+        // div04.style.textAlign = "right";
         div.appendChild(div04);
+    }
+
+    if(num.LaTeX){
+        const div05 = document.createElement("div");
+        div05.innerHTML = `<span onclick="copyText(this)">${num.LaTeX}</span>`;
+        div05.style.lineHeight = "1.2em";
+        div05.style.minHeight = "1.2em";
+        div05.style.paddingLeft = "2px";
+        div05.style.paddingRight = "2px";
+        // div05.style.textAlign = "right";
+        div05.style.color = "Green";
+        div.appendChild(div05);
     }
 
     const div03 = document.createElement("div");

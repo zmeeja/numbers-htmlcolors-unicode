@@ -2,7 +2,7 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
     document.getElementById(contenerID).innerHTML = "";
     document.getElementById(contenerID).innerHTML ="<table id='numbertable'></table>";
 
-    addtrtd(5, 22);
+    addtrtd(5, 23);
     document.getElementById("td_4_1").innerHTML = "total";
     document.getElementById("td_5_1").innerHTML = "<b>Unicode<br>symbol</b>";
 
@@ -13,7 +13,7 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
 
     document.getElementById("td_1_3").innerHTML = "<b>OCT:</b><br>\\0XX";
     document.getElementById("td_2_3").innerHTML = "<b>HEX:</b><br>\\xXX<br>\\uXXXX<br>\\u{XXXXX}";
-    document.getElementById("td_3_3").innerHTML = "text<br>↓<br>text";
+    document.getElementById("td_3_3").innerHTML = "symbol<br>↓<br>text";
     document.getElementById("td_3_3").style = "color: lime;";
     document.getElementById("td_5_3").innerHTML = "<b>named<br>escape<br>sequence</b>";
 
@@ -43,12 +43,12 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
     document.getElementById("td_4_10").innerHTML = "1 114 112";
     document.getElementById("td_5_10").innerHTML = "<b>UTF-16</b><br>16,32bit";
 
-    document.getElementById("td_3_11").innerHTML = "text<br>↓<br>text";
+    document.getElementById("td_3_11").innerHTML = "symbol<br>↓<br>text";
     document.getElementById("td_3_11").style = "color: lime;";
     document.getElementById("td_4_11").innerHTML = "1 114 112";
     document.getElementById("td_5_11").innerHTML = "<b>URI</b><br>component";
 
-    document.getElementById("td_3_12").innerHTML = "text<br>↓<br>text";
+    document.getElementById("td_3_12").innerHTML = "symbol<br>↓<br>text";
     document.getElementById("td_3_12").style = "color: lime;";
     document.getElementById("td_4_12").innerHTML = "1 114 112";
     document.getElementById("td_5_12").innerHTML = "<b>URI</b><br>complete";
@@ -68,16 +68,30 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
 
     document.getElementById("td_1_17").innerHTML = "<b>DEC:</b><br>&#X;";
     document.getElementById("td_2_17").innerHTML = "<b>HEX:</b><br>&#xX;";
-    document.getElementById("td_3_17").innerHTML = "text<br>↓<br>text";
+    document.getElementById("td_3_17").innerHTML = "symbol<br>↓<br>text";
     document.getElementById("td_3_17").style = "color: lime;";
+    document.getElementById("td_4_17").innerHTML = "1446";
     document.getElementById("td_5_17").innerHTML = "<b>named<br>HTML entity</b>";
 
-    document.getElementById("td_5_18").innerHTML = "CP437";
-    document.getElementById("td_5_19").innerHTML = "CP866";
-    document.getElementById("td_5_20").innerHTML = "CP1251";
-    document.getElementById("td_5_21").innerHTML = "CP1252";
+    document.getElementById("td_3_18").innerHTML = "symbol<br>↓<br>text";
+    document.getElementById("td_3_18").style = "color: lime;";
+    document.getElementById("td_4_18").innerHTML = "1596";
+    document.getElementById("td_5_18").innerHTML = "<b>LaTeX</b>";
 
-    document.getElementById("td_5_22").innerHTML = "<b>№</b>";
+    document.getElementById("td_3_19").innerHTML = "text<br>↓<br>bytes";
+    document.getElementById("td_3_19").style = "color: red;";
+    document.getElementById("td_5_19").innerHTML = "CP437";
+    document.getElementById("td_3_20").innerHTML = "text<br>↓<br>bytes";
+    document.getElementById("td_3_20").style = "color: red;";
+    document.getElementById("td_5_20").innerHTML = "CP866";
+    document.getElementById("td_3_21").innerHTML = "text<br>↓<br>bytes";
+    document.getElementById("td_3_21").style = "color: red;";
+    document.getElementById("td_5_21").innerHTML = "CP1251";
+    document.getElementById("td_3_22").innerHTML = "text<br>↓<br>bytes";
+    document.getElementById("td_3_22").style = "color: red;";
+    document.getElementById("td_5_22").innerHTML = "CP1252";
+
+    document.getElementById("td_5_23").innerHTML = "<b>№</b>";
 
 
 
@@ -92,8 +106,6 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
         q++;
     }
 }
-
-
 
 function addtrtd(row, col){
     const table = document.getElementById("numbertable");
@@ -203,6 +215,10 @@ function addtr(table, i, q){
         td17.innerHTML = `${ent1} ${ent2} ${ent3} ${ent4} ${ent5} ${ent6}`;
         tr.appendChild(td17);
 
+        const td23 = document.createElement("td");
+        td23.innerHTML = `<span onclick="copyText(this)">${num.LaTeX}</span>`;
+        tr.appendChild(td23);
+
         const td19 = document.createElement("td");
         td19.innerHTML = `<span onclick="copyText(this)">${num.CP437}</span>`;
         td19.style.textAlign = "center";
@@ -224,8 +240,10 @@ function addtr(table, i, q){
         tr.appendChild(td22);
 
         const td18 = document.createElement("td");
-        td18.innerHTML = `${q}`;
+        td18.innerHTML = `<span onclick="copyText(this)">${q}</span>`;
         tr.appendChild(td18);
+
+
 
     document.getElementById(table).appendChild(tr);
 }
