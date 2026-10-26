@@ -1,6 +1,6 @@
 //const { start } = require("repl");
 
-function* range(x1, x2 = undefined, step = 1) {
+function* rangeGen(x1, x2 = undefined, step = 1) {
     if (typeof x1 == "string") {
         x1 = parseInt(x1, 16);
     }
@@ -32,6 +32,9 @@ function* range(x1, x2 = undefined, step = 1) {
     }
 }
 
+function range(x1, x2 = undefined, step = 1) {
+    return [...rangeGen(x1, x2, step)];
+}
 
 class rangeDict {
     constructor(x1, x2, x3) {
@@ -126,3 +129,5 @@ class rangeDict {
 //     console.log(i);
 // }
 
+// greyMap = [...range(0, 256)].map(x => "0x" + x.toString(16).padStart(2, "0") + x.toString(16).padStart(2, "0") + x.toString(16).padStart(2, "0"));
+// console.log(greyMap);

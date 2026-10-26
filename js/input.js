@@ -123,6 +123,16 @@ document.getElementById("myRange3").addEventListener("input", () => {
     rangeInput();
 });
 
+document.getElementById("myRange").addEventListener("input", () => {
+    let x = document.getElementById("myRange").value;
+    x = parseInt(x, 10);
+    x = x.toString(16).padStart(2, "0");
+
+    let result = x + x + x;
+    
+    render(range(parseInt(result, 16), parseInt(result, 16) + 1));
+});
+
 function rangeInput(){
     let x = document.getElementById("myRange1").value;
     let y = document.getElementById("myRange2").value;
@@ -138,3 +148,5 @@ function rangeInput(){
     
     render(range(parseInt(result, 16), parseInt(result, 16) + 1));
 }
+
+
