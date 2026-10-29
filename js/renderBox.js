@@ -157,11 +157,6 @@ function addbox(contener, x) {
         divColor2.style.textAlign = "right";
         divColor2.style.paddingRight = "2px";
         divColor.appendChild(divColor2);
-
-
-
-
-
 }
 
 

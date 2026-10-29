@@ -8,6 +8,7 @@ function render(x, contenerID="contener"){
             renderLine(x, contenerID);
             break;
         case "select3":
+            renderMiniBox(x, contenerID);
             break;
     }
 }

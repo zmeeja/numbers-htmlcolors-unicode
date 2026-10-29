@@ -23,6 +23,7 @@
     <script src="js/render.js"></script>
     <script src="js/renderTable.js"></script>
     <script src="js/renderBox.js"></script>
+    <script src="js/renderMiniBox.js"></script>
     <script src="js/buttonsSelector.js" defer></script>
     <script src="js/input.js" defer></script>
     <script src="js/other.js"></script>
@@ -47,7 +48,7 @@
     <div id="buttonsSelector" style="border: 1px solid black; padding: 5px; display: flex; background-color: LightGray;">
         <button onclick="selector(this)" id="select1">Table</button>
         <button onclick="selector(this)" id="select2">Box</button>
-        <button onclick="selector(this)" id="select3" style="display: none;">...</button>
+        <button onclick="selector(this)" id="select3">miniBox</button>
         <div style="flex-grow: 1; text-align: right; padding: 5px;"><b>Unix time</b> (1 January 1970, 00:00:00 UTC)</div>
         <div style="background-color: white; padding: 5px;" id="time"></div>
     </div>
