@@ -145,7 +145,7 @@ class mynumber{
             }
         }
         //---------------------------------------------Brightness---------------------------------------------
-        this.brightness = this.getBrightness(this.xi16_6);
+        this.brightness = mynumber.getBrightness(this.xi16_6);
         
        
 
@@ -155,7 +155,7 @@ class mynumber{
 
 
 
-    getBrightness(hexColor=this.xi16_6) {
+    static getBrightness(hexColor=this.xi16_6) {
         // Убираем символ #, если он есть
         hexColor = hexColor.replace(/^#/, '');
 
@@ -165,12 +165,12 @@ class mynumber{
         let b = parseInt(hexColor.substring(4, 6), 16);
 
         // Рассчитываем яркость
-        return (r * 299 + g * 587 + b * 114) / 1000;
+        return parseInt((r * 299 + g * 587 + b * 114) / 1000);
     }
 
     getContrastColor(hexColor=this.xi16_6) {
         // Рассчитываем яркость фона
-        let brightness = this.getBrightness(hexColor);
+        let brightness = mynumber.getBrightness(hexColor);
 
         // Определяем цвет текста в зависимости от яркости фона
         return brightness > 128 ? "#000000" : "#FFFFFF";

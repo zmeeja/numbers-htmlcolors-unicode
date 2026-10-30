@@ -2,7 +2,7 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
     document.getElementById(contenerID).innerHTML = "";
     document.getElementById(contenerID).innerHTML ="<table id='numbertable'></table>";
 
-    addtrtd(5, 23);
+    addtrtd(5, 24);
     document.getElementById("td_4_1").innerHTML = "total";
     document.getElementById("td_5_1").innerHTML = "<b>Unicode<br>symbol</b>";
 
@@ -91,7 +91,9 @@ function renderTable(x = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9], contenerID="contener")
     document.getElementById("td_3_22").style = "color: red;";
     document.getElementById("td_5_22").innerHTML = "CP1252";
 
-    document.getElementById("td_5_23").innerHTML = "<b>№</b>";
+    document.getElementById("td_5_23").innerHTML = "<b>brightness</b>";
+
+    document.getElementById("td_5_24").innerHTML = "<b>№</b>";
 
 
 
@@ -243,6 +245,11 @@ function addtr(table, i, q){
         td22.innerHTML = `<span onclick="copyText(this)">${num.CP1252}</span>`;
         td22.style.textAlign = "center";
         tr.appendChild(td22);
+
+        const td24 = document.createElement("td");
+        td24.innerHTML = `<span onclick="copyText(this)">${num.brightness}</span>`;
+        td24.style.textAlign = "center";
+        tr.appendChild(td24);
 
         const td18 = document.createElement("td");
         td18.innerHTML = `<span onclick="copyText(this)">${q}</span>`;

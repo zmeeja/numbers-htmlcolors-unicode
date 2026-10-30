@@ -62,6 +62,7 @@
     </div>
     <div style="border: 1px solid black; padding: 5px; display: flex; flex-direction: row; background-color: LightGray;">
         <button onclick="render(Object.keys(colorsMap).sort().map(x => parseInt(x, 16)))">named HTML<br><span style="font-size: 24px;"><b><span style="color: blue;">c</span><span style="color: lime;">o</span><span style="color: aqua;">l</span><span style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></span></button>
+        <button onclick="render(Object.keys(colorsMap).sort((a, b) => mynumber.getBrightness(a) - mynumber.getBrightness(b)).map(x => parseInt(x, 16)))">brightness</button>
         <button onclick="render(Object.keys(colorsMap).filter(x => colorsMap[x].length == 1).sort().map(x => parseInt(x, 16)))">1</button>
         <button onclick="render(Object.keys(colorsMap).filter(x => colorsMap[x].length !== 1).sort().map(x => parseInt(x, 16)))">2</button>
         <button onclick='render(["000000", "FFFFFF", "FF0000", "00FF00", "0000FF", "FFFF00", "FF00FF", "00FFFF"].sort().map(x => parseInt(x, 16)))'>basic<br><span style="font-size: 24px;"><b><span style="color: blue;">c</span><span style="color: lime;">o</span><span style="color: aqua;">l</span><span style="color: red;">o</span><span style="color: fuchsia;">r</span><span style="color: yellow;">s</span></b></span></button>
