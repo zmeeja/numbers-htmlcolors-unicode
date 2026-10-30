@@ -152,22 +152,27 @@ function addtr(table, i, q){
     
         const td4 = document.createElement("td");
         td4.innerHTML = `<span onclick="copyText(this)">${num.xi10}</span>`;
+        td4.style.textAlign = "right";
         tr.appendChild(td4);
     
         const td5 = document.createElement("td");
         td5.innerHTML = `<span onclick="copyText(this)"><span style="color: #FF0000">${num.xi2_24.slice(0, 8)}</span><span style="color: #00FF00">${num.xi2_24.slice(8, 16)}</span><span style="color: #0000FF">${num.xi2_24.slice(16, 24)}</span></span>`;
+        td5.style.textAlign = "right";
         tr.appendChild(td5);
 
         const td6 = document.createElement("td");
         td6.innerHTML = `<span onclick="copyText(this)">${num.xi8_8}</span>`;
+        td6.style.textAlign = "right";
         tr.appendChild(td6);
 
         const td7 = document.createElement("td");
         td7.innerHTML = `<span onclick="copyText(this)"><span style="color: #FF0000">${num.xi16_6.slice(0, 2)}</span><span style="color: #00FF00">${num.xi16_6.slice(2, 4)}</span><span style="color: #0000FF">${num.xi16_6.slice(4, 6)}</span></span>`;
+        td7.style.textAlign = "right";
         tr.appendChild(td7);
 
         const td8 = document.createElement("td");
         td8.innerHTML = `<span onclick="copyText(this)"><span style="color: #FF0000">${num.xR}</span><span style="color: #00FF00">${num.xG}</span><span style="color: #0000FF">${num.xB}</span></span>`;
+        td8.style.textAlign = "right";
         tr.appendChild(td8);
 
         const td9 = document.createElement("td");
