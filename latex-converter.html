@@ -139,33 +139,22 @@
         <div class="editors">
             <section class="panel">
                 <label for="source">Исходный текст</label>
-                <textarea id="source" placeholder="Например:&#10;Формула: \(a+b\)&#10;&#10;\[&#10;a+b=c&#10;\]"
+                <textarea id="source" placeholder="Сюда нужно вставить текст...&#10;Например:&#10;Формула: \(a+b\)&#10;&#10;\[&#10;a+b=c&#10;\]"
                     spellcheck="false"></textarea>
             </section>
 
             <section class="panel">
                 <label for="result">Результат</label>
-                <textarea id="result" placeholder="Здесь появится преобразованный текст..."
+                <textarea id="result" placeholder="Здесь появится преобразованный текст...&#10;Например:&#10;Формула: $a+b$&#10;&#10;$$&#10;a+b=c&#10;$$"
                     spellcheck="false"></textarea>
             </section>
         </div>
 
         <div class="toolbar">
-            <button class="primary" id="toMarkdown">
-                \( \) → $ $
-            </button>
-
-            <button class="primary" id="toLatex">
-                $ $ → \( \)
-            </button>
-
-            <button id="copy">
-                Копировать результат
-            </button>
-
-            <button id="clear">
-                Очистить
-            </button>
+            <button class="primary" id="toMarkdown">Преобразовать</button>
+            <!-- <button class="primary" id="toLatex">$ $ → \( \)</button> -->
+            <button id="copy">Копировать результат</button>
+            <button id="clear">Очистить</button>
         </div>
 
         <div id="status" role="status" aria-live="polite"></div>
